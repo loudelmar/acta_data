@@ -1,23 +1,28 @@
-<div class="wrapper fadeInDown">
-    <div id="formContent">
-      <!-- Tabs Titles -->
-  
-      <!-- Icon -->
-      <div class="fadeIn first">
-        <img src="" id="icon" alt="Acta Data">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card-signin my-5">
+            <img class="logo" src="assets/img/logo.png" alt="ActaData">
+              <div class="card-body">
+                <form class="form-signin">
+                  <div class="form-label-group">
+                    <input type="text" id="inputDNI" class="form-control" placeholder="DNI"
+                    required autofocus>
+                    <label for="inputDNI">DNI</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
+                    required>
+                    <label for="inputPassword">Contraseña</label>
+                  </div>
+
+                  <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">INGRESAR</button>
+                  <button class="btn btn-lg" type="submit">Olvidé mi contraseña</button>
+                  <hr class="my-4">
+                  <button class="btn btn-lg btn-block text-uppercase" type="submit">REGISTRARME</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  
-      <!-- Login Form -->
-      <form>
-        <input type="text" class="fadeIn second" name="login" placeholder="Usuario">
-        <input type="text" class="fadeIn third" name="pass" placeholder="Contraseña">
-        <input type="submit" class="fadeIn fourth" value="Log In">
-      </form>
-  
-      <!-- Remind Passowrd -->
-      <div id="formFooter">
-        <a class="underlineHover" href="#">Forgot Password?</a>
-      </div>
-  
-    </div>
-  </div>

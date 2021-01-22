@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.form-label-group input {
+    height: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
+    font-family: 'times new roman';
+  }
