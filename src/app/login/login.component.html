@@ -1,28 +1,30 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">   
     <div class="container">
-      <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-          <div class="card-signin my-5">
+          <div class="my-5">
             <img class="logo" src="assets/img/logo.png" alt="ActaData">
               <div class="card-body">
-                <form class="form-signin">
+                <form>
                   <div class= "form-label-group">
-                    <input type="text" id="inputDNI" class="form-control" placeholder="DNI"
-                    required autofocus>
-                    <label for="inputDNI">DNI</label>
+                    <input type="text" id= "inputDNI" class="form-control" placeholder="DNI" required autofocus>
+                    <label for="inputDNI"></label>
                   </div>
-                  <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
-                    required>
-                    <label for="inputPassword">Contraseña</label>
+                  <div class="form-label-group icon-div">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required autofocus onclick="mostrarPassword()">
+                    <i class="far fa-eye"></i>
+                    <label for="inputPassword"></label>
                   </div>
-
-                  <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">INGRESAR</button>
-                  <button class="btn btn-lg" type="submit">Olvidé mi contraseña</button>
-                  <hr class="my-4">
-                  <button class="btn btn-lg btn-block text-uppercase" type="submit">REGISTRARME</button>
+                  <button class="btn btn-block btn-primary btn-ingresar text-uppercase" type="submit">Ingresar</button>
+                  <div class="center">
+                  <a href="#" class="btn-pass">Olvidé mi contraseña</a>
+                  </div>
+                  <br>
+                  <hr class="my-1">
+                  <div class="center">
+                    <a href="#" class="btn-registrar text-uppercase">Registrarme</a>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </div>
