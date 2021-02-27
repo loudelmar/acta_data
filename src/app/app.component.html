@@ -1,1 +1,35 @@
-<router-outlet></router-outlet>
+<div class="mx-auto">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <img class="logo" src="assets/img/logo2.png" alt="ActaData">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/consulta']">Inicio
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/miscargas']">Actas de Nacimiento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/misborradores']">Personas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/misborradores']">Borradores</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mi perfil</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Editar perfil</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Cerrar sesión</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <router-outlet></router-outlet>
+</div>

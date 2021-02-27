@@ -2,26 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
-## Development server
+# Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Git version 2.30.0
+1. npm 6.14.10
+1. MySQL 5.7.31
+1. PHP 7.23.21
+1. Apache 2.4.46
 
-## Code scaffolding
+# Como instalar
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clonar el proyecto.
+1. Importar BD (acta_data.sql en la raiz del proyecto)
+1. Llenar tablas inscriptos, actas, personas, localidades, departamentos
+1. Copiar los endPoints (archivos .php dentro de la carpeta `endpoints` en la raiz del proyecto) en una carpeta llamada `api` dentro de la carpeta del servidor
+1. `cd acta_data`
+1. Bajar dependencias: `npm install`
+1. Compilar y servir: `ng serve`
+1. Abrir navegador en [http://localhost:4200/miscargas](http://localhost:4200/miscargas)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

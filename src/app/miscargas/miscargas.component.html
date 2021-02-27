@@ -1,55 +1,24 @@
-<div class="mx-auto">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <img class="logo" src="assets/img/logo2.png" alt="ActaData">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Inicio
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Mis Cargas</a>
-              <span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mi perfil</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Editar perfil</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Cerrar sesión</a>
-              </div>
-            </li>
-          </ul>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+<div>
+  <div class="busqueda">
+    <form class="form-control-lg my-lg-5">
+      <input class="form-control" type="text" placeholder="Buscar acta de nacimiento">
+      <i class="fas fa-search"></i>
+    </form>
+  </div>
+  <div class="container">
+    <h1 class="titulo">Mis cargas</h1>
+    <div>{{nombre}}</div>
+    <div *ngFor="let inscripto of inscriptos">
+      <div class="card">
+        <div class="card-header">{{inscripto.apellido + ', ' + inscripto.nombre}}</div>
+        <div class="card-body">
+          <h4 class="card-title">{{inscripto.dni}}</h4>
+          <h4 class="card-title">{{inscripto.fechaNacimiento}}</h4>
+          <h4 class="card-title">{{inscripto.localidad + ', ' + inscripto.departamento}}</h4>
+          <i class="fas fa-pen"></i>
+          <i class="fas fa-trash"></i>
         </div>
-      </nav>
-      <div class="busqueda">
-        <form class="form-control-lg my-lg-5">
-          <input class="form-control" type="text" placeholder="Buscar acta de nacimiento">
-          <i class="fas fa-search"></i>
-        </form>
-        </div>
-        <div class="container">
-          <h1 class="titulo">Mis cargas</h1>
-          <div class="card">
-              <div class="card-header">Lede, Lourdes del Mar</div>
-              <div class="card-body">
-      <h4 class="card-title">40.775.265</h4>
-      <h4 class="card-title">17/02/1998</h4>
-      <h4 class="card-title">La Rioja, Capital</h4>
-              </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="card">
-            <div class="card-header">Lede, Lourdes del Mar</div>
-            <div class="card-body">
-            <h4 class="card-title">40.775.265</h4>
-            <h4 class="card-title">17/02/1998</h4>
-            <h4 class="card-title">La Rioja, Capital</h4>
-            </div>
-          </div>
-              </div>
+      </div>
+    </div>
   </div>

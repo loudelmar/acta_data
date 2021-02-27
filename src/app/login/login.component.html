@@ -14,14 +14,14 @@
                     <i class="far fa-eye"></i>
                     <label for="inputPassword"></label>
                   </div>
-                  <button class="btn btn-block btn-primary btn-ingresar text-uppercase" type="submit">Ingresar</button>
+                  <button class="btn btn-block btn-primary btn-ingresar text-uppercase" type="submit" [routerLink]="['/consulta']">Ingresar</button>
                   <div class="center">
-                  <a href="#" class="btn-pass">Olvidé mi contraseña</a>
+                  <a href="#" class="btn-pass" [routerLink]="['/olvide-contra']">Olvidé mi contraseña</a>
                   </div>
                   <br>
                   <hr class="my-1">
                   <div class="center">
-                    <a href="#" class="btn-registrar text-uppercase">Registrarme</a>
+                    <a href="#" class="btn-registrar text-uppercase" [routerLink]="['/registro']">Registrarme</a>
                   </div>
                 </form>
               </div>
