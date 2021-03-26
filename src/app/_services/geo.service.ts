@@ -15,11 +15,21 @@ export class GeoService {
 
   /**  */
   getLocalidades (){
-    return this.http.get('');
+    return this.http.get(this.apiUrl + 'localidades_por_departamento');
   }
   /**  */
   getDepartamentos (){
-    return this.http.get('');
+    return this.http.get(this.apiUrl + 'departamentos_por_provincia');
+  }
+
+  /**  */
+  getProvincias (){
+    return this.http.get(this.apiUrl + 'provincias_por_pais');
+  }
+  
+  /**  */
+  getPaises (){
+    return this.http.get(this.apiUrl + 'paises_por_id');
   }
 
 }

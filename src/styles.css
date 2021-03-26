@@ -40,3 +40,5 @@
     font-size: 15px;
     color: #7A7A7A;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

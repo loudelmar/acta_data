@@ -126,6 +126,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "actadata"
 }

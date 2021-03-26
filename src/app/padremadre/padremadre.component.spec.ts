@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MisborradoresComponent } from './misborradores.component';
+import { PadremadreComponent } from './padremadre.component';
 
-describe('MisborradoresComponent', () => {
-  let component: MisborradoresComponent;
-  let fixture: ComponentFixture<MisborradoresComponent>;
+describe('PadremadreComponent', () => {
+  let component: PadremadreComponent;
+  let fixture: ComponentFixture<PadremadreComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MisborradoresComponent ]
+      declarations: [ PadremadreComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MisborradoresComponent);
+    fixture = TestBed.createComponent(PadremadreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

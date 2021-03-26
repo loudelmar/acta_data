@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit{
 
-  constructor() { }
+  fieldTextType: boolean;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(){
   }
 
-}
+    toggleFieldTextType() {
+      this.fieldTextType = !this.fieldTextType;
+    }
+
+  }

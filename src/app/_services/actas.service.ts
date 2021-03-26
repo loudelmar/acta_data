@@ -19,16 +19,24 @@ export class ActasService {
   getActas (){
     return this.http.get(this.apiUrl + 'personas_por_id_corto.php');
   } 
+
   /**  */
   getActa(id:Number){
-    return this.http.get('');
+    return this.http.get(this.apiUrl + 'personas_por_id_largo.php');
   }
+
   /**  */
   getObstetras (){
+    return this.http.get(this.apiUrl + 'obstetras.php');
+  }
+
+  /**  */
+  getClinicas (){
     return this.http.get('');
   }
+  
   /**  */
-  getEmpleados (){
+  getGeneros (){
     return this.http.get('');
   }
 }

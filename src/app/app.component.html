@@ -1,29 +1,27 @@
 <div class="mx-auto">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <img class="logo" src="assets/img/logo2.png" alt="ActaData">
+        <img class="logo" src="assets/img/logo2.png" alt="ActaData" style="cursor: pointer;" [routerLink]="['/consulta']">
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/consulta']">Inicio
-                <span class="sr-only">(current)</span>
-              </a>
+            <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" [routerLink]="['/consulta']">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/miscargas']">Actas de Nacimiento</a>
+            <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" [routerLink]="['/personas']">Carga de Personas</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/misborradores']">Personas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/misborradores']">Borradores</a>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/borradores']">Borradores</a>
               </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mi perfil</a>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Mi perfil</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Editar perfil</a>
+                <a class="dropdown-item" data-toggle="tab" href="#">Editar Perfil</a>
+                <a class="dropdown-item" data-toggle="tab" href="#">Mis Cargas</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Cerrar sesión</a>
               </div>

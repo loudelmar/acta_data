@@ -10,9 +10,14 @@
                     <label for="inputDNI"></label>
                   </div>
                   <div class="form-label-group icon-div">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required autofocus onclick="mostrarPassword()">
-                    <i class="far fa-eye"></i>
-                    <label for="inputPassword"></label>
+                    <input [type]="fieldTextType ? 'text' : 'password'" name="password" id="password" class="form-control" placeholder="Contraseña">
+                    <i class="fa"
+                      [ngClass]="{
+                        'fa-eye-slash': !fieldTextType,
+                        'fa-eye': fieldTextType
+                      }"
+                      (click)="toggleFieldTextType()"></i>
+                    <label for="password"></label>
                   </div>
                   <button class="btn btn-block btn-primary btn-ingresar text-uppercase" type="submit" [routerLink]="['/consulta']">Ingresar</button>
                   <div class="center">

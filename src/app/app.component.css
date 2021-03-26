@@ -1,12 +1,15 @@
 .logo{
-    width: 5%;
+    width: 6%;
     margin-right: 30px;
     margin-left: 20px;
+    border: none;
+    outline: none;
 }
 .nav-link{
     font-family: "poppins light";
     font-size: 15px;
 }
+
 .nav-item{
     margin-right: 25px;
 }
