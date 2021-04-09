@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 .form-label-group input {
     height: 3rem;
     border-radius: 2rem;
@@ -33,6 +34,7 @@
     font-weight: bold;
     font-size: 22px;
     color: #4B5057;
+    background-color: transparent !important;
   }
   .card-title{
     font-family: 'poppins';
@@ -42,3 +44,6 @@
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+i{
+  cursor: pointer;
+}

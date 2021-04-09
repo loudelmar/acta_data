@@ -3,32 +3,22 @@
        <div class="busqueda">
           <form class="form-control-lg my-lg-5">
             <input class="form-control" type="text" placeholder="Buscar acta de nacimiento">
-            <i class="fas fa-search"></i>
+            <a href="#"><i class="fas fa-search"></i></a>
           </form>
           </div>
           <div class="container">
             <h1 class="titulo">Mis borradores</h1>
-			<div class="card">
-				<div class="card-header">Lede, Lourdes del Mar</div>
-				<div class="card-body">
-        <h4 class="card-title">40.775.265</h4>
-        <h4 class="card-title">17/02/1998</h4>
-        <h4 class="card-title">La Rioja, Capital</h4>
-        <i class="fas fa-pen"></i>
-        <i class="fas fa-trash"></i>
-				</div>
-			</div>
+      <div *ngFor="let inscripto of inscriptos">
+        <div class="card">
+          <div class="card-header">{{inscripto.apellido + ', ' + inscripto.nombre}}</div>
+          <div class="card-body">
+            <h4 class="card-title">{{inscripto.dni}}</h4>
+            <h4 class="card-title">{{inscripto.fechaNacimiento}}</h4>
+            <h4 class="card-title">{{inscripto.localidad + ', ' + inscripto.departamento}}</h4>
+            <i class="fas fa-pen" ng-click="editar(inscripto.id)"></i>
+            <i class="fas fa-trash"></i>
           </div>
-          <div class="container">
-            <div class="card">
-              <div class="card-header">Lede, Lourdes del Mar</div>
-              <div class="card-body">
-              <h4 class="card-title">40.775.265</h4>
-              <h4 class="card-title">17/02/1998</h4>
-              <h4 class="card-title">La Rioja, Capital</h4>
-              <i class="fas fa-pen"></i>
-              <i class="fas fa-trash"></i>
-              </div>
-            </div>
+        </div>
+      </div>
     </div>
 

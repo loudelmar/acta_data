@@ -6,19 +6,24 @@ import { BorradoresComponent } from './borradores/borradores.component';
 import { CargasComponent } from './cargas/cargas.component';
 import { OlvidecontraComponent } from './olvidecontra/olvidecontra.component';
 import { PersonasComponent } from './personas/personas.component';
-import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { ObstetrasComponent } from './obstetras/obstetras.component';
+import { CerrarsesionComponent } from './cerrarsesion/cerrarsesion.component';
+import { EditarperfilComponent } from './editarperfil/editarperfil.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
+import { ClinicasComponent } from './clinicas/clinicas.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'consulta', component: ConsultaComponent},
-  {path: 'cargas', component: CargasComponent},
   {path: 'borradores', component: BorradoresComponent},
-  {path: 'olvide-contra', component: OlvidecontraComponent},
-  {path: 'registro', component: RegistrarseComponent},
-  {path: 'personas', component: PersonasComponent},
-  {path: 'obstetras', component: ObstetrasComponent}
-  
+  {path: 'cargas', component: CargasComponent},
+  {path: 'cerrarsesion', component: CerrarsesionComponent},
+  {path: 'clinicas', component: ClinicasComponent},
+  {path: 'consulta', component: ConsultaComponent},
+  {path: 'editarperfil', component: EditarperfilComponent},
+  {path: 'empleados', component: EmpleadosComponent},
+  {path: '', component: LoginComponent},
+  {path: 'obstetras', component: ObstetrasComponent},
+  {path: 'olvidecontra', component: OlvidecontraComponent},
+  {path: 'personas', component: PersonasComponent}
 ];
 
 @NgModule({

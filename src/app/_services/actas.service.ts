@@ -32,11 +32,12 @@ export class ActasService {
 
   /**  */
   getClinicas (){
-    return this.http.get('');
+    return this.http.get(this.apiUrl + 'clinicas.php');
   }
-  
+
   /**  */
-  getGeneros (){
-    return this.http.get('');
+  getEmpleados (){
+    return this.http.get(this.apiUrl + 'empleados.php');
   }
+
 }
