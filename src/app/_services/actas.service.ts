@@ -17,7 +17,7 @@ export class ActasService {
    * Devuelve un observable con data sobre las actas
    */
   getActas (){
-    return this.http.get(this.apiUrl + 'personas_por_id_corto.php');
+    return this.http.get(this.apiUrl + 'actas.php');
   } 
 
   /**  */
