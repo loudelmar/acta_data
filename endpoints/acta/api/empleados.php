@@ -6,15 +6,16 @@ header('Access-Control-Allow-Methods: GET, POST');
 include('conexion.php');
 
 #Params
-$res = $mysqli->query("SELECT DISTINCT empleados.email AS Mail,
-inscriptos.dni AS dni,
-personas.nombre AS nombre,
-personas.apellido AS apellido,
-inscriptos.fecha_nacimiento AS fechaNacimiento,
-sectores_trabajo.nombre AS sectorTrabajo,
-pregs_seguridad.preg_seguridad AS preguntaSeguridad,
-pregs_seguridad.respuesta AS respuestaPreguntaSeguridad,
-empleados.archivo_empleado AS fotoEmpleado
+$res = $mysqli->query("SELECT 
+    empleados.email AS Mail,
+    inscriptos.dni AS dni,
+    personas.nombre AS nombre,
+    personas.apellido AS apellido,
+    inscriptos.fecha_nacimiento AS fechaNacimiento,
+    sectores_trabajo.nombre AS sectorTrabajo,
+    pregs_seguridad.preg_seguridad AS preguntaSeguridad,
+    pregs_seguridad.respuesta AS respuestaPreguntaSeguridad,
+    empleados.archivo_empleado AS fotoEmpleado
 FROM empleados
 INNER JOIN inscriptos ON inscriptos.id_nacido=empleados.id_nacido
 INNER JOIN personas ON personas.id_persona=empleados.id_persona
@@ -24,7 +25,7 @@ ORDER BY empleados.id_empleado");
 
 $json_res = array();
 
-while($f = $res->fetch_object()){
+while ($f = $res->fetch_object()) {
     array_push($json_res, $f);
 }
 

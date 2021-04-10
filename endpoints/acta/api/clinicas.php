@@ -13,7 +13,7 @@ ORDER BY clinicas.nombre");
 
 $json_res = array();
 
-while($f = $res->fetch_object()){
+while ($f = $res->fetch_object()) {
     array_push($json_res, $f);
 }
 

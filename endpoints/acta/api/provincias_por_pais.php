@@ -6,13 +6,14 @@ header('Access-Control-Allow-Methods: GET, POST');
 include('conexion.php');
 
 #Params
-$res = $mysqli->query("SELECT prov.nombre
-                        FROM provincias AS prov
-                        INNER JOIN paises ON paises.id=prov.id_pais
-                        ORDER BY prov.nombre");
+$res = $mysqli->query("SELECT provincias.nombre
+    FROM provincias
+    INNER JOIN paises ON paises.id_pais=provincias.id_pais
+    ORDER BY provincias.nombre
+");
 $json_res = array();
 
-while($f = $res->fetch_object()){
+while ($f = $res->fetch_object()) {
     array_push($json_res, $f);
 }
 
