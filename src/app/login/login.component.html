@@ -1,35 +1,34 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">   
-    <div class="container">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-          <div class="my-5">
-            <img class="logo" src="assets/img/logo.png" alt="ActaData">
-              <div class="card-body">
-                <form>
-                  <div class= "form-label-group">
-                    <input type="text" id= "inputDNI" class="form-control" placeholder="DNI" required autofocus>
-                    <label for="inputDNI"></label>
-                  </div>
-                  <div class="form-label-group icon-div">
-                    <input [type]="fieldTextType ? 'text' : 'password'" name="password" id="password" class="form-control" placeholder="Contraseña">
-                    <i class="fa"
-                      [ngClass]="{
+<div class="container">
+  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="my-5">
+      <img class="logo" src="assets/img/logo.png" alt="ActaData">
+      <div class="card-body">
+        <form>
+          <div class="form-label-group">
+            <input type="text" id="inputDNI" class="form-control" placeholder="DNI" required autofocus>
+            <label for="inputDNI"></label>
+          </div>
+          <div class="form-label-group icon-div">
+            <input [type]="fieldTextType ? 'text' : 'password'" name="password" id="password" class="form-control"
+              placeholder="Contraseña">
+            <i class="fa" [ngClass]="{
                         'fa-eye-slash': !fieldTextType,
                         'fa-eye': fieldTextType
-                      }"
-                      (click)="toggleFieldTextType()"></i>
-                    <label for="password"></label>
-                  </div>
-                  <button class="btn btn-block btn-primary btn-ingresar text-uppercase" type="submit" [routerLink]="['/consulta']">Ingresar</button>
-                  <div class="center">
-                  <a href="#" class="btn-pass" [routerLink]="['/olvide-contra']">Olvidé mi contraseña</a>
-                  </div>
-                  <br>
-                  <hr class="my-1">
-                  <div class="center">
-                    <a href="#" class="btn-registrar text-uppercase" [routerLink]="['/registro']">Registrarme</a>
-                  </div>
-                </form>
-              </div>
-            </div>
+                      }" (click)="toggleFieldTextType()"></i>
+            <label for="password"></label>
           </div>
-        </div>
+          <button class="btn btn-block btn-primary btn-ingresar text-uppercase" type="submit"
+            [routerLink]="['/consulta']">Ingresar</button>
+          <div class="center">
+            <a href="#" class="btn-pass" [routerLink]="['/olvide-contra']">Olvidé mi contraseña</a>
+          </div>
+          <br>
+          <hr class="my-1">
+          <div class="center">
+            <a href="#" class="btn-registrar text-uppercase" [routerLink]="['/registro']">Registrarme</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

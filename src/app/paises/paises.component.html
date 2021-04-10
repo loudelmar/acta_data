@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row mt-3 justify-content-md-center">
+        <h3 class="panel-title">Demo simple para la gesión de países</h3>
+    </div>
+    <!-- text input & button -->
+    <div class="row mt-3 justify-content-md-center">
+        <div class="col-6">
+            <div class="input-group mb-3">
+                <input [(ngModel)]="nombrePais" type="text" class="form-control" placeholder="Ej. Argentina">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button" (click)="crear()">
+                        <i class="fas fa-plus"></i>
+                        Agregar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- list -->
+    <div class="row mt-3 justify-content-md-center">
+        <div class="col-6">
+            <div class="panel panel-default">
+                <ul id="list" class="list-group" *ngFor="let pais of paises">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{pais.nombre}}
+                        <button type="button" class="badge" (click)="eliminar(pais.id_pais)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,10 +5,12 @@ header('Access-Control-Allow-Methods: GET, POST');
 <?php
 include('conexion.php');
 
+# TODO: auth + read policy check
+# TODO: sanitize params
+# TODO: improve response
+
 #Params
-$res = $mysqli->query("SELECT paises.nombre
-                        FROM paises
-                        ORDER BY paises.nombre");
+$res = $mysqli->query("SELECT * FROM paises ORDER BY paises.nombre");
 $json_res = array();
 
 while ($f = $res->fetch_object()) {

@@ -26,10 +26,32 @@ export class GeoService {
   getProvincias (){
     return this.http.get(this.apiUrl + 'provincias_por_pais');
   }
-  
-  /**  */
-  getPaises (){
-    return this.http.get(this.apiUrl + 'paises_por_id');
+
+  /** Gets a list of available countries */
+  public getPaises(){
+    return this.http.get(this.apiUrl + 'paises_por_id.php');
+  }
+
+  /**
+   * Creates a new country
+   * @param name - The country name
+   */
+   public createPais(name: string){
+    const formData = new FormData();
+    formData.append('nombre', name);
+
+    return this.http.post(this.apiUrl + 'pais_nuevo.php', formData);
+  }
+
+  /**
+   * Deletes a country by id
+   * @param id - The country id
+   */
+  public deletePais(id: string){
+    const formData = new FormData();
+    formData.append('id', id);
+
+    return this.http.post(this.apiUrl + 'pais_eliminar.php', formData);
   }
 
 }

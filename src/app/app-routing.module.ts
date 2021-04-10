@@ -11,6 +11,7 @@ import { CerrarsesionComponent } from './cerrarsesion/cerrarsesion.component';
 import { EditarperfilComponent } from './editarperfil/editarperfil.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { ClinicasComponent } from './clinicas/clinicas.component';
+import { PaisesComponent } from './paises/paises.component';
 
 const routes: Routes = [
   {path: 'borradores', component: BorradoresComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'obstetras', component: ObstetrasComponent},
   {path: 'olvidecontra', component: OlvidecontraComponent},
+  {path: 'paises', component: PaisesComponent},
   {path: 'personas', component: PersonasComponent}
 ];
 
