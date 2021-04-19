@@ -1,17 +1,5 @@
 <div class="container">
-    <div class="alert alert-dismissible alert-primary">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <h4 class="alert-heading">¡ATENCIÓN!</h4>
-        <p class="mb-0">Deberá responder las preguntas de seguridad seleccionadas durante el registro en el sistema.
-            <br>
-            En el caso que los datos sean incorrectos, tendrá que comunicarse con servicio técnico.
-        </p>
-    </div>
     <h1 class="titulo">Olvidé mi contraseña</h1>
-    <div class="form form-label-group">
-        <label for="dni">Escriba su número de DNI</label>
-        <input class="form-control" id="dni" placeholder="DNI">
-    </div>
     <div class="form form-group">
         <label for="preg-seg-1">Seleccione su pregunta de seguridad</label>
         <select class="form-control" id="preg-seg-1">
@@ -27,6 +15,6 @@
         <label for="resp-preg-seg-1">Escriba su respuesta</label>
         <input class="form-control" id="resp-preg-seg-1">
     </div>
-    <button class="col-lg-2 mx-auto pull-right my-5 btn btn-block btn-primary text-uppercase" type="submit"
-    [routerLink]="['/olvide-contra-2']">Continuar</button>
+    <button class="col-lg-2 mx-auto pull-right my-5 btn btn-block btn-primary btn-ingresar text-uppercase" type="submit"
+    [routerLink]="['/olvide-contra-3']">Continuar</button>
 </div>

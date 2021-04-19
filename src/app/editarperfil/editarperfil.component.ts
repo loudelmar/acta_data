@@ -10,6 +10,6 @@ export class EditarperfilComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-
 }

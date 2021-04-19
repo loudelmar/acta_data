@@ -1,1 +1,237 @@
-<p>editarperfil works!</p>
+<div class="container">
+    <h1 class="titulo text-center">Editar Perfil</h1>
+    <div class="container-2">
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <th class="dato">DNI</th>
+                    <td class="dato">40775265</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditDni">
+                        Editar
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dato">Nombre/s</th>
+                    <td class="dato">Lourdes del Mar</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditNombre">
+                        Editar
+                        </button>
+                    </td>
+                <tr>
+                  <th class="dato">Apellido/s</th>
+                  <td class="dato">Lede</td>
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditApellido">
+                      Editar
+                      </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="dato">Fecha Nacimiento</th>
+                  <td class="dato">17/02/1998</td>
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditFechaNac">
+                      Editar
+                      </button>
+                  </td>
+              </tr>
+              <tr>
+                <th class="dato">Sector Trabajo</th>
+                <td class="dato">Archivo</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditSector">
+                    Editar
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th class="dato">Mail</th>
+                <td class="dato">lourdeslede17....</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditMail">
+                    Editar
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th class="dato">Contraseña</th>
+                <td class="dato">**********</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditContra">
+                    Editar
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Modal DNI -->
+<div class="modal fade" id="modalEditDni" tabindex="-1" role="dialog" aria-labelledby="modalEditDniLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEditDniLabel">Modificar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="inputdefault">DNI</label>
+            <input class="form-control" id="inputdefault" type="text">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Descartar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Modal Nombre/s -->
+<div class="modal fade" id="modalEditNombre" tabindex="-1" role="dialog" aria-labelledby="modalEditNombreLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditNombreLabel">Modificar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputdefault">Nombre/s</label>
+          <input class="form-control" id="inputdefault" type="text">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Descartar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Apellido/s -->
+<div class="modal fade" id="modalEditApellido" tabindex="-1" role="dialog" aria-labelledby="modalEditApellidoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditApellidoLabel">Modificar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputdefault">Apellido/s</label>
+          <input class="form-control" id="inputdefault" type="text">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Descartar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Fecha de Nacimiento -->
+<div class="modal fade" id="modalEditFechaNac" tabindex="-1" role="dialog" aria-labelledby="modalEditFechaNacLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditFechaNacLabel">Modificar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputdefault">Fecha de Nacimiento</label>
+          <input class="form-control" id="inputdefault" type="date">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Descartar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Sector de Trabajo -->
+<div class="modal fade" id="modalEditSector" tabindex="-1" role="dialog" aria-labelledby="modalEditSectorLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditSectorLabel">Modificar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputdefault">Sector de Trabajo</label>
+          <select class="form-control" id="inputdefault">
+            <option>Archivo</option>
+            <option>Recepción</option>
+            <option>Entrega de documentación</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Descartar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Mail -->
+<div class="modal fade" id="modalEditMail" tabindex="-1" role="dialog" aria-labelledby="modalEditMailLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditMailLabel">Modificar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputdefault">Ingrese su mail actual</label>
+          <input class="form-control" id="inputdefault" type="email">
+        </div>
+        <div class="form-group">
+          <label for="inputdefault">Ingrese su nuevo mail</label>
+          <input class="form-control" id="inputdefault" type="email">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Descartar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Contraseña -->
+<div class="modal fade" id="modalEditContra" tabindex="-1" role="dialog" aria-labelledby="modalEditContraLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditContraLabel">Modificar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputdefault">Ingrese su contraseña actual</label>
+          <input class="form-control" id="inputdefault" type="password">
+        </div>
+        <div class="form-group">
+          <label for="inputdefault">Ingrese su nueva contraseña</label>
+          <input class="form-control" id="inputdefault" type="password">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Descartar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

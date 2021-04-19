@@ -3,30 +3,33 @@
     <div class="my-5">
       <img class="logo" src="assets/img/logo.png" alt="ActaData">
       <div class="card-body">
-        <form>
+        <form formGroup="loginForm" (ngSubmit)="onSubmit()">
           <div class="form-label-group">
-            <input type="text" id="inputDNI" class="form-control" placeholder="DNI" required autofocus>
             <label for="inputDNI"></label>
+            <input type="text" id="inputDNI" class="form-control" placeholder="DNI" formControlName="dni" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" required autofocus>
+            <div *ngIf="submitted && f.dni.errors" class="invalid-feedback">
+              <div *ngIf="f.dni.errors.required">Escribe un DNI</div>
+            </div>
           </div>
           <div class="form-label-group icon-div">
+            <label for="password"></label>
             <input [type]="fieldTextType ? 'text' : 'password'" name="password" id="password" class="form-control"
-              placeholder="Contraseña">
+              placeholder="Contraseña" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
             <i class="fa" [ngClass]="{
                         'fa-eye-slash': !fieldTextType,
                         'fa-eye': fieldTextType
                       }" (click)="toggleFieldTextType()"></i>
-            <label for="password"></label>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
           </div>
-          <button class="btn btn-block btn-primary btn-ingresar text-uppercase" type="submit"
-            [routerLink]="['/consulta']">Ingresar</button>
+          <button [disabled]="loading" class="btn btn-block btn-primary btn-ingresar text-uppercase" type="submit"
+            [routerLink]="['/inicio']"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Ingresar</button>
+            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
           <div class="center">
             <a href="#" class="btn-pass" [routerLink]="['/olvide-contra']">Olvidé mi contraseña</a>
           </div>
           <br>
-          <hr class="my-1">
-          <div class="center">
-            <a href="#" class="btn-registrar text-uppercase" [routerLink]="['/registro']">Registrarme</a>
-          </div>
         </form>
       </div>
     </div>

@@ -17,6 +17,7 @@
   .container{
     align-items: center;
     justify-content: center;
+    padding-bottom: 50px;
   }
   .card{
     height: auto !important;
@@ -43,7 +44,17 @@
     color: #7A7A7A;
   }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'poppins' }
 i{
   cursor: pointer;
+}
+
+.modal-title{
+  font-family: 'poppins';
+  color: #4B5057;
+}
+
+.btn-secondary{
+  background-color: #979797 !important;
+  border-radius: 2rem !important;
 }
