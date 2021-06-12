@@ -1,0 +1,25 @@
+.titulo{
+    font-family: 'poppins';
+    color: #4B5057;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+.alert{
+    font-family: 'poppins';
+    color: #C30A20;
+    margin-top: 50px;
+}
+.form-control{
+    height: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
+    font-size: 14px;
+    color: #7A7A7A;
+}
+.form{
+    font-family: 'poppins';
+    color: #7A7A7A;
+    margin-top: 30px;
+}

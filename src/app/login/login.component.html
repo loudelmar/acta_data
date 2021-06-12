@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="my-5">
+            <img class="logo" src="assets/img/logo.png" alt="ActaData" />
+            <div class="card-body">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-label-group">
+                        <label for="dni"></label>
+                        <input type="text" placeholder="DNI" formControlName="dni" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dni.errors }" />
+                        <div *ngIf="submitted && f.dni.errors" class="invalid-feedback">
+                            <div *ngIf="f.dni.errors.required">Debe ingresar un DNI</div>
+                        </div>
+                    </div>
+                    <div class="form-label-group">
+                        <label for="password"></label>
+                        <input type="password" placeholder="Contraseña" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Escriba su contraseña</div>
+                        </div>
+                    </div>
+                    <button [disabled]="loading" class="btn btn-block btn-primary btn-ingresar text-uppercase">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  Ingresar
+              </button>
+                    <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+
+.form-label-group input {
+    height: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
+    font-family: 'poppins';
+    font-size: 13px;
+}
+
+.btn-primary {
+    background-color: #C30A20 !important;
+    border-radius: 2rem !important;
+}
+
+.navbar {
+    background-color: #C30A20 !important;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: auto !important;
+    margin-left: 30px;
+    float: left;
+    width: 45%;
+    position: relative;
+    border-radius: 3rem !important;
+    padding-left: 10px;
+    padding-top: 5px;
+    box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
+}
+
+.card-header {
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 22px;
+    color: #4B5057;
+    background-color: transparent !important;
+}
+
+.card-title {
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 15px;
+    color: #7A7A7A;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'poppins'
+}
+
+i {
+    cursor: pointer;
+}
+
+.modal-title {
+    font-family: 'poppins';
+    color: #4B5057;
+}
+
+.btn-secondary {
+    background-color: #979797 !important;
+    border-radius: 2rem !important;
+}
+
+.alert-danger {
+    color: #C30A20 !important;
+    background-color: white !important;
+    border: none !important;
+    text-align: center;
+    font-family: 'poppins';
+}
+
+.invalid-feedback {
+    font-family: 'poppins';
+    color: #C30A20 !important;
+    border: 1px #C30A20 !important;
+}

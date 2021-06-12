@@ -1,0 +1,29 @@
+.titulo {
+    font-family: 'poppins';
+    color: #4B5057;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+
+.txt {
+    font-family: 'poppins';
+    color: #4B5057;
+    margin-left: 10px;
+}
+
+.btns {
+    font-size: 15px;
+    font-family: "poppins light";
+    height: 4rem;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.container-2 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}

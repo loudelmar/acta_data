@@ -1,0 +1,35 @@
+<div class="mx-auto">
+    <nav class="navbar navbar-expand-lg navbar-dark" *ngIf="user">
+        <img class="logo" src="assets/img/logo2.png" alt="ActaData" style="cursor: pointer;" [routerLink]="['/inicio']">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['/inicio']">Inicio</a>
+                </li>
+                <li class="nav-item-2" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['/cargas']" *ngIf="isAdmin">Carga de Empleados</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['/carga-actas']" *ngIf="isUser">Carga</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['/busqueda']" *ngIf="isUser">Búsqueda</a>
+                </li>
+            </ul>
+            <div class="btn-group">
+                <i class="fas fa-user-circle fa-2x" data-toggle="dropdown"></i>
+                <i class="fas fa-caret-down fa-xs" data-toggle="dropdown"></i>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li><a class="dropdown-item" [routerLink]="['/editar-perfil']" *ngIf="isUser"><i class="fas fa-pen"></i>Editar Perfil</a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/cargas']" *ngIf="isUser">Mis Cargas</a></li>
+                    <hr class="my-2" *ngIf="isUser">
+                    <li><a class="dropdown-item" (click)="logout()" data-toggle="modal" data-target="#modalCerrarSesion"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
