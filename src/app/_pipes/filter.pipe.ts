@@ -1,14 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { ADTSettings } from 'angular-datatables/src/models/settings';
 
 @Pipe({ name: 'appFilter' })
 export class FilterPipe implements PipeTransform {
-  /**
-   * Transform
-   *
-   * @param {any[]} items
-   * @param {string} searchText
-   * @returns {any[]}
-   */
+
   transform(items: any[], searchText: string): any[] {
     if (!items) {
       return [];

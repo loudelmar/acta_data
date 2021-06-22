@@ -1,15 +1,109 @@
-<div>
+<h5>Filter Row</h5>
+<p>Filters are displayed inline within a separate row.</p>
+<p-table #dt2 [value]="actas" dataKey="id" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-customers" [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [globalFilterFields]="['name','country.name','representative.name','status']">
+    <ng-template pTemplate="caption">
+        <div class="p-d-flex">
+            <span class="p-input-icon-left p-ml-auto">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" (input)="dt2.filterGlobal($event.target.value, 'contains')" placeholder="Search keyword" />
+            </span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Agent</th>
+            <th>Status</th>
+            <th style="width: 6rem">Verified</th>
+        </tr>
+        <tr>
+            <th>
+                <p-columnFilter type="text" field="name"></p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter type="text" field="country.name"></p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter field="representative" matchMode="in" [showMenu]="false">
+                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                        <p-multiSelect [ngModel]="value" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name">
+                            <ng-template let-option pTemplate="item">
+                                <div class="p-multiselect-representative-option">
+                                    <span class="p-ml-1">{{option.name}}</span>
+                                </div>
+                            </ng-template>
+                        </p-multiSelect>
+                    </ng-template>
+                </p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter field="status" matchMode="equals" [showMenu]="false">
+                    <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                        <p-dropdown [ngModel]="value" [options]="statuses" (onChange)="filter($event.value)" placeholder="Any" [showClear]="true">
+                            <ng-template let-option pTemplate="item">
+                                <span [class]="'customer-badge status-' + option.value">{{option.label}}</span>
+                            </ng-template>
+                        </p-dropdown>
+                    </ng-template>
+                </p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter type="boolean" field="verified"></p-columnFilter>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-customer>
+        <tr>
+            <td>
+                {{customer.name}}
+            </td>
+            <td>
+                <span class="image-text">{{customer.country.name}}</span>
+            </td>
+            <td>
+                <span class="image-text">{{customer.representative.name}}</span>
+            </td>
+            <td>
+                <span [class]="'customer-badge status-' + customer.status">{{customer.status}}</span>
+            </td>
+            <td>
+                <i class="pi" [ngClass]="{'true-icon pi-check-circle': customer.verified, 'false-icon pi-times-circle': !customer.verified}"></i>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="5">No customers found.</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+<!--<div>
     <div class="busqueda">
-        <form class="form-control-lg">
-            <input type="text" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="searchText" placeholder="Buscar acta de nacimiento" autofocus>
-            <a href="#"><i class="fas fa-search"></i></a>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item" *ngFor="let c of characters | appFilter: searchText" appHighlight [searchedWord]="searchText" [content]="c" [classToApply]="'font-weight-bold'" [setTitle]="'true'">
-                    {{c}}
-                </li>
-            </ul>
-        </form>
-        <div class="container">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userRecords | filter:filterTerm">
+                    <td>{{user.name}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <div class="container">
             <div class="col-sm-12">
                 <div class="input-group">
                     <div class="input-group-btn">
@@ -42,7 +136,9 @@
                 </div>
             </div>
         </div>
-    </div>
+        -->
+
+<!--</div>
     <div class="container">
         <div class="card">
             <div class="card-header">Lede, Lourdes del Mar</div>
@@ -54,3 +150,4 @@
         </div>
     </div>
 </div>
+-->
