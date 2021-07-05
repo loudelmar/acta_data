@@ -1,4 +1,4 @@
-.titulo{
+.titulo {
     font-family: 'poppins';
     color: #4B5057;
     font-size: 25px;
@@ -7,7 +7,7 @@
     margin-top: 50px;
 }
 
-.table{
+.table {
     width: 50%;
     height: 100px;
     font-size: 15px;
@@ -15,36 +15,37 @@
     color: #7a7a7a;
 }
 
-.container-2{
+.container-2 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dato{
+.dato {
     padding-top: 20px;
     cursor: default;
 }
 
-td, th{
+td,
+th {
     border: none;
     width: 1%;
 }
 
-th{
+th {
     text-align: right;
 }
 
-.btn{
+.btn {
     font-family: 'poppins';
     font-size: 15px;
     font-weight: normal;
 }
 
-.form-group label{
-  font-family: 'poppins';
-  font-weight: 600;
-  margin-left: 5px;
-  font-size: 18px;
-  color: #4B5057;
+.form-group label {
+    font-family: 'poppins';
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 18px;
+    color: #4B5057;
 }

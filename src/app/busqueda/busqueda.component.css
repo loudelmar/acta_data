@@ -1,15 +1,16 @@
-input{
+input {
     font-size: 14px;
     font-weight: 300;
 }
+
 i {
     color: #a7a7a7;
     position: absolute;
     right: 40px;
     top: 18px;
-  }
+}
 
-.busqueda{
+.busqueda {
     position: relative;
     width: 85%;
     margin-left: auto;
@@ -17,16 +18,30 @@ i {
     margin-top: 50px;
     margin-bottom: 30px;
 }
-.form-control{
+
+.form-control {
     font-family: 'poppins';
     height: 2.5rem !important;
     border-radius: 2rem !important;
     box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
-  }
-  .titulo{
-      font-family: 'poppins';
-      color: #4B5057;
-      font-size: 25px;
-      margin-bottom: 20px;
-      margin-left: 15px;
-  }
+}
+
+.titulo {
+    font-family: 'poppins';
+    color: #4B5057;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.table {
+    font-family: "poppins";
+    font-size: 15px;
+    text-align: center;
+}
+
+.tabla {
+    background-color: #C30A20;
+    color: white;
+    align-items: center;
+}
