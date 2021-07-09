@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ConsultaComponent } from './consulta/consulta.component';
 import { LoginComponent } from './login/login.component';
-import { CargasComponent } from './cargas/cargas.component';
 import { OlvidecontraComponent } from './olvidecontra/olvidecontra.component';
 import { ObstetrasComponent } from './obstetras/obstetras.component';
 import { CerrarsesionComponent } from './cerrarsesion/cerrarsesion.component';
@@ -18,7 +17,6 @@ import { Olvidecontra3Component } from './olvidecontra3/olvidecontra3.component'
 import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
-  {path: 'cargas', component: CargasComponent},
   {path: 'cerrar-sesion', component: CerrarsesionComponent},
   {path: 'clinicas', component: ClinicasComponent},
   {path: 'consulta', component: ConsultaComponent},

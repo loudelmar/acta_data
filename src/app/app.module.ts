@@ -33,7 +33,6 @@ import { AppComponent } from './app.component';
 
 import { LoginComponent } from './login/login.component';
 import { ConsultaComponent } from './consulta/consulta.component';
-import { CargasComponent } from './cargas/cargas.component';
 import { EditarperfilComponent } from './editarperfil/editarperfil.component';
 import { OlvidecontraComponent } from './olvidecontra/olvidecontra.component';
 import { CerrarsesionComponent } from './cerrarsesion/cerrarsesion.component';
@@ -61,7 +60,6 @@ import { HighlightDirective } from './_directives/highlight.directive';
     EditarperfilComponent,
     OlvidecontraComponent,
     CerrarsesionComponent,
-    CargasComponent,
     EmpleadosComponent,
     ObstetrasComponent,
     ClinicasComponent,
