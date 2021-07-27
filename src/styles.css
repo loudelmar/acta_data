@@ -2,15 +2,15 @@
 
 .form-label-group input {
     height: 3rem;
-    border-radius: 2rem;
-    box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1.5rem 0.1rem rgb(226, 226, 226);
     font-family: 'poppins';
     font-size: 13px;
 }
 
 .btn-primary {
     background-color: #C30A20 !important;
-    border-radius: 2rem !important;
+    border-radius: 1rem !important;
 }
 
 .navbar {
@@ -86,3 +86,5 @@ i {
     color: #C30A20 !important;
     border: 1px #C30A20 !important;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

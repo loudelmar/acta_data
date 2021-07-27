@@ -1,7 +1,7 @@
 .titulo {
     font-family: 'poppins';
-    color: #4B5057;
-    font-size: 25px;
+    color: #C30A20;
+    font-size: 30px;
     margin-bottom: 20px;
     margin-left: 15px;
     margin-top: 50px;
@@ -9,7 +9,7 @@
 
 .txt {
     font-family: 'poppins';
-    color: #4B5057;
+    color: #C30A20;
     margin-left: 10px;
 }
 
@@ -26,4 +26,8 @@
     display: block;
     align-items: center;
     justify-content: center;
+}
+
+.fas {
+    margin-left: 10px;
 }

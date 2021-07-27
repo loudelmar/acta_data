@@ -1,18 +1,66 @@
-<div>
-    <div class="container">
-        <h1 class="titulo">Mis cargas</h1>
-        <div *ngFor="let inscripto of inscriptos">
-            <div class="card">
-                <div class="card-header">{{inscripto.apellido + ', ' + inscripto.nombre}}</div>
-                <div class="card-body">
-                    <h4 class="card-title"><strong>DNI:</strong> {{inscripto.dni}}</h4>
-                    <h4 class="card-title"><strong>Fecha de nacimiento:</strong> {{inscripto.fechaNacimiento}}</h4>
-                    <h4 class="card-title"><strong>Fecha de inscripción:</strong> {{inscripto.fechaInscripcion}}</h4>
-                    <h4 class="card-title"><strong>Ubicación:</strong> {{inscripto.localidad + ', ' + inscripto.departamento}}</h4>
-                    <h4 class="card-title"><strong>Clínica:</strong> {{inscripto.clinica}}</h4>
-                    <i class="fas fa-pen" ng-click="editar(inscripto.id)"></i>
-                    <i class="fas fa-trash"></i>
-                </div>
-            </div>
-        </div>
+<div class="container">
+    <h1 class="titulo text-center">Cargar un acta</h1>
+    <p class="txt text-center">Complete todos los campos requeridos para poder
+        <br> guardar el acta como borrador o de manera definitiva.</p>
+    <div class="container-2">
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <th class="dato">DNI</th>
+                    <td class="dato">40775265</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditDni">
+                    Editar
+                    </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dato">Nombre/s</th>
+                    <td class="dato">Lourdes del Mar</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditNombre">
+                    Editar
+                    </button>
+                    </td>
+                    <tr>
+                        <th class="dato">Apellido/s</th>
+                        <td class="dato">Lede</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditApellido">
+                  Editar
+                  </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="dato">Fecha Nacimiento</th>
+                        <td class="dato">17/02/1998</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditFechaNac">
+                  Editar
+                  </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="dato">Sector Trabajo</th>
+                        <td class="dato">Archivo</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditSector">
+                Editar
+                </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="dato">Mail</th>
+                        <td class="dato">lourdeslede17....</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditMail">
+                Editar
+                </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="dato">Contraseña</th>
+                        <td class="dato">**********</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditContra">
+                Editar
+                </button>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
     </div>
+</div>

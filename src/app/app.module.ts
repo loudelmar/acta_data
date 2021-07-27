@@ -14,18 +14,6 @@ import { MatTableFilter, MatTableFilterModule } from 'mat-table-filter';
 import { DataTablesModule } from "angular-datatables";
 import { ActasService } from './busqueda/actas-service';
 
-//primeNG
-import {TableModule} from 'primeng/table';
-import {ToastModule} from 'primeng/toast';
-import {CalendarModule} from 'primeng/calendar';
-import {SliderModule} from 'primeng/slider';
-import {MultiSelectModule} from 'primeng/multiselect';
-import {ContextMenuModule} from 'primeng/contextmenu';
-import {DialogModule} from 'primeng/dialog';
-import {ButtonModule} from 'primeng/button';
-import {DropdownModule} from 'primeng/dropdown';
-import {ProgressBarModule} from 'primeng/progressbar';
-import {InputTextModule} from 'primeng/inputtext';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -51,6 +39,7 @@ import { Olvidecontra3Component } from './olvidecontra3/olvidecontra3.component'
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AdminComponent } from './admin/admin.component';
 import { HighlightDirective } from './_directives/highlight.directive';
+import { MiscargasComponent } from './miscargas/miscargas.component';
 
 @NgModule({
   declarations: [
@@ -71,22 +60,12 @@ import { HighlightDirective } from './_directives/highlight.directive';
     Olvidecontra3Component,
     AdminComponent,
     FilterPipe,
-    HighlightDirective
+    HighlightDirective,
+    MiscargasComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    TableModule,
-    CalendarModule,
-    SliderModule,
-    DialogModule,
-    MultiSelectModule,
-    ContextMenuModule,
-    DropdownModule,
-    ButtonModule,
-    ToastModule,
-    InputTextModule,
-    ProgressBarModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

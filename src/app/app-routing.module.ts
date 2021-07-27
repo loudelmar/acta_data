@@ -15,6 +15,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { Olvidecontra3Component } from './olvidecontra3/olvidecontra3.component';
 import { AdminComponent } from './admin/admin.component';
+import { MiscargasComponent } from './miscargas/miscargas.component';
 
 const routes: Routes = [
   {path: 'cerrar-sesion', component: CerrarsesionComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
   {path: 'busqueda', component: BusquedaComponent},
   {path: 'inicio', component: InicioComponent},
   {path: 'olvide-contra-3', component: Olvidecontra3Component},
-  {path: 'admin', component: AdminComponent}
+  {path: 'admin', component: AdminComponent},
+  {path: 'mis-cargas', component: MiscargasComponent}
 ];
 
 @NgModule({
