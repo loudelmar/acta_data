@@ -13,7 +13,7 @@ export class UsersService {
     return this.http.post("https://reqres.in/api/login", user);
   }
 
-  setToken(token: String) {
+  setToken(token: string) {
     this.cookies.set("token", token);
   }
   getToken() {
