@@ -18,7 +18,7 @@
                             <div *ngIf="f.password.errors.required">Escriba su contraseña</div>
                         </div>
                     </div>
-                    <button [disabled]="loading" class="btn btn-block btn-primary btn-ingresar text-uppercase">
+                    <button type="submit" (click)="login()" [disabled]="loading" class="btn btn-block btn-primary btn-ingresar text-uppercase">
                   <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                   Ingresar
               </button>

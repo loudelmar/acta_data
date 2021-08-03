@@ -40,6 +40,7 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AdminComponent } from './admin/admin.component';
 import { HighlightDirective } from './_directives/highlight.directive';
 import { MiscargasComponent } from './miscargas/miscargas.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { MiscargasComponent } from './miscargas/miscargas.component';
     
   ],
   providers: [
+    CookieService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi:true},
 

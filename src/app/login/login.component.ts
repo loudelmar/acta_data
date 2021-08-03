@@ -2,17 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
 import { AuthenticationService } from '../_services';
+import { UsersService } from '../users/users.service';
 
 @Component({ templateUrl: 'login.component.html', styleUrls: ['./login.component.css'] })
 export class LoginComponent implements OnInit {
+
+    //Login con JWT
+
+    dni: string;
+    password: string;
+
+
     loginForm: FormGroup;
     loading = false;
     submitted = false;
     error = '';
 
     constructor(
+
+        //Login con JWT
+        public userService: UsersService,
+
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
@@ -23,6 +34,20 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/inicio']);
         }
     }
+
+    //Login con JWT
+    login() {
+        const user = { dni: this.dni, password: this.password };
+        this.userService.login(user).subscribe(data => {
+          this.userService.setToken(data.token);
+          this.router.navigateByUrl('/');
+        },
+        error => {
+        console.log(error);
+        });
+      }
+
+
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
