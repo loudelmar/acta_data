@@ -1,5 +1,6 @@
 .logo {
-    width: 6%;
+    width: 60px;
+    max-width: 100%;
     margin-right: 30px;
     margin-left: 20px;
     border: none;
