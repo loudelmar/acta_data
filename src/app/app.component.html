@@ -1,10 +1,10 @@
 <div class="mx-auto">
-    <nav class="navbar navbar-expand-lg navbar-dark" *ngIf="user">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <img class="logo" src="assets/img/logo2.png" alt="ActaData" style="cursor: pointer;" [routerLink]="['/inicio']">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" [routerLink]="['/inicio']" *ngIf="isUser">Inicio</a>
@@ -25,7 +25,7 @@
             <div class="btn-group">
                 <i class="fas fa-user-circle fa-2x" data-toggle="dropdown"></i>
                 <i class="fas fa-caret-down fa-xs" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <ul class="dropdown-menu dropdown-menu-lg-right" role="menu">
                     <li><a class="dropdown-item" [routerLink]="['/editar-perfil']" *ngIf="isUser"><i class="fas fa-pen"></i>Editar Perfil</a></li>
                     <li><a class="dropdown-item" [routerLink]="['/mis-cargas']" *ngIf="isUser">Mis Cargas</a></li>
                     <hr class="my-2" *ngIf="isUser">
