@@ -82,11 +82,12 @@ export class BusquedaComponent implements OnInit {
       this.res_list = [];
       setTimeout(() => {
         this.condition = false;
-        if(this.actas[i] === this.prevText.toLowerCase()
+        for(let i=0; i<this.actas.length; i++){
+          if(this.actas[i] === this.prevText.toLowerCase()
              || this.actas[i].startsWith(this.prevText)){
             this.res_cnt += 1;
             this.res_list.push(this.actas[i]);
-          
+          }
         }
       }, 3000);
       this.searchValue = null;
