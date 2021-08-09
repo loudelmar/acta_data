@@ -2,10 +2,23 @@
     <h1 class="titulo text-center">Buscar un acta</h1>
     <div class="busqueda">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Buscar..." [(ngModel)]="filterTerm">
+            <input (keyup)="onSubmit($event)" [(ngModel)]="searchValue" type="text" id="searchKey" class="form-control" placeholder="Buscar..." />
             <i class="fas fa-search"></i>
         </div>
         <p class="txt text-center">La búsqueda se puede realizar por nombre, apellido, DNI, fecha de nacimiento o lugar de nacimiento.</p>
+        <div *ngIf="condition; then block1; else block2">
+        </div>
+        <ng-template #block1>
+            <i class="fa fa-spinner fa-spin" aria-hidden="true">
+              </i> Buscando resultados para
+            <strong>{{prevText}}</strong>
+        </ng-template>
+        <ng-template #block2>
+            <h6>{{res_cnt}} Búsqueda encontrada
+                <span *ngFor="let user of actas">
+                  <strong>{{lang}}, </strong></span>
+            </h6>
+        </ng-template>
         <table class="table table-hover">
             <thead>
                 <tr class="tabla">
@@ -17,7 +30,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="tabla" *ngFor="let user of actas | filter:filterTerm">
+                <tr class="tabla" *ngFor="let user of actas">
                     <td class="txt-left">{{user.nombre}}</td>
                     <td>{{user.DNI}}</td>
                     <td>{{user.FechaNacimiento}}</td>
@@ -27,7 +40,6 @@
             </tbody>
         </table>
     </div>
-
 </div>
 
 <!-- <div class="container">
