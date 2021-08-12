@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { Actas } from './actas-model';
+import { ActasService } from './actas-service';
 
 @Component({
   selector: 'app-busqueda',
@@ -9,48 +12,32 @@ import { Component, OnInit } from '@angular/core';
 
 export class BusquedaComponent implements OnInit {
 
+  //prueba buscador
+  actas: Actas[] = [];
+  actas$: Observable<Actas[]>;
+
+  constructor(private actasService:ActasService){}
+
+  ngOnInit(){
+    this.actas$ = this.actasService.getActas$();
+    this.actas$.subscribe(actas => this.actas = actas);
+
+    error => {
+      console.log(error);
+      };
+  }
+}
+
+    //
+
+  /*
+
   searchValue: string = null;
+
   items = [];
   condition: boolean = null;
   prevText: string = '';
   nombre: string = '';
-  actas = [{
-    "nombre": "Lourdes del Mar",
-    "DNI": "40.775.265",
-    "FechaNacimiento": "17/02/1998",
-    "LugarNacimiento": "La Rioja, Capital",
-    "ActaNacimiento": "VER"
-  },
-  {
-    "nombre": "Lede, Milva Ernestina",
-    "DNI": "44.123.456",
-    "FechaNacimiento": "24/04/2004",
-    "LugarNacimiento": "La Rioja, Capital",
-    "ActaNacimiento": "VER"
-  },
-  {
-    "nombre": "Lede, Guadalupe Esmeralda",
-    "DNI": "01.234.567",
-    "FechaNacimiento": "13/11/2005",
-    "LugarNacimiento": "La Rioja, Capital",
-    "ActaNacimiento": "VER"
-  },
-  {
-    "nombre": "Lede, Ángel Gustavo",
-    "DNI": "23.670.990",
-    "FechaNacimiento": "07/01/1974",
-    "LugarNacimiento": "Buenos Aires, Capital Federal",
-    "ActaNacimiento": "VER"
-  },
-  {
-    "nombre": "Mansilla Kukulis, Susana Estela",
-    "DNI": "23.963.589",
-    "FechaNacimiento": "24/06/1974",
-    "LugarNacimiento": "La Rioja, Capital",
-    "ActaNacimiento": "VER"
-  }
-  
-];
   res_list = [];
   res_cnt: number = 0;
     
@@ -90,3 +77,4 @@ export class BusquedaComponent implements OnInit {
     this.items = Array(150).fill(0).map((x, i) => ({ id: (i + 1)}));
   }
 }
+*/
