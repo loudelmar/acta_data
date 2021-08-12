@@ -9,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class BusquedaComponent implements OnInit {
 
-  searchValue: string;
+  searchValue: string = null;
   items = [];
   condition: boolean = null;
   prevText: string = '';
+  nombre: string = '';
   actas = [{
-    "nombre": "Lede, Lourdes del Mar",
+    "nombre": "Lourdes del Mar",
     "DNI": "40.775.265",
     "FechaNacimiento": "17/02/1998",
     "LugarNacimiento": "La Rioja, Capital",
@@ -47,27 +48,6 @@ export class BusquedaComponent implements OnInit {
     "FechaNacimiento": "24/06/1974",
     "LugarNacimiento": "La Rioja, Capital",
     "ActaNacimiento": "VER"
-  },
-  {
-    "nombre": "Lede, Lourdes del Mar",
-    "DNI": "40.775.265",
-    "FechaNacimiento": "17/02/1998",
-    "LugarNacimiento": "La Rioja, Capital",
-    "ActaNacimiento": "VER"
-  },
-  {
-    "nombre": "Lede, Milva Ernestina",
-    "DNI": "44.123.456",
-    "FechaNacimiento": "24/04/2004",
-    "LugarNacimiento": "La Rioja, Capital",
-    "ActaNacimiento": "VER"
-  },
-  {
-    "nombre": "Lede, Guadalupe Esmeralda",
-    "DNI": "01.234.567",
-    "FechaNacimiento": "13/11/2005",
-    "LugarNacimiento": "La Rioja, Capital",
-    "ActaNacimiento": "VER"
   }
   
 ];
@@ -83,10 +63,10 @@ export class BusquedaComponent implements OnInit {
       setTimeout(() => {
         this.condition = false;
         for(let i=0; i<this.actas.length; i++){
-          if(this.actas[i] === this.prevText.toLowerCase()
-             || this.actas[i].startsWith(this.prevText)){
-            this.res_cnt += 1;
-            this.res_list.push(this.actas[i]);
+          if(this.nombre === this.searchValue
+             || this.nombre.startsWith(this.prevText)){
+            this.res_list.length
+            this.res_list.push(this.actas);
           }
         }
       }, 3000);
