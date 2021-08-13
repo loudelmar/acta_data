@@ -6,6 +6,16 @@
             <i class="fas fa-search"></i>
         </div>
         <p class="txt text-center">La búsqueda se puede realizar por nombre, apellido, DNI, fecha de nacimiento o lugar de nacimiento.</p>
+        <!-- Card ejemplo -->
+        <article class="card">
+            <div class="card-header">Lede, Lourdes del Mar</div>
+            <div class="card-body">
+                <h4 class="card-title">40.775.265</h4>
+                <h4 class="card-title">17/02/1998</h4>
+                <h4 class="card-title">La Rioja, Capital</h4>
+            </div>
+            <button class="btn btn-primary btns text-uppercase" [routerLink]="['/']">Ver acta</button>
+        </article>
         <div>
             <article *ngFor="let acta of actas">
               <span>{{acta.nombre}}</span>
@@ -15,7 +25,6 @@
               <span>{{acta.lugarNacimiento}}</span>
             </article>
         </div>
-            <p>{{ actas$ | async | json}}</p>
     </div>
     <!-- <div class="container">
             <div class="col-sm-12">
