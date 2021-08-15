@@ -24,13 +24,11 @@
 
 .card {
     height: auto !important;
-    margin-left: 30px;
     float: left;
-    width: 45%;
+    width: 100%;
     position: relative;
-    border-radius: 3rem !important;
-    padding-left: 10px;
-    padding-top: 5px;
+    border-radius: 2rem !important;
+    margin-top: 20px;
     box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
 }
 
@@ -38,12 +36,15 @@
     font-family: 'poppins';
     font-weight: bold;
     font-size: 22px;
+    text-align: center;
     color: #4B5057;
     background-color: transparent !important;
+    margin-top: 5px;
 }
 
 .card-title {
     font-family: 'poppins';
+    text-align: center;
     font-weight: 400;
     font-size: 15px;
     color: #7A7A7A;
@@ -86,5 +87,13 @@ i {
     color: #C30A20 !important;
     border: 1px #C30A20 !important;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

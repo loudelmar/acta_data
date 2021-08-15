@@ -10,19 +10,29 @@
         <article class="card">
             <div class="card-header">Lede, Lourdes del Mar</div>
             <div class="card-body">
-                <h4 class="card-title">40.775.265</h4>
-                <h4 class="card-title">17/02/1998</h4>
-                <h4 class="card-title">La Rioja, Capital</h4>
+                <h4 class="card-title">DNI: 40.775.265</h4>
+                <h4 class="card-title">Fecha de Nacimiento: 17/02/1998</h4>
+                <h4 class="card-title">Lugar de Nacimiento: La Rioja, Capital</h4>
+                <button class="btn btn-primary btns text-uppercase" [routerLink]="['/']">Ver acta</button>
             </div>
-            <button class="btn btn-primary btns text-uppercase" [routerLink]="['/']">Ver acta</button>
+        </article>
+        <!-- Card ejemplo 2-->
+        <article class="card">
+            <div class="card-header">Lede, Lourdes del Mar</div>
+            <div class="card-body">
+                <h4 class="card-title">DNI: 40.775.265</h4>
+                <h4 class="card-title">Fecha de Nacimiento: 17/02/1998</h4>
+                <h4 class="card-title">Lugar de Nacimiento: La Rioja, Capital</h4>
+                <button class="btn btn-primary btns text-uppercase" [routerLink]="['/']">Ver acta</button>
+            </div>
         </article>
         <div>
             <article *ngFor="let acta of actas">
-              <span>{{acta.nombre}}</span>
-              <span>{{acta.apellido}}</span>
-              <span>{{acta.dni}}</span>
-              <span>{{acta.fechaNacimiento}}</span>
-              <span>{{acta.lugarNacimiento}}</span>
+                <span>{{acta.nombre}}</span>
+                <span>{{acta.apellido}}</span>
+                <span>{{acta.dni}}</span>
+                <span>{{acta.fechaNacimiento}}</span>
+                <span>{{acta.lugarNacimiento}}</span>
             </article>
         </div>
     </div>

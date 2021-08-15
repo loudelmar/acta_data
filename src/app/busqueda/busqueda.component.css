@@ -37,7 +37,6 @@ i {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    margin-bottom: 30px;
 }
 
 .form-control {
@@ -47,38 +46,15 @@ i {
     box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
 }
 
-.table {
-    font-size: 15px;
-    font-family: 'poppins';
-    color: #7a7a7a;
-    text-align: center;
-}
-
-.tabla th {
-    background-color: #C30A20;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    vertical-align: middle;
-}
-
-.tabla td {
-    vertical-align: middle;
-}
-
 .txt-left {
     text-align: left !important;
-}
-
-.table-hover {
-    color: #af4953;
 }
 
 .btns {
     font-size: 15px;
     font-family: "poppins light";
-    height: 4rem;
-    display: block;
-    margin: auto;
-    margin-bottom: 15px;
+    height: 3rem;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }

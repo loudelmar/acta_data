@@ -18,7 +18,7 @@ export class BusquedaComponent implements OnInit {
 
   constructor(private actasService:ActasService){}
 
-  ngOnInit(){
+  ngOnInit(): void{
 
     const array3 = [1, 2, 3, 4, 5, 6, 7]
     const obsfrom1 = from(array3);
