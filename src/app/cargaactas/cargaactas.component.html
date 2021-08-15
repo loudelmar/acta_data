@@ -1,66 +1,28 @@
 <div class="container">
     <h1 class="titulo text-center">Cargar un acta</h1>
-    <p class="txt text-center">Complete todos los campos requeridos para poder
-        <br> guardar el acta como borrador o de manera definitiva.</p>
-    <div class="container-2">
-        <table class="table table-hover">
-            <tbody>
-                <tr>
-                    <th class="dato">DNI</th>
-                    <td class="dato">40775265</td>
-                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditDni">
-                    Editar
-                    </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="dato">Nombre/s</th>
-                    <td class="dato">Lourdes del Mar</td>
-                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditNombre">
-                    Editar
-                    </button>
-                    </td>
-                    <tr>
-                        <th class="dato">Apellido/s</th>
-                        <td class="dato">Lede</td>
-                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditApellido">
-                  Editar
-                  </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="dato">Fecha Nacimiento</th>
-                        <td class="dato">17/02/1998</td>
-                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditFechaNac">
-                  Editar
-                  </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="dato">Sector Trabajo</th>
-                        <td class="dato">Archivo</td>
-                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditSector">
-                Editar
-                </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="dato">Mail</th>
-                        <td class="dato">lourdeslede17....</td>
-                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditMail">
-                Editar
-                </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="dato">Contraseña</th>
-                        <td class="dato">**********</td>
-                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditContra">
-                Editar
-                </button>
-                        </td>
-                    </tr>
-            </tbody>
-        </table>
-    </div>
+    <p class="txt text-center">Complete todos los campos requeridos para poder guardar el acta como borrador o de manera definitiva.</p>
+    <form novalidate [formGroup]="acta">
+        <label>
+          <span>DNI</span>
+          <input
+            type="number"
+            placeholder="DNI del Inscripto"
+            formControlName="dniInscripto">
+        </label>
+        <label>
+            <span>Nombre</span>
+            <input
+              type="text"
+              placeholder="Nombre del Inscripto"
+              formControlName="nombreInscripto">
+          </label>
+          <label>
+            <span>Apellido</span>
+            <input
+              type="text"
+              placeholder="Apellido del Inscripto"
+              formControlName="apellidoInscripto">
+          </label>
+        <button type="submit">Guardar Acta</button>
+      </form>
 </div>
