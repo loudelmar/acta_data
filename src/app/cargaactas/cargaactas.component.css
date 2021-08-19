@@ -14,53 +14,64 @@
     margin-bottom: 30px;
 }
 
-.table {
-    width: 50%;
-    height: 100px;
-    font-size: 15px;
-    font-family: 'poppins';
-    color: #7a7a7a;
-}
-
-.container-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dato {
-    padding-top: 20px;
-    cursor: default;
-}
-
-td,
-th {
-    border: none;
-    width: 1%;
-}
-
-th {
-    text-align: right;
-}
-
 .btn {
     font-family: 'poppins';
     font-size: 15px;
-    font-weight: normal;
+    font-weight: 500;
+    height: auto;
+    width: auto;
+    padding: 12px;
 }
 
 .form-group label {
     font-family: 'poppins';
     font-weight: 600;
-    margin-left: 5px;
-    font-size: 18px;
-    color: #4B5057;
+    font-size: 14px;
+    color: #616161;
 }
 
-.ng-valid[required], .ng-valid.required  {
-    border-left: 5px solid #42A948; /* green */
-  }
-  
-.ng-invalid:not(form)  {
-    border-left: 5px solid #a94442; /* red */
-  }
+.btn1 {
+    background-color: #e4707d !important;
+    border-radius: 0.7rem !important;
+    color: white;
+    margin-right: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+}
+
+.btn2 {
+    background-color: #C30A20 !important;
+    border-radius: 0.7rem !important;
+    color: white;
+    margin-left: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.carga {
+    position: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset {
+    align-items: center;
+}
+
+button {
+    margin-top: 15px;
+}
+
+h3 {
+    font-family: 'poppins';
+    font-size: 18px;
+    color: #7A7A7A;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.fas {
+    margin-left: 10px;
+}

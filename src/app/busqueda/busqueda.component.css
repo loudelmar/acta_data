@@ -1,60 +1,78 @@
-.titulo {
-    font-family: 'poppins';
-    color: #C30A20;
-    font-size: 30px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-top: 50px;
-}
+    .titulo {
+        font-family: 'poppins';
+        color: #C30A20;
+        font-size: 30px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-top: 50px;
+    }
+    
+    .busqueda {
+        position: relative;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+    
+    .txt {
+        font-family: 'poppins';
+        color: #C30A20;
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    
+    .form-control {
+        font-size: 14px;
+        font-weight: 300;
+        font-family: 'poppins';
+        height: 2.5rem !important;
+        border-radius: 2rem !important;
+    }
+    
+    .btns {
+        font-size: 15px;
+        font-family: "poppins light";
+        height: auto;
+        margin-top: 10px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+    
+    .input-group input:focus {
+        box-shadow: none;
+    }
+    
+    .input-group-append button:focus {
+        box-shadow: none;
+    }
+    
+    label {
+        font-family: 'poppins';
+        font-size: 15px;
+        margin-left: 5px;
+        color: #7A7A7A;
+    }
+    
+    .fa-filter,
+    .gris {
+        color: #7A7A7A;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+    }
+    
+    .dropdown-menu {
+        padding: 10px;
+        align-items: center;
+    }
+    /*
+    .form-group {
+        display: block;
+    }
 
-.txt {
-    font-family: 'poppins';
-    color: #C30A20;
-    margin-top: 20px;
-    margin-left: 10px;
-    font-size: 14px;
-}
-
-input {
-    font-size: 14px;
-    font-weight: 300;
-}
-
-.form-group {
-    display: block;
-}
-
-i {
-    color: #a7a7a7;
-    position: absolute;
-    right: 20px;
-    top: 12px;
-}
-
-.busqueda {
-    position: relative;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-}
-
-.form-control {
-    font-family: 'poppins';
-    height: 2.5rem !important;
-    border-radius: 2rem !important;
-    box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
-}
-
-.txt-left {
-    text-align: left !important;
-}
-
-.btns {
-    font-size: 15px;
-    font-family: "poppins light";
-    height: 3rem;
-    margin-top: 10px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
+    
+*/
