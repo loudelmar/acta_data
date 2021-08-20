@@ -1,0 +1,56 @@
+.titulo {
+    font-family: 'poppins';
+    color: #C30A20;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+
+.txt {
+    font-family: 'poppins';
+    color: #C30A20;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    font-family: 'poppins';
+    font-size: 15px;
+    font-weight: 500;
+    height: auto;
+    width: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+}
+
+.form-group label {
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 14px;
+    color: #616161;
+}
+
+.admin {
+    position: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset {
+    align-items: center;
+}
+
+button {
+    margin-top: 20px;
+}
+
+h3 {
+    font-family: 'poppins';
+    font-size: 18px;
+    color: #7A7A7A;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
