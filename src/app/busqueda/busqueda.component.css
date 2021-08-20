@@ -73,3 +73,12 @@ i {
 .table-hover {
     color: #af4953;
 }
+
+.btns {
+    font-size: 15px;
+    font-family: "poppins light";
+    height: 4rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}

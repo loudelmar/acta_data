@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, from} from 'rxjs';
 import { Actas } from './actas-model';
 import { ActasService } from './actas-service';
 
@@ -19,14 +19,18 @@ export class BusquedaComponent implements OnInit {
   constructor(private actasService:ActasService){}
 
   ngOnInit(){
-    this.actas$ = this.actasService.getActas$();
-    this.actas$.subscribe(actas => this.actas = actas);
 
-    error => {
-      console.log(error);
+    const array3 = [1, 2, 3, 4, 5, 6, 7]
+    const obsfrom1 = from(array3);
+    obsfrom1.subscribe(val => console.log(val),
+      error => console.log("error"),
+      () => console.log("complete"))
+
+
+    //this.actas$ = this.actasService.getActas$();
+    //this.actas$.subscribe(actas => this.actas = actas);
       };
   }
-}
 
     //
 
