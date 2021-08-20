@@ -50,6 +50,7 @@ i {
     text-align: left !important;
 }
 
+<<<<<<< HEAD
 .btns {
     font-size: 15px;
     font-family: "poppins light";
@@ -58,3 +59,17 @@ i {
     margin-left: 50%;
     transform: translateX(-50%);
 }
+=======
+.table-hover {
+    color: #af4953;
+}
+
+.btns {
+    font-size: 15px;
+    font-family: "poppins light";
+    height: 4rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+>>>>>>> master
