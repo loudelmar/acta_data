@@ -41,3 +41,11 @@ i {
     top: 15px;
     cursor: pointer;
 }
+
+.form-control:focus {
+    box-shadow: 1px #C30A20 !important;
+}
+
+.container {
+    margin-top: 100px;
+}

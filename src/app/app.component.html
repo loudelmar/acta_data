@@ -1,6 +1,7 @@
 <div class="mx-auto">
     <nav class="navbar navbar-expand-lg navbar-dark" *ngIf="isUser || isAdmin">
-        <img class="logo" src="assets/img/logo2.png" alt="ActaData" style="cursor: pointer;" [routerLink]="['/inicio']">
+        <img class="logo" src="assets/img/logo2.png" alt="ActaData" style="cursor: pointer;" [routerLink]="['/inicio']" *ngIf="isUser">
+        <img class="logo" src="assets/img/logo2.png" alt="ActaData" style="cursor: pointer;" [routerLink]="['/admin']" *ngIf="isAdmin">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
