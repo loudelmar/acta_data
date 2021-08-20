@@ -38,8 +38,7 @@ export class Acta {
       public localidadPadre: string,
       public barrioPadre: string,
       public callePadre: string,
-      public numeroCallePadre: number,
-      public fotoActa: string
+      public numeroCallePadre: number
     ) {  }
   
   }

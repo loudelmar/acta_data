@@ -10,7 +10,7 @@
 
 .btn-primary {
     background-color: #C30A20 !important;
-    border-radius: 0.7rem !important;
+    border-radius: 1rem !important;
 }
 
 .navbar {
@@ -25,12 +25,10 @@
 .card {
     height: auto !important;
     float: left;
-    width: 50%;
+    width: 100%;
     position: relative;
     border-radius: 2rem !important;
     margin-top: 20px;
-    margin-left: 50%;
-    transform: translateX(-50%);
     box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(226, 226, 226);
 }
 

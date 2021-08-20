@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ConsultaComponent } from './consulta/consulta.component';
 import { LoginComponent } from './login/login.component';
 import { OlvidecontraComponent } from './olvidecontra/olvidecontra.component';
 import { ObstetrasComponent } from './obstetras/obstetras.component';
+import { CerrarsesionComponent } from './cerrarsesion/cerrarsesion.component';
+import { EditarperfilComponent } from './editarperfil/editarperfil.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
+import { ClinicasComponent } from './clinicas/clinicas.component';
 import { PaisesComponent } from './paises/paises.component';
 import { Olvidecontra2Component } from './olvidecontra2/olvidecontra2.component';
 import { CargaactasComponent } from './cargaactas/cargaactas.component';
@@ -14,6 +18,10 @@ import { AdminComponent } from './admin/admin.component';
 import { MiscargasComponent } from './miscargas/miscargas.component';
 
 const routes: Routes = [
+  {path: 'cerrar-sesion', component: CerrarsesionComponent},
+  {path: 'clinicas', component: ClinicasComponent},
+  {path: 'consulta', component: ConsultaComponent},
+  {path: 'editar-perfil', component: EditarperfilComponent},
   {path: 'empleados', component: EmpleadosComponent},
   {path: '', component: LoginComponent},
   {path: 'obstetras', component: ObstetrasComponent},
