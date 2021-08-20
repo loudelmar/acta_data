@@ -1,16 +1,36 @@
 <div class="container">
     <h1 class="titulo text-center">Buscar un acta</h1>
     <div class="busqueda">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Buscar..." />
-            <i class="fas fa-search"></i>
+        <div class="bg-light rounded rounded-pill shadow-sm">
+            <div class="dropdown dropdown-lg d-flex input-group-append">
+                <button type="button" class="btn gris dropdown-toggle ml-auto" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-filter"></i></button>
+                <div class="dropdown-menu dropdown-menu-lg-right" role="menu">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="filter">Filtrar por</label>
+                            <select class="form-control">
+                                <option value="0">Nombre</option>
+                                <option value="1">Apellido</option>
+                                <option value="2">DNI</option>
+                                <option value="3">Fecha Nacimiento</option>
+                                <option value="4">Lugar Nacimiento</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control border-0 bg-light" placeholder="Buscar..." aria-describedby="button-addon1">
+                    <div class="input-group-append">
+                        <button id="button-addon1" type="submit" class="btn text-primary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
         <p class="txt text-center">La búsqueda se puede realizar por nombre, apellido, DNI, fecha de nacimiento o lugar de nacimiento.</p>
         <!-- Card ejemplo -->
         <article class="card">
             <div class="card-header">Lede, Lourdes del Mar</div>
             <div class="card-body">
-<<<<<<< HEAD
                 <h4 class="card-title">DNI: 40.775.265</h4>
                 <h4 class="card-title">Fecha de Nacimiento: 17/02/1998</h4>
                 <h4 class="card-title">Lugar de Nacimiento: La Rioja, Capital</h4>
@@ -26,55 +46,16 @@
                 <h4 class="card-title">Lugar de Nacimiento: La Rioja, Capital</h4>
                 <button class="btn btn-primary btns text-uppercase" [routerLink]="['/']">Ver acta</button>
             </div>
-=======
-                <h4 class="card-title">40.775.265</h4>
-                <h4 class="card-title">17/02/1998</h4>
-                <h4 class="card-title">La Rioja, Capital</h4>
-            </div>
-            <button class="btn btn-primary btns text-uppercase" [routerLink]="['/']">Ver acta</button>
->>>>>>> master
         </article>
-        <div>
-            <article *ngFor="let acta of actas">
-                <span>{{acta.nombre}}</span>
-                <span>{{acta.apellido}}</span>
-                <span>{{acta.dni}}</span>
-                <span>{{acta.fechaNacimiento}}</span>
-                <span>{{acta.lugarNacimiento}}</span>
-            </article>
-        </div>
     </div>
-    <!-- <div class="container">
-            <div class="col-sm-12">
-                <div class="input-group">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="label-icon">Category</span> <span
-                  class="caret">&nbsp;</span>
-              </button>
-                        <div class="dropdown-menu">
-                            <ul class="category_filters">
-                                <li>
-                                    <input class="cat_type category-input" data-label="All" id="all" value="" name="radios" type="radio"><label for="all">All</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="radios" id="Design" value="Design"><label class="category-label" for="Design">Design</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="radios" id="Marketing" value="Marketing"><label class="category-label" for="Marketing">Marketing</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="radios" id="Programming" value="Programming"><label class="category-label" for="Programming">Programming</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="radios" id="Sales" value="Sales"><label class="category-label" for="Sales">Sales</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="radios" id="Support" value="Support"><label class="category-label" for="Support">Support</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
+</div>
+
+<div>
+    <article *ngFor="let acta of actas">
+        <span>{{acta.nombre}}</span>
+        <span>{{acta.apellido}}</span>
+        <span>{{acta.dni}}</span>
+        <span>{{acta.fechaNacimiento}}</span>
+        <span>{{acta.lugarNacimiento}}</span>
+    </article>
+</div>

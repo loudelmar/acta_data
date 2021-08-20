@@ -20,13 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LoginComponent } from './login/login.component';
-import { ConsultaComponent } from './consulta/consulta.component';
-import { EditarperfilComponent } from './editarperfil/editarperfil.component';
 import { OlvidecontraComponent } from './olvidecontra/olvidecontra.component';
-import { CerrarsesionComponent } from './cerrarsesion/cerrarsesion.component';
-import { EmpleadosComponent } from './empleados/empleados.component';
-import { ObstetrasComponent } from './obstetras/obstetras.component';
-import { ClinicasComponent } from './clinicas/clinicas.component';
 import { PaisesComponent } from './paises/paises.component';
 import 'bootstrap';
 import { Olvidecontra2Component } from './olvidecontra2/olvidecontra2.component';
@@ -46,13 +40,7 @@ import { CookieService } from 'ngx-cookie-service';
   declarations: [
     AppComponent,
     LoginComponent,
-    ConsultaComponent,
-    EditarperfilComponent,
     OlvidecontraComponent,
-    CerrarsesionComponent,
-    EmpleadosComponent,
-    ObstetrasComponent,
-    ClinicasComponent,
     PaisesComponent,
     Olvidecontra2Component,
     CargaactasComponent,
