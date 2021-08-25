@@ -1,12 +1,15 @@
 <div class="container">
     <h1 class="titulo text-center">Bienvenido/a a ActaData</h1>
     <div class="container-2">
-        <p class="txt text-center">¿Qué desea hacer?</p>
-        <button class="btn btn-primary btns text-uppercase" [routerLink]="['/carga-actas']">Cargar un acta
+        <p class="txt text-center" *ngIf="isUser">¿Qué desea hacer?</p>
+        <button class="btn btn-primary btns text-uppercase" [routerLink]="['/carga-actas']" *ngIf="isUser">Cargar un acta
             <i class="fas fa-plus"></i>
         </button>
-        <button class="btn btn-primary btns text-uppercase" [routerLink]="['/busqueda']">Buscar un acta
+        <button class="btn btn-primary btns text-uppercase" [routerLink]="['/busqueda']" *ngIf="isUser">Buscar un acta
             <i class="fas fa-search"></i>
+        </button>
+        <button class="btn btn-primary btns text-uppercase" [routerLink]="['/admin']" *ngIf="isAdmin">Cargar un empleado
+            <i class="fas fa-plus"></i>
         </button>
     </div>
 </div>
