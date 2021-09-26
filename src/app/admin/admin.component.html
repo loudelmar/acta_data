@@ -1,11 +1,41 @@
-<div class="card mt-4">
-    <h4 class="card-header">Admin</h4>
-    <div class="card-body">
-        <p>This page can be accessed <u>only by administrators</u>.</p>
-        <p class="mb-1">All users from secure (admin only) api end point:</p>
-        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
-        <ul *ngIf="users">
-            <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
-        </ul>
+<div class="container">
+    <div class="empleados">
+        <h1 class="titulo">Empleados</h1>
+        <button class="btn btn-primary btns text-uppercase" [routerLink]="['/carga-actas']">Cargar
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="tabla">
+            <table class="table table-striped table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Sector de Trabajo</th>
+                        <th>Mail</th>
+                        <th>Contraseña</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>40775265</td>
+                        <td>Lourdes del Mar</td>
+                        <td>Lede</td>
+                        <td>17/02/1998</td>
+                        <td>Archivo</td>
+                        <td>lourdeslede17@gmail.com</td>
+                        <td>*********</td>
+                        <td style="white-space: nowrap">
+                            <a routerLink="edit" class="btn btn-sm">Editar</a>
+                            <button class="btn btn-sm">
+                            <span>Borrar</span>
+                        </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

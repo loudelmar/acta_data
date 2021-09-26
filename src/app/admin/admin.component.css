@@ -1,0 +1,70 @@
+.titulo {
+    font-family: 'poppins';
+    color: #C30A20;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+
+.empleados {
+    position: relative;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.txt {
+    font-family: 'poppins';
+    color: #C30A20;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.form-control {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'poppins';
+    height: 2.5rem !important;
+    border-radius: 2rem !important;
+}
+
+.btns {
+    font-size: 15px;
+    font-family: "poppins light";
+    height: 3rem;
+    margin-left: 10px;
+}
+
+label {
+    font-family: 'poppins';
+    font-size: 15px;
+    margin-left: 5px;
+    color: #7A7A7A;
+}
+
+.fa-filter,
+.gris {
+    color: #7A7A7A;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.dropdown-menu {
+    padding: 10px;
+    align-items: center;
+}
+
+.tabla {
+    margin-top: 20px;
+}
+
+th {
+    color: #4e4e4e;
+    font-family: 'poppins';
+    cursor: default;
+}
