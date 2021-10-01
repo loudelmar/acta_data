@@ -2,9 +2,9 @@
     font-family: 'poppins';
     color: #C30A20;
     font-size: 30px;
-    margin-bottom: 20px;
     margin-left: 15px;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .empleados {
@@ -31,6 +31,13 @@
     border-radius: 2rem !important;
 }
 
+.form-group label {
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 14px;
+    color: #616161;
+}
+
 .btns {
     font-size: 15px;
     font-family: "poppins light";
@@ -43,20 +50,6 @@ label {
     font-size: 15px;
     margin-left: 5px;
     color: #7A7A7A;
-}
-
-.fa-filter,
-.gris {
-    color: #7A7A7A;
-}
-
-.form-control:focus {
-    box-shadow: none;
-}
-
-.dropdown-menu {
-    padding: 10px;
-    align-items: center;
 }
 
 .tabla {
@@ -97,7 +90,7 @@ th {
     box-shadow: none !important;
 }
 
-.btn {
+.btn-general {
     margin-left: 5px !important;
     display: inline;
     margin-top: 5px !important;
@@ -115,4 +108,49 @@ td {
     word-wrap: break-word;
     border: none;
     vertical-align: middle;
+}
+
+.modal-title {
+    color: #C30A20;
+    font-family: 'poppins';
+}
+
+.input-group input:focus {
+    box-shadow: none;
+}
+
+.input-group-append button:focus {
+    box-shadow: none;
+}
+
+.btn-cargar {
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.fa-save {
+    margin-left: 5px;
+}
+
+.btn-cerrar {
+    color: #C30A20 !important;
+    font-family: 'poppins';
+    font-size: 16px;
+}
+
+.btn-guardar {
+    background-color: #7A7A7A !important;
+    border-radius: 0.7rem !important;
+    color: white;
+    font-family: 'poppins';
+    font-size: 15px;
+    font-weight: 500;
+    height: 3rem;
+    box-shadow: none !important;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-right: 25px;
 }
