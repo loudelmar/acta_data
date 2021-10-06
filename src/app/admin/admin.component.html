@@ -2,7 +2,7 @@
     <div class="empleados">
         <h1 class="titulo">Empleados</h1>
         <div class="btn-cargar">
-            <button class="btn btn-primary btns text-uppercase" [routerLink]="['/carga-actas']">Cargar
+            <button class="btn btn-primary btns text-uppercase" data-toggle="modal" data-target="#cargar">Cargar
             <i class="fas fa-plus"></i>
             </button>
         </div>
@@ -31,10 +31,10 @@
                         <td class="item">Lourdes del Mar</td>
                         <td class="item">Lede</td>
                         <td class="item">lourdeslede17@gmail.com</td>
-                        <button class="btn btn-general btn2" data-toggle="modal" data-target="#editar01">
+                        <button class="btn btn-general btn2" data-toggle="modal" data-target="#editar">
                             <i class="fas fa-user-edit"></i>
                         </button>
-                        <button class="btn btn-general btn1">
+                        <button class="btn btn-general btn1" data-toggle="modal" data-target="#borrar">
                             <i class="fas fa-trash"></i>
                         </button>
                     </tr>
@@ -43,10 +43,10 @@
                         <td class="item">Empleado</td>
                         <td class="item">del Registro Civil</td>
                         <td class="item">empleadoregistrocivil@gmail.com</td>
-                        <button class="btn btn-general btn2">
+                        <button class="btn btn-general btn2" data-toggle="modal" data-target="#editar">
                             <i class="fas fa-user-edit"></i>
                         </button>
-                        <button class="btn btn-general btn1">
+                        <button class="btn btn-general btn1" data-toggle="modal" data-target="#borrar">
                             <i class="fas fa-trash"></i>
                         </button>
                     </tr>
@@ -55,18 +55,89 @@
                         <td class="item">Empleada</td>
                         <td class="item">del Registro Civil</td>
                         <td class="item">empleadaregistrocivil@gmail.com</td>
-                        <button class="btn btn-general btn2">
+                        <button class="btn btn-general btn2" data-toggle="modal" data-target="#editar">
                             <i class="fas fa-user-edit"></i>
                         </button>
-                        <button class="btn btn-general btn1">
+                        <button class="btn btn-general btn1" data-toggle="modal" data-target="#borrar">
                             <i class="fas fa-trash"></i>
                         </button>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <!-- Modal 01 -->
-        <div class="modal fade" id="editar01" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+
+
+        <!-- Modal Cargar-->
+        <div class="modal fade" id="cargar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLongTitle">Cargar</h5>
+                        <button type="button" class="close btn btn-cerrar" data-dismiss="modal" aria-label="Close">
+                            <i aria-hidden="true" class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="was-validated">
+                            <div class="form-row">
+                                <div class="form-group col-lg">
+                                    <label for="dni" class="form-label">DNI</label>
+                                    <input type="number" class="form-control is-valid" id="dni" placeholder="Ej. 40775265" required>
+                                    <div class="invalid-feedback">Ingrese un DNI</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="nombre" class="form-label">Nombre/s</label>
+                                    <input type="text" class="form-control is-valid" id="nombre" placeholder="Ej. Lourdes del Mar" required>
+                                    <div class="invalid-feedback">Ingrese un nombre</div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="apellido">Apellido/s</label>
+                                    <input type="text" class="form-control is-valid" id="apellido" placeholder="Ej. Lede" required>
+                                    <div class="invalid-feedback">Ingrese un apellido</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                                    <input type="date" class="form-control is-valid" id="fechaNacimiento" required>
+                                    <div class="invalid-feedback">Elija una fecha de nacimiento</div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="sectorTrabajo">Sector de trabajo</label>
+                                    <select id="sectorTrabajo" class="form-control is-valid" required>
+                                        <option value="">Ej.Archivo</option>
+                                        <option value="1">Archivo del Registro Civil</option>
+                                        <option value="2">Atención al público</option>
+                                        <option value="3">Digitalización de actas</option>
+                                    </select>
+                                    <div class="invalid-feedback">Elija un sector de trabajo</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="mail" class="form-label">Mail</label>
+                                    <input type="email" class="form-control is-valid" id="mail" placeholder="Ej.lourdeslede17@gmail.com" required>
+                                    <div class="invalid-feedback">Ingrese un mail válido</div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="contraseña" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control is-valid" id="contraseña" required>
+                                    <div class="invalid-feedback">Ingrese una contraseña</div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-cargar-2" data-dismiss="modal">Cargar
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Editar -->
+        <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -76,97 +147,83 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="needs-validation" novalidate>
+                        <form>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="dni">DNI</label>
-                                    <input type="number" class="form-control" id="dni" placeholder="40775265" formControlName="dniInscripto" required>
-                                    <div class="invalid-feedback">
-                                        Escriba un DNI
-                                    </div>
+                                    <input type="number" class="form-control" id="dni" placeholder="40775265">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="nombre">Nombre/s</label>
-                                    <input type="text" class="form-control" id="nombre" placeholder="Lourdes del Mar" formControlName="nombreInscripto" required>
-                                    <div class="invalid-feedback">
-                                        Escriba un nombre
-                                    </div>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Lourdes del Mar">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="apellido">Apellido/s</label>
-                                    <input type="text" class="form-control" id="apellido" placeholder="Lede" formControlName="apellidoInscripto" required>
-                                    <div class="invalid-feedback">
-                                        Escriba un nombre
-                                    </div>
+                                    <input type="text" class="form-control" id="apellido" placeholder="Lede">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                                    <input type="date" class="form-control" id="fechaNacimiento" formControlName="fechaNacimientoInscripto" required>
-                                    <div class="invalid-feedback">
-                                        Elija una fecha de nacimiento
-                                    </div>
+                                    <input type="date" class="form-control" id="fechaNacimiento" placeholder="17/02/1998">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="sectorTrabajo">Sector de trabajo</label>
-                                    <select id="sectorTrabajo" class="form-control" formControlName="sectorTrabajo" required>
-                                      <option>Archivo del Registro Civil</option>
-                                      <option>Atención al público</option>
-                                      <option>Digitalización de actas</option>
-                                  </select>
-                                    <div class="invalid-feedback">
-                                        Elija un sector de trabajo
-                                    </div>
+                                    <select id="sectorTrabajo" class="form-control">
+                                        <option value="1">Archivo del Registro Civil</option>
+                                        <option value="2">Atención al público</option>
+                                        <option value="3">Digitalización de actas</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="mail">Mail</label>
-                                    <input type="email" class="form-control" id="mail" placeholder="lourdeslede17@gmail.com" formControlName="mail" required>
-                                    <div class="invalid-feedback">
-                                        Escriba un mail
-                                    </div>
+                                    <input type="email" class="form-control" id="mail" placeholder="lourdeslede17@gmail.com">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="contraseña">Contraseña</label>
-                                    <input type="text" class="form-control" id="contraseña" placeholder="*********" formControlName="contraseña" required>
-                                    <div class="invalid-feedback">
-                                        Escriba una contraseña
-                                    </div>
+                                    <input type="text" class="form-control" id="contraseña" placeholder="*************">
+                                </div>
+                                <button type="button" class="btn btn-guardar" data-dismiss="modal" type="submit">Guardar Cambios
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Delete-->
+        <div class="modal fade" id="borrar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLongTitle">Borrar</h5>
+                        <button type="button" class="close btn btn-cerrar" data-dismiss="modal" aria-label="Close">
+                            <i aria-hidden="true" class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="was-validated">
+                            <div class="form-group col-lg">
+                                <label for="contra" class="form-label">Introduzca su contraseña para eliminar el usuario</label>
+                                <input type="password" class="form-control is-valid" id="contra" required>
+                                <div class="invalid-feedback">
+                                    Escriba una contraseña
                                 </div>
                             </div>
                         </form>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-guardar" data-dismiss="modal">Guardar Cambios
+                        <button type="button" class="btn btn-borrar" data-dismiss="modal">Borrar
                                 <i class="fas fa-save"></i>
-                            </button>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>

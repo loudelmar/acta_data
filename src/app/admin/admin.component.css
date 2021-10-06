@@ -153,4 +153,34 @@ td {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-borrar,
+.btn-cargar-2 {
+    background-color: #C30A20 !important;
+    border-radius: 0.7rem !important;
+    color: white;
+    font-family: 'poppins';
+    font-size: 15px;
+    font-weight: 500;
+    height: 3rem;
+    box-shadow: none !important;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.txt-contra {
+    text-align: center;
+    font-family: 'poppins';
+    color: #4e4e4e;
+}
+
+.invalid-feedback {
+    margin-left: 5px !important;
+    font-size: 12px;
 }

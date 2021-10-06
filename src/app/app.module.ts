@@ -20,15 +20,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LoginComponent } from './login/login.component';
-import { OlvidecontraComponent } from './olvidecontra/olvidecontra.component';
 import { PaisesComponent } from './paises/paises.component';
 import 'bootstrap';
-import { Olvidecontra2Component } from './olvidecontra2/olvidecontra2.component';
 import { CargaactasComponent } from './cargaactas/cargaactas.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { InicioComponent } from './inicio/inicio.component';
 import * as $ from 'jquery';
-import { Olvidecontra3Component } from './olvidecontra3/olvidecontra3.component';
 
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AdminComponent } from './admin/admin.component';
@@ -40,13 +37,10 @@ import { CookieService } from 'ngx-cookie-service';
   declarations: [
     AppComponent,
     LoginComponent,
-    OlvidecontraComponent,
     PaisesComponent,
-    Olvidecontra2Component,
     CargaactasComponent,
     BusquedaComponent,
     InicioComponent,
-    Olvidecontra3Component,
     AdminComponent,
     FilterPipe,
     HighlightDirective,
