@@ -12,7 +12,6 @@ import { FilterPipe } from './_pipes/filter.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MatTableFilter, MatTableFilterModule } from 'mat-table-filter';
 import { DataTablesModule } from "angular-datatables";
-import { ActasService } from './busqueda/actas-service';
 
 
 
@@ -62,9 +61,6 @@ import { CookieService } from 'ngx-cookie-service';
     CookieService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi:true},
-
-    //provider de primeNG
-    ActasService,
 
     // provider used to create fake backend
     fakeBackendProvider

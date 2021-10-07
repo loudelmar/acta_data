@@ -4,48 +4,9 @@
     margin: 10px auto;
 }
 
-.btn-pass {
-    font-size: 14px;
-    font-family: 'poppins regular';
-    color: #C30A20;
-}
-
-.center {
-    margin: 10px auto;
-    text-align: center;
-}
-
 .btn-ingresar {
     font-size: 15px;
     font-family: "poppins light";
     height: 3rem;
     margin-top: 20px;
-}
-
-.btn-registrar {
-    font-size: 18px;
-    font-family: "poppins";
-    font-weight: bold;
-    height: 2.5rem;
-    color: #C30A20;
-}
-
-.icon-div {
-    position: relative;
-}
-
-i {
-    color: #a7a7a7;
-    position: absolute;
-    right: 25px;
-    top: 15px;
-    cursor: pointer;
-}
-
-.form-control:focus {
-    box-shadow: 1px #C30A20 !important;
-}
-
-.container {
-    margin-top: 100px;
 }
