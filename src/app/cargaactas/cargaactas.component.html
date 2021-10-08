@@ -1,344 +1,279 @@
 <div class="container">
-    <h1 class="titulo text-center">Cargar un acta</h1>
-    <p class="txt text-center">Complete todos los campos requeridos para <strong>cargar</strong> o <strong>guardar como borrador</strong> el acta de nacimiento.</p>
+    <h1 class="titulo text-center">Cargar acta</h1>
     <div class="carga">
-        <form class="needs-validation" novalidate>
-            <h3>Datos del inscripto</h3>
+        <form class="was-validated">
+            <h3>Datos del Acta</h3>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="tomo">Tomo N°</label>
+                    <input type="number" class="form-control is-valid" id="tomo" required>
+                    <div class="invalid-feedback">Ingrese el número de tomo</div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="acta">Acta N°</label>
+                    <input type="number" class="form-control is-valid" id="acta" required>
+                    <div class="invalid-feedback">Ingrese el número de acta</div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="año">Año</label>
+                    <input type="number" class="form-control is-valid" id="año" required>
+                    <div class="invalid-feedback">Ingrese el año</div>
+                </div>
+            </div>
+            <h3>Datos del Inscripto</h3>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="dni">DNI</label>
-                    <input type="number" class="form-control" id="dni" placeholder="12345678" formControlName="dniInscripto" required>
-                    <div class="invalid-feedback">
-                        Escriba un DNI
-                    </div>
+                    <label for="dni" class="form-label">DNI</label>
+                    <input type="number" class="form-control is-valid" id="dni" placeholder="Con puntos y sin espacios" required>
+                    <div class="invalid-feedback">Ingrese el DNI</div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="sexo">Sexo</label>
-                    <select id="sexo" class="form-control" formControlName="sexoInscripto" required>
-                      <option>Femenino</option>
-                      <option>Masculino</option>
+                    <select id="sexo" class="form-control is-valid" required>
+                      <option value="">Ej. Femenino</option>
+                      <option value="1">Femenino</option>
+                      <option value="2">Masculino</option>
                   </select>
-                    <div class="invalid-feedback">
-                        Seleccione un sexo
-                    </div>
+                    <div class="invalid-feedback">Elija el sexo</div>
                 </div>
-            </div>
-            <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="nombre">Nombre/s</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Lourdes del Mar" formControlName="nombreInscripto" required>
-                    <div class="invalid-feedback">
-                        Escriba un nombre
-                    </div>
+                    <label for="nombre" class="form-label">Nombre/s</label>
+                    <input type="text" class="form-control is-valid" id="nombre" required>
+                    <div class="invalid-feedback">Ingrese un nombre</div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="apellido">Apellido/s</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="Lede" formControlName="apellidoInscripto" required>
-                    <div class="invalid-feedback">
-                        Escriba un nombre
-                    </div>
+                    <input type="text" class="form-control is-valid" id="apellido" required>
+                    <div class="invalid-feedback">Ingrese un apellido</div>
                 </div>
-            </div>
-            <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="fechaNacimiento" formControlName="fechaNacimientoInscripto" required>
-                    <div class="invalid-feedback">
-                        Elija una fecha de nacimiento
-                    </div>
+                    <input type="date" class="form-control is-valid" id="fechaNacimiento" required>
+                    <div class="invalid-feedback">Ingrese la fecha de nacimiento</div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="fechaInscripcion">Fecha de Inscripción</label>
-                    <input type="date" class="form-control" id="fechaNacimiento" formControlName="fechaInscripcionInscripto">
+                    <input type="date" class="form-control is-valid" id="fechaInscripcion" required>
+                    <div class="invalid-feedback">Ingrese la fecha de inscripción</div>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="provincia">Provincia</label>
-                    <select id="provincia" class="form-control" formControlName="provinciaInscripto" required>
-                      <option>La Rioja</option>
-                      <option>Córdoba</option>
-                      <option>Buenos Aires</option>
-                  </select>
-                    <div class="invalid-feedback">
-                        Elija una provincia
-                    </div>
+                    <select id="provincia" class="form-control is-valid" required>
+                        <option value="">Ej. La Rioja</option>
+                        <option value="1">La Rioja</option>
+                        <option value="2">Córdoba</option>
+                        <option value="3">Buenos Aires</option>
+                    </select>
+                    <div class="invalid-feedback">Elija una provincia</div>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="departamento">Departamento</label>
-                    <select id="departamento" class="form-control" formControlName="departamentoInscripto" required>
-                      <option>Capital</option>
-                      <option>Castro Barros</option>
-                      <option>Chilecito</option>
-                  </select>
-                    <div class="invalid-feedback">
-                        Elija un departamento
-                    </div>
+                    <select id="departamento" class="form-control is-valid" required>
+                        <option value="">Ej. Capital</option>
+                        <option value="1">Capital</option>
+                        <option value="2">Castro Barros</option>
+                        <option value="3">Chilecito</option>
+                    </select>
+                    <div class="invalid-feedback">Elija un departamento</div>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="localidad">Localidad</label>
-                    <select id="localidad" class="form-control" formControlName="localidadInscripto" required>
-                      <option>Aimogasta</option>
-                      <option>La Rioja</option>
-                      <option>Chilecito</option>
-                  </select>
-                    <div class="invalid-feedback">
-                        Elija una localidad
-                    </div>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="barrio">Barrio</label>
-                    <select id="barrio" class="form-control" formControlName="barrioInscripto">
-                      <option>San Martín</option>
-                      <option>Centro</option>
-                      <option>San Vicente</option>
-                      <option>Mis Montañas</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="calle">Calle</label>
-                    <select id="calle" class="form-control" formControlName="calleInscripto">
-                      <option>Urquiza</option>
-                      <option>Avenida Castro Barros</option>
-                      <option>Avenida Ortíz de Ocampo</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="numcalle">Número de Calle</label>
-                    <input type="text" class="form-control" id="numcalle" placeholder="123" formControlName="numeroCalleInscripto">
+                    <select id="localidad" class="form-control is-valid" required>
+                        <option value="">Ej. La Rioja</option>
+                        <option value="1">La Rioja</option>
+                        <option value="2">Chilecito</option>
+                        <option value="3">Aimogasta</option>
+                    </select>
+                    <div class="invalid-feedback">Elija una localidad</div>
                 </div>
             </div>
-            <h3>Datos del nacimiento</h3>
+        </form>
+        <form>
+            <h3>Datos del Nacimiento</h3>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="horaNacimiento">Horario de Nacimiento</label>
+                    <input type="time" class="form-control" id="horaNacimiento">
+                </div>
+            </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="nombre">Nombre del Obstetra</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="" formControlName="nombreObstetra" required>
-                    <div class="invalid-feedback">
-                        Escriba un nombre
-                    </div>
+                    <input type="text" class="form-control" id="nombre">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="apellido">Apellido del Obstetra</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="" formControlName="apellidoObstetra" required>
-                    <div class="invalid-feedback">
-                        Escriba un apellido
-                    </div>
+                    <input type="text" class="form-control" id="apellido">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="clinica">Clínica</label>
-                    <select id="clinica" class="form-control" formControlName="nombreClinica">
-                      <option>Maternidad Privada</option>
-                      <option>Hospital de la Madre y el Niño</option>
-                      <option>Hospital Vera Barros</option>
+                    <select id="clinica" class="form-control">
+                      <option value="">Ej. Maternidad Privada</option>
+                      <option value="1">Maternidad Privada</option>
+                      <option value="2">Hospital de la Madre y el Niño</option>
+                      <option value="3">Hospital Vera Barros</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="tipoClinica">Tipo de Clínica</label>
-                    <select id="tipoClinica" class="form-control" formControlName="tipoClinica">
-                      <option>Pública</option>
-                      <option>Privada</option>
+                    <select id="tipoClinica" class="form-control">
+                      <option value="">Ej. Pública</option>
+                      <option value="1">Pública</option>
+                      <option value="2">Privada</option>
                   </select>
                 </div>
             </div>
-            <h3>Datos de madre/padre</h3>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="dni">DNI</label>
-                    <input type="number" class="form-control" id="dni" placeholder="12345678" formControlName="dniMadre">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="sexo">Sexo</label>
-                    <select id="sexo" class="form-control" formControlName="sexoMadre">
-                      <option>Femenino</option>
-                      <option>Masculino</option>
-                  </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="nombre">Nombre/s</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Susana Estela" formControlName="nombreMadre">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="apellido">Apellido/s</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="Mansilla Kukulis" formControlName="apellidoMadre">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="fechaNacimiento" formControlName="fechaNacimientoMadre">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="provincia">Provincia</label>
-                    <select id="provincia" class="form-control" formControlName="provinciaMadre">
-                      <option>La Rioja</option>
-                      <option>Córdoba</option>
-                      <option>Buenos Aires</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="departamento">Departamento</label>
-                    <select id="departamento" class="form-control" formControlName="departamentoMadre">
-                      <option>Capital</option>
-                      <option>Castro Barros</option>
-                      <option>Chilecito</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="localidad">Localidad</label>
-                    <select id="localidad" class="form-control" formControlName="localidadMadre">
-                      <option>Aimogasta</option>
-                      <option>La Rioja</option>
-                      <option>Chilecito</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="barrio">Barrio</label>
-                    <select id="barrio" class="form-control" formControlName="barrioMadre">
-                      <option>San Martín</option>
-                      <option>Centro</option>
-                      <option>San Vicente</option>
-                      <option>Mis Montañas</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="calle">Calle</label>
-                    <select id="calle" class="form-control" formControlName="calleMadre">
-                      <option>Urquiza</option>
-                      <option>Avenida Castro Barros</option>
-                      <option>Avenida Ortíz de Ocampo</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="numcalle">Número de Calle</label>
-                    <input type="text" class="form-control" id="numcalle" placeholder="123" formControlName="numeroCalleMadre">
-                </div>
-            </div>
-            <h3>Datos de madre/padre</h3>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="dni">DNI</label>
-                    <input type="number" class="form-control" id="dni" placeholder="12345678" formControlName="dniMadre">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="sexo">Sexo</label>
-                    <select id="sexo" class="form-control" formControlName="sexoMadre">
-                      <option>Femenino</option>
-                      <option>Masculino</option>
-                  </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="nombre">Nombre/s</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Susana Estela" formControlName="nombreMadre">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="apellido">Apellido/s</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="Mansilla Kukulis" formControlName="apellidoMadre">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="fechaNacimiento" formControlName="fechaNacimientoMadre">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="provincia">Provincia</label>
-                    <select id="provincia" class="form-control" formControlName="provinciaMadre">
-                      <option>La Rioja</option>
-                      <option>Córdoba</option>
-                      <option>Buenos Aires</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="departamento">Departamento</label>
-                    <select id="departamento" class="form-control" formControlName="departamentoMadre">
-                      <option>Capital</option>
-                      <option>Castro Barros</option>
-                      <option>Chilecito</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="localidad">Localidad</label>
-                    <select id="localidad" class="form-control" formControlName="localidadMadre">
-                      <option>Aimogasta</option>
-                      <option>La Rioja</option>
-                      <option>Chilecito</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="barrio">Barrio</label>
-                    <select id="barrio" class="form-control" formControlName="barrioMadre">
-                      <option>San Martín</option>
-                      <option>Centro</option>
-                      <option>San Vicente</option>
-                      <option>Mis Montañas</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="calle">Calle</label>
-                    <select id="calle" class="form-control" formControlName="calleMadre">
-                      <option>Urquiza</option>
-                      <option>Avenida Castro Barros</option>
-                      <option>Avenida Ortíz de Ocampo</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="numcalle">Número de Calle</label>
-                    <input type="text" class="form-control" id="numcalle" placeholder="123" formControlName="numeroCalleMadre">
-                </div>
-            </div>
-            <h3>Acta de Nacimiento</h3>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="fotoActa">Foto Acta Nacimiento</label>
-                    <input type="file" class="form-control-file" id="fotoActa" formControlName="fotoActa" required>
-                    <div class="invalid-feedback">
-                        Suba una foto del acta
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="fotoActa">Foto Acta Nacimiento</label>
-                    <input type="file" class="form-control-file" id="fotoActa" formControlName="fotoActa" required>
-                    <div class="invalid-feedback">
-                        Suba una foto del acta
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="fotoActa">Foto Acta Nacimiento</label>
-                    <input type="file" class="form-control-file" id="fotoActa" formControlName="fotoActa">
-                </div>
-            </div>
-            <button class="btn btn1 text-uppercase">Guardar como borrador
-              <i class="fas fa-save"></i>
-          </button>
-            <button type="submit" class="btn btn2 text-uppercase">Cargar acta
-              <i class="fas fa-plus"></i>
-          </button>
         </form>
+        <form class="was-validated">
+            <h3>Datos de Madre/Padre</h3>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="form-control is-valid" id="dni" required>
+                    <div class="invalid-feedback">Ingrese el DNI</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre/s</label>
+                    <input type="text" class="form-control is-valid" id="nombre" required>
+                    <div class="invalid-feedback">Ingrese un nombre</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido/s</label>
+                    <input type="text" class="form-control is-valid" id="apellido" required>
+                    <div class="invalid-feedback">Ingrese un apellido</div>
+                </div>
+            </div>
+        </form>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="barrio">Barrio</label>
+                    <select id="barrio" class="form-control">
+                        <option value="">Ej. Joaquín V. González</option>
+                        <option value="1">Joaquín V. González</option>
+                        <option value="2">San Martín</option>
+                        <option value="3">San Vicente</option>
+                        <option value="4">Mis Montañas</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="calle">Calle</label>
+                    <select id="calle" class="form-control">
+                        <option value="">Ej. Benjamín Rincón</option>
+                        <option value="1">Benjamín Rincón</option>
+                        <option value="2">Urquiza</option>
+                        <option value="3">Avenida Castro Barros</option>
+                        <option value="4">Avenida Ortíz de Ocampo</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="numcalle">N°</label>
+                    <input type="number" class="form-control" id="numcalle">
+                </div>
+                <div class="form-group col-lg">
+                    <label for="observaciones">Observaciones</label>
+                    <textarea class="form-control" id="observaciones"></textarea>
+                </div>
+            </div>
+        </form>
+        <form class="was-validated">
+            <h3>Datos de Madre/Padre</h3>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="form-control is-valid" id="dni" required>
+                    <div class="invalid-feedback">Ingrese el DNI</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre/s</label>
+                    <input type="text" class="form-control is-valid" id="nombre" required>
+                    <div class="invalid-feedback">Ingrese un nombre</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido/s</label>
+                    <input type="text" class="form-control is-valid" id="apellido" required>
+                    <div class="invalid-feedback">Ingrese un apellido</div>
+                </div>
+            </div>
+        </form>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="barrio">Barrio</label>
+                    <select id="barrio" class="form-control">
+                        <option value="">Ej. Joaquín V. González</option>
+                        <option value="1">Joaquín V. González</option>
+                        <option value="2">San Martín</option>
+                        <option value="3">San Vicente</option>
+                        <option value="4">Mis Montañas</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="calle">Calle</label>
+                    <select id="calle" class="form-control">
+                        <option value="">Ej. Benjamín Rincón</option>
+                        <option value="1">Benjamín Rincón</option>
+                        <option value="2">Urquiza</option>
+                        <option value="3">Avenida Castro Barros</option>
+                        <option value="4">Avenida Ortíz de Ocampo</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="numcalle">N°</label>
+                    <input type="number" class="form-control" id="numcalle">
+                </div>
+                <div class="form-group col-lg">
+                    <label for="observaciones">Observaciones</label>
+                    <textarea class="form-control" id="observaciones"></textarea>
+                </div>
+            </div>
+        </form>
+        <form class="was-validated">
+            <h3>Declarantes</h3>
+            <div class="form-row">
+                <div class="form-group col-lg">
+                    <textarea class="form-control is-valid" required></textarea>
+                    <div class="invalid-feedback">Ingrese los declarantes del acta de nacimiento</div>
+                </div>
+            </div>
+        </form>
+        <form>
+            <h3>Archivos adjuntos</h3>
+            <div class="form-group">
+                <input type="file" class="form-control-file" multiple>
+            </div>
+        </form>
+        <br>
+        <hr>
+        <button type="submit" class="btn btn2 text-uppercase" data-toggle="modal" data-target="#cargar">Cargar acta
+              <i class="fas fa-plus"></i>
+        </button>
+        <button class="btn btn1 text-uppercase" data-toggle="modal" data-target="#guardar">Guardar como borrador
+            <i class="fas fa-save"></i>
+        </button>
+        <div class="modal fade" id="cargar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="txt-modal">Acta cargada correctamente!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="guardar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="txt-modal">Acta guardada como borrador!</p>
+                        <p class="txt-modal">Para editarla, ingrese en Mis Cargas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-<script>
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>
+<footer class="footer"></footer>

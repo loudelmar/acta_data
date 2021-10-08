@@ -2,16 +2,9 @@
     font-family: 'poppins';
     color: #C30A20;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     margin-left: 15px;
     margin-top: 50px;
-}
-
-.txt {
-    font-family: 'poppins';
-    color: #C30A20;
-    margin-left: 10px;
-    margin-bottom: 30px;
 }
 
 .btn {
@@ -30,22 +23,56 @@
     color: #616161;
 }
 
+.form-control {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'poppins';
+    height: 2.5rem !important;
+    border-radius: 2rem !important;
+}
+
+label {
+    font-family: 'poppins';
+    font-size: 15px;
+    margin-left: 5px;
+    color: #7A7A7A;
+}
+
+.input-group input:focus {
+    box-shadow: none;
+}
+
+.input-group-append button:focus {
+    box-shadow: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.invalid-feedback {
+    margin-left: 5px !important;
+    font-size: 14px;
+}
+
 .btn1 {
-    background-color: #C30A20 !important;
-    border-radius: 0.7rem !important;
+    background-color: #7A7A7A !important;
+    border-radius: 0.8rem !important;
     color: white;
     margin-right: 20px;
     margin-left: 50%;
+    height: auto;
     transform: translateX(-50%);
-    margin-top: 50px;
 }
 
 .btn2 {
     background-color: #C30A20 !important;
-    border-radius: 0.7rem !important;
+    border-radius: 0.8rem !important;
     color: white;
     margin-left: 20px;
     margin-left: 50%;
+    margin-top: 30px;
+    height: auto;
     transform: translateX(-50%);
 }
 
@@ -56,10 +83,6 @@
     margin-right: auto;
 }
 
-fieldset {
-    align-items: center;
-}
-
 button {
     margin-top: 15px;
 }
@@ -67,11 +90,22 @@ button {
 h3 {
     font-family: 'poppins';
     font-size: 18px;
-    color: #7A7A7A;
+    color: #8f0202d7;
     margin-top: 50px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .fas {
     margin-left: 10px;
+}
+
+.txt-modal {
+    font-size: 20px;
+    font-family: 'poppins';
+    color: #C30A20;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    margin-top: 12px;
 }
