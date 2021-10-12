@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActasService } from '../_services/actas.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-miscargas',
@@ -9,19 +7,8 @@ import { Router } from '@angular/router';
 })
 export class MiscargasComponent implements OnInit {
 
-  public inscriptos;
-
-  constructor(private service: ActasService, private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.service.getActas().subscribe(dataInscriptos => {
-      console.log(dataInscriptos);
-      this.inscriptos=dataInscriptos;
-    });
   }
-
-  editar(idInscripto:string){
-    this.router.navigate(['/obstetras'])
-  }
-
 }

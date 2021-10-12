@@ -6,8 +6,8 @@ import { delay, materialize, dematerialize } from 'rxjs/operators';
 import { Role } from '../_models';
 
 const users = [
-    { id: 1, dni: 'admin', password: 'admin', firstName: 'Admin', lastName: 'User', role: Role.Admin },
-    { id: 2, dni: 'user', password: 'user', firstName: 'Normal', lastName: 'User', role: Role.User }
+    { id: 1, dni: 'admin', password: 'admin', role: Role.Admin },
+    { id: 2, dni: 'user', password: 'user', role: Role.User }
 ];
 
 @Injectable()
@@ -41,8 +41,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             return ok({
                 id: user.id,
                 dni: user.dni,
-                firstName: user.firstName,
-                lastName: user.lastName,
                 role: user.role,
                 token: `fake-jwt-token.${user.id}`
             });
@@ -51,7 +49,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         function getUsers() {
             if (!isAdmin()) return unauthorized();
             return ok(users);
-            if (!isUser()) return unauthorized();
         }
 
         function getUserById() {
@@ -59,13 +56,12 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
             // only admins can access other user records
             if (!isAdmin() && currentUser().id !== idFromUrl()) return unauthorized();
-            if (!isUser() && currentUser().id !== idFromUrl()) return unauthorized();
 
             const user = users.find(x => x.id === idFromUrl());
             return ok(user);
         }
 
-        // helper functions
+        //helper functions
 
         function ok(body) {
             return of(new HttpResponse({ status: 200, body }))
@@ -74,7 +70,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
         function unauthorized() {
             return throwError({ status: 401, error: { message: 'unauthorized' } })
-                .pipe(materialize(), delay(500), dematerialize()); // call materialize and dematerialize to ensure delay even if an error is thrown (https://github.com/Reactive-Extensions/RxJS/issues/648);
+                .pipe(materialize(), delay(500), dematerialize()); // call materialize and dematerialize to ensure delay even if an error is thrown;
         }
 
         function error(message) {
@@ -91,10 +87,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             return isLoggedIn() && currentUser().role === Role.Admin;
         }
 
-        function isUser() {
-            return isLoggedIn() && currentUser().role === Role.User;
-        }
-
         function currentUser() {
             if (!isLoggedIn()) return;
             const id = parseInt(headers.get('Authorization').split('.')[1]);
@@ -105,7 +97,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             const urlParts = url.split('/');
             return parseInt(urlParts[urlParts.length - 1]);
         }
-    }
+
+        }
 }
 
 export const fakeBackendProvider = {

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://localhost/acta/api/"
+  apiUrl: "http://localhost:4200"
 };
 
 /*

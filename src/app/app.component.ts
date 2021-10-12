@@ -9,7 +9,7 @@ import { AuthenticationService } from './_services';
 })
 
 export class AppComponent {
-  title = 'actadata';
+  
   user: User;
   
 
