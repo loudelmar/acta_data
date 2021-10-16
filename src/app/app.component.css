@@ -47,15 +47,6 @@ i {
     cursor: pointer;
 }
 
-.cerrarsesion {
-    text-align: center;
-    margin-top: 15px;
-    font-family: 'poppins';
-    font-size: 18px;
-    font-weight: bold;
-    color: #4B5057;
-}
-
 .modal-footer {
     align-items: center;
     justify-content: center;

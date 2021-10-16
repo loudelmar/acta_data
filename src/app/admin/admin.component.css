@@ -34,7 +34,6 @@
     font-size: 15px;
     font-family: "poppins light";
     height: 3rem;
-    margin-left: 10px;
 }
 
 label {
@@ -64,9 +63,6 @@ th {
     background-color: #C30A20 !important;
     border-radius: 0.7rem !important;
     color: white;
-    font-family: 'poppins';
-    font-size: 13px;
-    font-weight: 500;
     height: auto;
     box-shadow: none !important;
 }
@@ -75,9 +71,6 @@ th {
     background-color: #7A7A7A !important;
     border-radius: 0.7rem !important;
     color: white;
-    font-family: 'poppins';
-    font-size: 13px;
-    font-weight: 500;
     height: auto;
     box-shadow: none !important;
 }
@@ -87,17 +80,11 @@ th {
     display: inline;
     margin-top: 5px !important;
     margin-bottom: 5px !important;
-}
-
-table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse !important;
+    margin-right: 10px;
 }
 
 th,
 td {
-    word-wrap: break-word;
     border: none;
     vertical-align: middle;
 }

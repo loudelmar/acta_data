@@ -62,11 +62,6 @@ i {
     cursor: pointer;
 }
 
-.modal-title {
-    font-family: 'poppins';
-    color: #4B5057;
-}
-
 .btn-secondary {
     background-color: #979797 !important;
     border-radius: 2rem !important;

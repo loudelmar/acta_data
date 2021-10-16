@@ -109,3 +109,19 @@ h3 {
     align-items: center;
     margin-top: 12px;
 }
+
+.txt-modal-2 {
+    font-size: 16px;
+    font-family: 'poppins';
+    color: #C30A20;
+    text-align: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.fa-check-circle,
+.fa-folder-open {
+    color: #C30A20;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

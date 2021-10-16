@@ -20,11 +20,25 @@
                     <div class="invalid-feedback">Ingrese el año</div>
                 </div>
             </div>
+        </form>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="lomo">Lomo</label>
+                    <input type="text" class="form-control" id="lomo">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="delegacion">Delegación</label>
+                    <input type="text" class="form-control" id="delegacion">
+                </div>
+            </div>
+        </form>
+        <form class="was-validated">
             <h3>Datos del Inscripto</h3>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="dni" class="form-label">DNI</label>
-                    <input type="number" class="form-control is-valid" id="dni" placeholder="Con puntos y sin espacios" required>
+                    <input type="text" class="form-control is-valid" id="dni" placeholder="Con puntos y sin espacios" required>
                     <div class="invalid-feedback">Ingrese el DNI</div>
                 </div>
                 <div class="form-group col-md-6">
@@ -33,6 +47,7 @@
                       <option value="">Ej. Femenino</option>
                       <option value="1">Femenino</option>
                       <option value="2">Masculino</option>
+                      <option value="3">X</option>
                   </select>
                     <div class="invalid-feedback">Elija el sexo</div>
                 </div>
@@ -61,8 +76,29 @@
                     <select id="provincia" class="form-control is-valid" required>
                         <option value="">Ej. La Rioja</option>
                         <option value="1">La Rioja</option>
-                        <option value="2">Córdoba</option>
-                        <option value="3">Buenos Aires</option>
+                        <option value="2">Buenos Aires</option>
+                        <option value="3">Capital Federal</option>
+                        <option value="4">Catamarca</option>
+                        <option value="5">Chaco</option>
+                        <option value="6">Chubut</option>
+                        <option value="7">Córdoba</option>
+                        <option value="8">Corrientes</option>
+                        <option value="9">Entre Ríos</option>
+                        <option value="10">Formosa</option>
+                        <option value="11">Jujuy</option>
+                        <option value="12">La Pampa</option>
+                        <option value="13">Mendoza</option>
+                        <option value="14">Misiones</option>
+                        <option value="15">Neuquén</option>
+                        <option value="16">Río Negro</option>
+                        <option value="17">Salta</option>
+                        <option value="18">San Juan</option>
+                        <option value="19">San Luis</option>
+                        <option value="20">Santa Cruz</option>
+                        <option value="21">Santa Fé</option>
+                        <option value="22">Santiago del Estero</option>
+                        <option value="23">Tierra del Fuego</option>
+                        <option value="24">Tucumán</option>
                     </select>
                     <div class="invalid-feedback">Elija una provincia</div>
                 </div>
@@ -71,8 +107,24 @@
                     <select id="departamento" class="form-control is-valid" required>
                         <option value="">Ej. Capital</option>
                         <option value="1">Capital</option>
-                        <option value="2">Castro Barros</option>
-                        <option value="3">Chilecito</option>
+                        <option value="2">Arauco</option>
+                        <option value="3">Castro Barros</option>
+                        <option value="4">Chamical</option>
+                        <option value="5">Chilecito</option>
+                        <option value="6">Coronel Felipe Varela</option>
+                        <option value="7">Famatina</option>
+                        <option value="8">General Ángel V. Peñaloza</option>
+                        <option value="9">General Belgrano</option>
+                        <option value="10">General Juan Facundo Quiroga</option>
+                        <option value="11">General Lamadrid</option>
+                        <option value="12">General Lamadrid</option>
+                        <option value="13">General Ocampo</option>
+                        <option value="14">General San Martín</option>
+                        <option value="15">Independencia</option>
+                        <option value="16">Rosario Vera Peñaloza</option>
+                        <option value="17">San Blas de los Sauces</option>
+                        <option value="18">Sanagasta</option>
+                        <option value="19">Vinchina</option>
                     </select>
                     <div class="invalid-feedback">Elija un departamento</div>
                 </div>
@@ -81,8 +133,25 @@
                     <select id="localidad" class="form-control is-valid" required>
                         <option value="">Ej. La Rioja</option>
                         <option value="1">La Rioja</option>
-                        <option value="2">Chilecito</option>
-                        <option value="3">Aimogasta</option>
+                        <option value="2">Aimogasta</option>
+                        <option value="3">Aminga</option>
+                        <option value="4">Anillaco</option>
+                        <option value="5">Chamical</option>
+                        <option value="6">Chepes</option>
+                        <option value="7">Chilecito</option>
+                        <option value="8">Famatina</option>
+                        <option value="9">Guandacol</option>
+                        <option value="10">Olta</option>
+                        <option value="11">Pagancillo</option>
+                        <option value="12">Patquía</option>
+                        <option value="13">Sanagasta</option>
+                        <option value="14">San Blas de los Sauces</option>
+                        <option value="15">Santa Teresita</option>
+                        <option value="16">Tama</option>
+                        <option value="17">Ulapes</option>
+                        <option value="18">Villa Castelli</option>
+                        <option value="19">Villa Unión</option>
+                        <option value="20">Vinchina</option>
                     </select>
                     <div class="invalid-feedback">Elija una localidad</div>
                 </div>
@@ -106,7 +175,7 @@
                     <input type="text" class="form-control" id="apellido">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="clinica">Clínica</label>
+                    <label for="clinica">Clínica / Hospital</label>
                     <select id="clinica" class="form-control">
                       <option value="">Ej. Maternidad Privada</option>
                       <option value="1">Maternidad Privada</option>
@@ -115,7 +184,7 @@
                   </select>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="tipoClinica">Tipo de Clínica</label>
+                    <label for="tipoClinica">Tipo</label>
                     <select id="tipoClinica" class="form-control">
                       <option value="">Ej. Pública</option>
                       <option value="1">Pública</option>
@@ -129,7 +198,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="dni">DNI</label>
-                    <input type="text" class="form-control is-valid" id="dni" required>
+                    <input type="text" class="form-control is-valid" id="dni" placeholder="Con puntos y sin espacios" required>
                     <div class="invalid-feedback">Ingrese el DNI</div>
                 </div>
             </div>
@@ -148,32 +217,24 @@
         </form>
         <form>
             <div class="form-row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-lg">
                     <label for="barrio">Barrio</label>
-                    <select id="barrio" class="form-control">
-                        <option value="">Ej. Joaquín V. González</option>
-                        <option value="1">Joaquín V. González</option>
-                        <option value="2">San Martín</option>
-                        <option value="3">San Vicente</option>
-                        <option value="4">Mis Montañas</option>
-                    </select>
+                    <input type="text" class="form-control" id="barrio">
                 </div>
-                <div class="form-group col-md-6">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
                     <label for="calle">Calle</label>
-                    <select id="calle" class="form-control">
-                        <option value="">Ej. Benjamín Rincón</option>
-                        <option value="1">Benjamín Rincón</option>
-                        <option value="2">Urquiza</option>
-                        <option value="3">Avenida Castro Barros</option>
-                        <option value="4">Avenida Ortíz de Ocampo</option>
-                    </select>
+                    <input type="text" class="form-control" id="calle">
                 </div>
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-4">
                     <label for="numcalle">N°</label>
                     <input type="number" class="form-control" id="numcalle">
                 </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-lg">
-                    <label for="observaciones">Observaciones</label>
+                    <label for="observaciones">Detalles del Domicilio</label>
                     <textarea class="form-control" id="observaciones"></textarea>
                 </div>
             </div>
@@ -183,7 +244,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="dni">DNI</label>
-                    <input type="text" class="form-control is-valid" id="dni" required>
+                    <input type="text" class="form-control is-valid" id="dni" placeholder="Con puntos y sin espacios" required>
                     <div class="invalid-feedback">Ingrese el DNI</div>
                 </div>
             </div>
@@ -204,30 +265,18 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="barrio">Barrio</label>
-                    <select id="barrio" class="form-control">
-                        <option value="">Ej. Joaquín V. González</option>
-                        <option value="1">Joaquín V. González</option>
-                        <option value="2">San Martín</option>
-                        <option value="3">San Vicente</option>
-                        <option value="4">Mis Montañas</option>
-                    </select>
+                    <input type="text" class="form-control" id="barrio">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="calle">Calle</label>
-                    <select id="calle" class="form-control">
-                        <option value="">Ej. Benjamín Rincón</option>
-                        <option value="1">Benjamín Rincón</option>
-                        <option value="2">Urquiza</option>
-                        <option value="3">Avenida Castro Barros</option>
-                        <option value="4">Avenida Ortíz de Ocampo</option>
-                    </select>
+                    <input type="text" class="form-control" id="calle">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="numcalle">N°</label>
                     <input type="number" class="form-control" id="numcalle">
                 </div>
                 <div class="form-group col-lg">
-                    <label for="observaciones">Observaciones</label>
+                    <label for="observaciones">Detalles del Domicilio</label>
                     <textarea class="form-control" id="observaciones"></textarea>
                 </div>
             </div>
@@ -244,7 +293,7 @@
         <form>
             <h3>Archivos adjuntos</h3>
             <div class="form-group">
-                <input type="file" class="form-control-file" multiple>
+                <input type="file" class="form-control-file" multiple accept=".jpg, .png, .pdf, .jpeg">
             </div>
         </form>
         <br>
@@ -259,6 +308,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
+                        <i class="fas fa-check-circle fa-2x"></i>
                         <p class="txt-modal">Acta cargada correctamente!</p>
                     </div>
                 </div>
@@ -268,8 +318,9 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
+                        <i class="fas fa-folder-open fa-2x"></i>
                         <p class="txt-modal">Acta guardada como borrador!</p>
-                        <p class="txt-modal">Para editarla, ingrese en Mis Cargas.</p>
+                        <p class="txt-modal-2">Para editarla, ingrese en Mis Cargas.</p>
                     </div>
                 </div>
             </div>
