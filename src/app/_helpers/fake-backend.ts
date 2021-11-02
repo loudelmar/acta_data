@@ -6,8 +6,8 @@ import { delay, materialize, dematerialize } from 'rxjs/operators';
 import { Role } from '../_models';
 
 const users = [
-    { id: 1, dni: 'admin', password: 'admin', role: Role.Admin },
-    { id: 2, dni: 'user', password: 'user', role: Role.User }
+    { id: 1, dni: '12345678', password: 'admin', role: Role.Admin },
+    { id: 2, dni: '40775265', password: 'user', role: Role.User }
 ];
 
 @Injectable()
