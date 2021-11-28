@@ -28,6 +28,9 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AdminComponent } from './admin/admin.component';
 import { MiscargasComponent } from './miscargas/miscargas.component';
 import { CookieService } from 'ngx-cookie-service';
+import { AgregarEmpleadoComponent } from './admin/agregar-empleado/agregar-empleado.component';
+import { EditarEmpleadoComponent } from './admin/editar-empleado/editar-empleado.component';
+import { BorrarEmpleadoComponent } from './admin/borrar-empleado/borrar-empleado.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { CookieService } from 'ngx-cookie-service';
     BusquedaComponent,
     InicioComponent,
     AdminComponent,
-    MiscargasComponent
+    MiscargasComponent,
+    AgregarEmpleadoComponent,
+    EditarEmpleadoComponent,
+    BorrarEmpleadoComponent,
   ],
   imports: [
     BrowserModule,

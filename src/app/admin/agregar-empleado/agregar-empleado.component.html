@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="empleados">
+        <h1 class="titulo">Cargar Empleados</h1>
+        <form [formGroup]="formularioDeEmpleados" class="was-validated" (ngSubmit)="enviarDatos()">
+            <div class="form-row">
+                <div class="form-group col-lg">
+                    <label for="dni" class="form-label">DNI</label>
+                    <input type="number" formControlName="dni" class="form-control is-valid" id="dni" placeholder="Ej. 40775265" required>
+                    <div class="invalid-feedback">Ingrese un DNI</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre" class="form-label">Nombre/s</label>
+                    <input type="text" formControlName="nombre" class="form-control is-valid" id="nombre" placeholder="Ej. Lourdes del Mar" required>
+                    <div class="invalid-feedback">Ingrese un nombre</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido/s</label>
+                    <input type="text" formControlName="apellido" class="form-control is-valid" id="apellido" placeholder="Ej. Lede" required>
+                    <div class="invalid-feedback">Ingrese un apellido</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" formControlName="fechaNacimiento" class="form-control is-valid" id="fechaNacimiento" required>
+                    <div class="invalid-feedback">Elija una fecha de nacimiento</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="sectorTrabajo">Sector de trabajo</label>
+                    <select id="sectorTrabajo" formControlName="sectorTrabajo" class="form-control is-valid" required>
+                                <option value="">Ej.Archivo</option>
+                                <option value="1">Archivo del Registro Civil</option>
+                                <option value="2">Atención al público</option>
+                                <option value="3">Digitalización de actas</option>
+                            </select>
+                    <div class="invalid-feedback">Elija un sector de trabajo</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="mail" class="form-label">Mail</label>
+                    <input type="email" formControlName="mail" class="form-control is-valid" id="mail" placeholder="Ej.lourdeslede17@gmail.com" required>
+                    <div class="invalid-feedback">Ingrese un mail válido</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="contraseña" class="form-label">Contraseña</label>
+                    <input type="password" formControlName="contraseña" class="form-control is-valid" id="contraseña" required>
+                    <div class="invalid-feedback">Ingrese una contraseña</div>
+                </div>
+            </div>
+            <div class="container-2">
+                <button type="submit" class="btn btn-primary btns text-uppercase">Cargar
+                <i class="fas fa-plus"></i>
+            </button>
+            </div>
+        </form>
+    </div>
+</div>
+<footer class="footer"></footer>

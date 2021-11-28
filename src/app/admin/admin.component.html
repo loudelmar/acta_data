@@ -2,7 +2,7 @@
     <div class="empleados">
         <h1 class="titulo">Empleados</h1>
         <div class="btn-cargar">
-            <button class="btn btn-primary btns text-uppercase" data-toggle="modal" data-target="#cargar">Cargar
+            <button class="btn btn-primary btns text-uppercase" [routerLink]="['/agregar-empleado']">Cargar
             <i class="fas fa-plus"></i>
             </button>
         </div>
@@ -31,10 +31,10 @@
                         <td class="item">Lourdes del Mar</td>
                         <td class="item">Lede</td>
                         <td class="item">lourdeslede17@gmail.com</td>
-                        <button class="btn btn-general btn2" data-toggle="modal" data-target="#editar">
+                        <button class="btn btn-general btn2" [routerLink]="['/editar-empleado/1']">
                             <i class="fas fa-user-edit"></i>
                         </button>
-                        <button class="btn btn-general btn1" data-toggle="modal" data-target="#borrar">
+                        <button class="btn btn-general btn1" [routerLink]="['/borrar-empleado/1']">
                             <i class="fas fa-trash"></i>
                         </button>
                     </tr>
@@ -43,10 +43,10 @@
                         <td class="item">Empleado</td>
                         <td class="item">del Registro Civil</td>
                         <td class="item">empleadoregistrocivil@gmail.com</td>
-                        <button class="btn btn-general btn2" data-toggle="modal" data-target="#editar">
+                        <button class="btn btn-general btn2" [routerLink]="['/editar-empleado/2']">
                             <i class="fas fa-user-edit"></i>
                         </button>
-                        <button class="btn btn-general btn1" data-toggle="modal" data-target="#borrar">
+                        <button class="btn btn-general btn1" [routerLink]="['/borrar-empleado/2']">
                             <i class="fas fa-trash"></i>
                         </button>
                     </tr>
@@ -55,173 +55,15 @@
                         <td class="item">Empleada</td>
                         <td class="item">del Registro Civil</td>
                         <td class="item">empleadaregistrocivil@gmail.com</td>
-                        <button class="btn btn-general btn2" data-toggle="modal" data-target="#editar">
+                        <button class="btn btn-general btn2" [routerLink]="['/editar-empleado/3']">
                             <i class="fas fa-user-edit"></i>
                         </button>
-                        <button class="btn btn-general btn1" data-toggle="modal" data-target="#borrar">
+                        <button class="btn btn-general btn1" [routerLink]="['/borrar-empleado/3']">
                             <i class="fas fa-trash"></i>
                         </button>
                     </tr>
                 </tbody>
             </table>
-        </div>
-
-        <!-- Modal Cargar-->
-        <div class="modal fade" id="cargar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLongTitle">Cargar</h5>
-                        <button type="button" class="close btn btn-cerrar" data-dismiss="modal" aria-label="Close">
-                            <i aria-hidden="true" class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="was-validated">
-                            <div class="form-row">
-                                <div class="form-group col-lg">
-                                    <label for="dni" class="form-label">DNI</label>
-                                    <input type="number" class="form-control is-valid" id="dni" placeholder="Ej. 40775265" required>
-                                    <div class="invalid-feedback">Ingrese un DNI</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="nombre" class="form-label">Nombre/s</label>
-                                    <input type="text" class="form-control is-valid" id="nombre" placeholder="Ej. Lourdes del Mar" required>
-                                    <div class="invalid-feedback">Ingrese un nombre</div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="apellido">Apellido/s</label>
-                                    <input type="text" class="form-control is-valid" id="apellido" placeholder="Ej. Lede" required>
-                                    <div class="invalid-feedback">Ingrese un apellido</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                                    <input type="date" class="form-control is-valid" id="fechaNacimiento" required>
-                                    <div class="invalid-feedback">Elija una fecha de nacimiento</div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="sectorTrabajo">Sector de trabajo</label>
-                                    <select id="sectorTrabajo" class="form-control is-valid" required>
-                                        <option value="">Ej.Archivo</option>
-                                        <option value="1">Archivo del Registro Civil</option>
-                                        <option value="2">Atención al público</option>
-                                        <option value="3">Digitalización de actas</option>
-                                    </select>
-                                    <div class="invalid-feedback">Elija un sector de trabajo</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="mail" class="form-label">Mail</label>
-                                    <input type="email" class="form-control is-valid" id="mail" placeholder="Ej.lourdeslede17@gmail.com" required>
-                                    <div class="invalid-feedback">Ingrese un mail válido</div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="contraseña" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control is-valid" id="contraseña" required>
-                                    <div class="invalid-feedback">Ingrese una contraseña</div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-cargar-2" data-dismiss="modal">Cargar
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Editar -->
-        <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLongTitle">Editar</h5>
-                        <button type="button" class="close btn btn-cerrar" data-dismiss="modal" aria-label="Close">
-                            <i aria-hidden="true" class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="dni">DNI</label>
-                                    <input type="number" class="form-control" id="dni" value="40775265">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="nombre">Nombre/s</label>
-                                    <input type="text" class="form-control" id="nombre" value="Lourdes del Mar">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="apellido">Apellido/s</label>
-                                    <input type="text" class="form-control" id="apellido" value="Lede">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                                    <input type="date" class="form-control" id="fechaNacimiento" value="17/02/1998">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="sectorTrabajo">Sector de trabajo</label>
-                                    <select id="sectorTrabajo" class="form-control">
-                                        <option value="1">Archivo del Registro Civil</option>
-                                        <option value="2">Atención al público</option>
-                                        <option value="3">Digitalización de actas</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="mail">Mail</label>
-                                    <input type="email" class="form-control" id="mail" value="lourdeslede17@gmail.com">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="contraseña">Contraseña</label>
-                                    <input type="text" class="form-control" id="contraseña" value="*************">
-                                </div>
-                                <button type="button" class="btn btn-guardar" data-dismiss="modal" type="submit">Guardar Cambios
-                                    <i class="fas fa-save"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Delete-->
-        <div class="modal fade" id="borrar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLongTitle">Borrar</h5>
-                        <button type="button" class="close btn btn-cerrar" data-dismiss="modal" aria-label="Close">
-                            <i aria-hidden="true" class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="was-validated">
-                            <div class="form-group col-lg">
-                                <label for="contra" class="form-label">Introduzca su contraseña para eliminar el usuario</label>
-                                <input type="password" class="form-control is-valid" id="contra" required>
-                                <div class="invalid-feedback">
-                                    Escriba una contraseña
-                                </div>
-                            </div>
-                        </form>
-                        <button type="button" class="btn btn-borrar" data-dismiss="modal">Borrar
-                                <i class="fas fa-save"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
