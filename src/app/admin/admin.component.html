@@ -26,41 +26,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="item">40775265</td>
-                        <td class="item">Lourdes del Mar</td>
-                        <td class="item">Lede</td>
-                        <td class="item">lourdeslede17@gmail.com</td>
-                        <button class="btn btn-general btn2" [routerLink]="['/editar-empleado/1']">
-                            <i class="fas fa-user-edit"></i>
-                        </button>
-                        <button class="btn btn-general btn1" [routerLink]="['/borrar-empleado/1']">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </tr>
-                    <tr>
-                        <td class="item">12345678</td>
-                        <td class="item">Empleado</td>
-                        <td class="item">del Registro Civil</td>
-                        <td class="item">empleadoregistrocivil@gmail.com</td>
-                        <button class="btn btn-general btn2" [routerLink]="['/editar-empleado/2']">
-                            <i class="fas fa-user-edit"></i>
-                        </button>
-                        <button class="btn btn-general btn1" [routerLink]="['/borrar-empleado/2']">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </tr>
-                    <tr>
-                        <td class="item">23456789</td>
-                        <td class="item">Empleada</td>
-                        <td class="item">del Registro Civil</td>
-                        <td class="item">empleadaregistrocivil@gmail.com</td>
-                        <button class="btn btn-general btn2" [routerLink]="['/editar-empleado/3']">
-                            <i class="fas fa-user-edit"></i>
-                        </button>
-                        <button class="btn btn-general btn1" [routerLink]="['/borrar-empleado/3']">
-                            <i class="fas fa-trash"></i>
-                        </button>
+                    <tr *ngFor="let empleado of Empleados; let iControl=index">
+                        <td class="item">{{ empleado.dni_empleado }}</td>
+                        <td class="item"> {{ empleado.nombre_empleado }}</td>
+                        <td class="item">{{ empleado.apellido_empleado }}</td>
+                        <td class="item">{{ empleado.mail }}</td>
+                        <td>
+                            <a routerLink="/editar-empleado/{{empleado.id_empleado}}"><button class="btn btn-general btn2"><i class="fas fa-user-edit"></i></button></a>
+                            <a (click)="borrarRegistro(empleado.id_empleado, iControl)"><button class="btn btn-general btn1"><i class="fas fa-trash"></i></button></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>

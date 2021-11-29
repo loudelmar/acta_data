@@ -10,7 +10,6 @@ import { AuthGuard } from './_helpers';
 import { Role } from './_models';
 import { AgregarEmpleadoComponent } from './admin/agregar-empleado/agregar-empleado.component';
 import { EditarEmpleadoComponent } from './admin/editar-empleado/editar-empleado.component';
-import { BorrarEmpleadoComponent } from './admin/borrar-empleado/borrar-empleado.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -21,7 +20,6 @@ const routes: Routes = [
   {path: 'mis-cargas', component: MiscargasComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
   {path: 'agregar-empleado', component: AgregarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
   {path: 'editar-empleado/:id', component: EditarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
-  {path: 'borrar-empleado/:id', component: BorrarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '/' }

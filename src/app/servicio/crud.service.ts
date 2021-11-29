@@ -8,11 +8,23 @@ import { Empleado } from 'src/app/servicio/Empleado';
 })
 export class CrudService {
 
-  API: string="http://localhost:80/acta/";
+  API: string="http://localhost:80/acta/empleados/";
 
   constructor(private clientHttp:HttpClient) { }
 
   AgregarEmpleado(datosEmpleado: Empleado):Observable<any>{
-    return this.clientHttp.post(this.API+"?insertar=1", datosEmpleado);
+    return this.clientHttp.post(this.API+"?insertar=1",datosEmpleado);
+  }
+
+  ObtenerEmpleados(){
+    return this.clientHttp.get(this.API);
+  }
+
+  BorrarEmpleado(id_empleado:any):Observable<any>{
+    return this.clientHttp.get(this.API+"?borrar="+id_empleado);
+  }
+
+  ObtenerEmpleado(id_empleado:any):Observable<any>{
+    return this.clientHttp.get(this.API+"?consultar="+id_empleado);
   }
 }

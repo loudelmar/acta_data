@@ -30,7 +30,6 @@ import { MiscargasComponent } from './miscargas/miscargas.component';
 import { CookieService } from 'ngx-cookie-service';
 import { AgregarEmpleadoComponent } from './admin/agregar-empleado/agregar-empleado.component';
 import { EditarEmpleadoComponent } from './admin/editar-empleado/editar-empleado.component';
-import { BorrarEmpleadoComponent } from './admin/borrar-empleado/borrar-empleado.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +42,6 @@ import { BorrarEmpleadoComponent } from './admin/borrar-empleado/borrar-empleado
     MiscargasComponent,
     AgregarEmpleadoComponent,
     EditarEmpleadoComponent,
-    BorrarEmpleadoComponent,
   ],
   imports: [
     BrowserModule,
