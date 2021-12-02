@@ -12,13 +12,17 @@ import { CrudService } from '../servicio/crud.service';
  })
 export class AdminComponent implements OnInit {
 
+    busqueda;
+
     Empleados:any;
+
+    apellido:any;
 
     users: User[] = [];
 
     constructor(
         private userService: UserService,
-        private crudService: CrudService
+        private crudService: CrudService,
         ) { }
 
     ngOnInit():void {
@@ -45,4 +49,5 @@ export class AdminComponent implements OnInit {
         });
     }
     }
+
 }

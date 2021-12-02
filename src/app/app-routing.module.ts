@@ -20,6 +20,7 @@ const routes: Routes = [
   {path: 'mis-cargas', component: MiscargasComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
   {path: 'agregar-empleado', component: AgregarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
   {path: 'editar-empleado/:id', component: EditarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
+  {path: 'buscar/:searchTerm', component: AdminComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '/' }

@@ -17,11 +17,22 @@ export class EditarEmpleadoComponent implements OnInit {
   constructor(
     private activeRoute:ActivatedRoute,
     private crudService:CrudService,
-    public formulario:FormBuilder
+    public formulario:FormBuilder,
+    private ruteador:Router
     ) { 
 
     this.elID=this.activeRoute.snapshot.paramMap.get('id');
     console.log(this.elID);
+
+    this.formularioDeEmpleados=this.formulario.group({
+      dni: [''],
+      nombre: [''],
+      apellido: [''],
+      fechaNacimiento: [''],
+      idSectorTrabajo: [''],
+      mail: [''],
+      contrasenia: [''],
+    });
 
     this.crudService.ObtenerEmpleado(this.elID).subscribe(
       respuesta=>{
@@ -31,25 +42,26 @@ export class EditarEmpleadoComponent implements OnInit {
           nombre:respuesta[0]['nombre_empleado'],
           apellido:respuesta[0]['apellido_empleado'],
           fechaNacimiento:respuesta[0]['fecha_nacimiento_empleado'],
-          //sectorTrabajo: respuesta[0]['sector_trabajo'],
+          idSectorTrabajo:respuesta[0]['nombre_sector_trabajo'],
           mail: respuesta[0]['mail'],
-          contraseña: respuesta[0]['contrasenia']
+          contrasenia: respuesta[0]['contrasenia']
         });
       }
     );
-
-    this.formularioDeEmpleados=this.formulario.group({
-      dni: [''],
-      nombre: [''],
-      apellido: [''],
-      fechaNacimiento: [''],
-      sectorTrabajo: [''],
-      mail: [''],
-      contraseña: [''],
-    });
   }
 
   ngOnInit(): void {
+  }
+
+  enviarDatos():any{
+    console.log(this.elID);
+    console.log(this.formularioDeEmpleados.value);
+
+    this.crudService.EditarEmpleado(this.elID, this.formularioDeEmpleados.value).subscribe(()=>{
+
+      this.ruteador.navigate(['/admin'],{relativeTo: this.activeRoute});
+
+    })
   }
 
 }

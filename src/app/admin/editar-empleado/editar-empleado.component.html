@@ -1,52 +1,54 @@
 <div class="container">
     <div class="empleados">
         <h1 class="titulo">Editar Empleados</h1>
-        <form [formGroup]="formularioDeEmpleados">
+        <form [formGroup]="formularioDeEmpleados" (ngSubmit)="enviarDatos()">
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="dni">DNI</label>
-                    <input type="number" formControlName="dni" class="form-control" id="dni">
+                <div class="form-group col-lg">
+                    <label for="dni" class="form-label">DNI</label>
+                    <input type="number" formControlName="dni" class="form-control" id="dni" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="nombre">Nombre/s</label>
-                    <input type="text" formControlName="nombre" class="form-control" id="nombre">
+                    <label for="nombre" class="form-label">Nombre/s</label>
+                    <input type="text" formControlName="nombre" class="form-control" id="nombre" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="apellido">Apellido/s</label>
-                    <input type="text" formControlName="apellido" class="form-control" id="apellido">
+                    <input type="text" formControlName="apellido" class="form-control" id="apellido" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                    <input type="date" formControlName="fechaNacimiento" class="form-control" id="fechaNacimiento">
+                    <input type="date" formControlName="fechaNacimiento" class="form-control" id="fechaNacimiento" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="sectorTrabajo">Sector de trabajo</label>
-                    <select id="sectorTrabajo" formControlName="sectorTrabajo" class="form-control">
-                                <option>Archivo del Registro Civil</option>
-                                <option>Atención al público</option>
-                                <option>Digitalización de actas</option>
-                            </select>
+                    <label for="idSectorTrabajo">Sector de trabajo</label>
+                    <select id="idSectorTrabajo" formControlName="idSectorTrabajo" class="form-control" required>
+                        <option value="1">Encargado del Archivo</option>
+                        <option value="2">Empleado del Archivo</option>
+                        <option value="3">Atención al público</option>
+                        <option value="4">Empleado de Digitalización</option>
+                    </select>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="mail">Mail</label>
-                    <input type="email" formControlName="mail" class="form-control" id="mail">
+                    <label for="mail" class="form-label">Mail</label>
+                    <input type="email" formControlName="mail" class="form-control" id="mail" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="contraseña">Contraseña</label>
-                    <input type="text" formControlName="contraseña" class="form-control" id="contraseña">
+                    <label for="contrasenia" class="form-label">Contraseña</label>
+                    <input type="text" formControlName="contrasenia" class="form-control" id="contrasenia" required>
                 </div>
             </div>
             <div class="container-2">
-                <button class="btn btn-primary btns text-uppercase">Guardar
-                    <i class="fas fa-save"></i>
+                <button type="submit" class="btn btn-primary btns text-uppercase">Guardar
+                <i class="fas fa-save"></i>
             </button>
             </div>
         </form>
     </div>
 </div>
+<footer class="footer"></footer>

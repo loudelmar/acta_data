@@ -4,7 +4,8 @@ export class Empleado{
     nombre!: String;
     apellido!: String;
     fechaNacimiento!: String;
+    idSectorTrabajo!: String;
     sectorTrabajo!: String;
     mail!: String;
-    contraseña!: String;
+    contrasenia!: String;
 }

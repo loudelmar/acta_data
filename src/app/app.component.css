@@ -5,11 +5,13 @@
     margin-left: 20px;
     border: none;
     outline: none;
+    user-select: none;
 }
 
 .nav-link {
     font-family: "poppins light";
     font-size: 15px;
+    user-select: none;
 }
 
 .nav-item {
@@ -45,6 +47,7 @@ i {
     color: #7A7A7A;
     font-size: 15px;
     cursor: pointer;
+    user-select: none;
 }
 
 .modal-footer {

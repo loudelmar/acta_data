@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { CrudService } from 'src/app/servicio/crud.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-agregar-empleado',
@@ -11,12 +11,15 @@ import { Router } from '@angular/router';
 })
 export class AgregarEmpleadoComponent implements OnInit {
 
+  Empleados:any;
+
   formularioDeEmpleados: FormGroup;
 
   constructor(
     public formulario:FormBuilder,
     private crudService:CrudService,
-    private ruteador:Router
+    private ruteador:Router,
+    private activeRoute:ActivatedRoute
     ) {
 
     this.formularioDeEmpleados = this.formulario.group({
@@ -26,7 +29,7 @@ export class AgregarEmpleadoComponent implements OnInit {
       fechaNacimiento: [''],
       sectorTrabajo: [''],
       mail: [''],
-      contraseña: [''],
+      contrasenia: [''],
     });
 
    }
@@ -38,9 +41,12 @@ export class AgregarEmpleadoComponent implements OnInit {
     console.log("Presionao");
     console.log(this.formularioDeEmpleados.value);
     
-    this.crudService.AgregarEmpleado(this.formularioDeEmpleados.value).subscribe();
+    this.crudService.AgregarEmpleado(this.formularioDeEmpleados.value).subscribe(respuesta=>{
 
-    this.ruteador.navigateByUrl('/admin');
+      this.ruteador.navigate(['/admin'],{relativeTo: this.activeRoute});
+      
+    });
+
 
   }
 

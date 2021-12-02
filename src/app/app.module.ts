@@ -12,8 +12,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MatTableFilter, MatTableFilterModule } from 'mat-table-filter';
 import { DataTablesModule } from "angular-datatables";
 
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 

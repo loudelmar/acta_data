@@ -30,11 +30,12 @@
                 <div class="form-group col-md-6">
                     <label for="sectorTrabajo">Sector de trabajo</label>
                     <select id="sectorTrabajo" formControlName="sectorTrabajo" class="form-control is-valid" required>
-                                <option value="">Ej.Archivo</option>
-                                <option value="1">Archivo del Registro Civil</option>
-                                <option value="2">Atención al público</option>
-                                <option value="3">Digitalización de actas</option>
-                            </select>
+                        <option value="">Seleccione un sector de trabajo</option>
+                        <option value="1">Encargado del Archivo</option>
+                        <option value="2">Empleado del Archivo</option>
+                        <option value="3">Atención al público</option>
+                        <option value="4">Empleado de Digitalización</option>
+                    </select>
                     <div class="invalid-feedback">Elija un sector de trabajo</div>
                 </div>
             </div>
@@ -45,8 +46,8 @@
                     <div class="invalid-feedback">Ingrese un mail válido</div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="contraseña" class="form-label">Contraseña</label>
-                    <input type="password" formControlName="contraseña" class="form-control is-valid" id="contraseña" required>
+                    <label for="contrasenia" class="form-label">Contraseña</label>
+                    <input type="text" formControlName="contrasenia" class="form-control is-valid" id="contrasenia" placeholder="Utilice mayúsculas, minúsculas y números" required>
                     <div class="invalid-feedback">Ingrese una contraseña</div>
                 </div>
             </div>
