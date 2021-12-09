@@ -15,12 +15,15 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'carga-actas', component: CargaactasComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
   {path: 'busqueda', component: BusquedaComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
+  {path: 'editar-acta/:id', component: BusquedaComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
   {path: 'inicio', component: InicioComponent, canActivate: [AuthGuard]},
-  {path: 'admin', component: AdminComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
+  {path: 'admin', children:[
+    {path: '', component: AdminComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
+    {path: 'agregar-empleado', component: AgregarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
+    {path: 'editar-empleado/:id', component: EditarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
+    {path: 'buscar/:searchTerm', component: AdminComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}}
+  ]},
   {path: 'mis-cargas', component: MiscargasComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
-  {path: 'agregar-empleado', component: AgregarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
-  {path: 'editar-empleado/:id', component: EditarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
-  {path: 'buscar/:searchTerm', component: AdminComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '/' }

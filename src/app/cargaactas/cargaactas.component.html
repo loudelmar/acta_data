@@ -1,80 +1,78 @@
 <div class="container">
     <h1 class="titulo text-center">Cargar acta</h1>
     <div class="carga">
-        <form class="was-validated">
+        <form [formGroup]="formularioDeActas" class="was-validated" (ngSubmit)="enviarDatos()">
             <h3>Datos del Acta</h3>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="tomo">Tomo N°</label>
-                    <input type="number" class="form-control is-valid" id="tomo" required>
-                    <div class="invalid-feedback">Ingrese el número de tomo</div>
+                    <input type="number" formControlName="tomo" class="form-control is-valid" id="tomo" placeholder="Ingrese número de tomo" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="acta">Acta N°</label>
-                    <input type="number" class="form-control is-valid" id="acta" required>
-                    <div class="invalid-feedback">Ingrese el número de acta</div>
+                    <input type="number" formControlName="acta" class="form-control is-valid" id="acta" placeholder="Ingrese número de acta" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="año">Año</label>
-                    <input type="number" class="form-control is-valid" id="año" required>
-                    <div class="invalid-feedback">Ingrese el año</div>
+                    <label for="anio">Año</label>
+                    <input type="number" formControlName="anio" class="form-control is-valid" id="anio" placeholder="Ingrese año" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-        </form>
-        <form>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="lomo">Lomo</label>
-                    <input type="text" class="form-control" id="lomo">
+                    <input type="number" formControlName="lomo" class="form-control is-valid" id="lomo" placeholder="Ingrese 0, si no hay tomo" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-8">
                     <label for="delegacion">Delegación</label>
-                    <input type="text" class="form-control" id="delegacion">
+                    <input type="text" formControlName="delegacion" class="form-control is-valid" id="delegacion" placeholder="Ingrese Ninguna, si no hay delegación" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-        </form>
-        <form class="was-validated">
             <h3>Datos del Inscripto</h3>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="dni" class="form-label">DNI</label>
-                    <input type="text" class="form-control is-valid" id="dni" placeholder="Con puntos y sin espacios" required>
-                    <div class="invalid-feedback">Ingrese el DNI</div>
+                    <label for="dniInscripto" class="form-label">DNI</label>
+                    <input type="number" formControlName="dniInscripto" class="form-control is-valid" id="dniInscripto" placeholder="Sin puntos ni espacios" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="sexo">Sexo</label>
-                    <select id="sexo" class="form-control is-valid" required>
-                      <option value="">Ej. Femenino</option>
-                      <option value="1">Femenino</option>
-                      <option value="2">Masculino</option>
-                      <option value="3">X</option>
-                  </select>
-                    <div class="invalid-feedback">Elija el sexo</div>
+                    <select id="sexo" formControlName="sexo" class="form-control is-valid" required>
+                        <option value="">Seleccione un sexo</option>
+                        <option value="1">Femenino</option>
+                        <option value="2">Masculino</option>
+                        <option value="3">X</option>
+                    </select>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="nombre" class="form-label">Nombre/s</label>
-                    <input type="text" class="form-control is-valid" id="nombre" required>
-                    <div class="invalid-feedback">Ingrese un nombre</div>
+                    <label for="nombreInscripto" class="form-label">Nombre/s</label>
+                    <input type="text" formControlName="nombreInscripto" class="form-control is-valid" id="nombreInscripto" placeholder="Ingrese el nombre" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="apellido">Apellido/s</label>
-                    <input type="text" class="form-control is-valid" id="apellido" required>
-                    <div class="invalid-feedback">Ingrese un apellido</div>
+                    <label for="apellidoInscripto">Apellido/s</label>
+                    <input type="text" formControlName="apellidoInscripto" class="form-control is-valid" id="apellidoInscripto" placeholder="Ingrese el apellido" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control is-valid" id="fechaNacimiento" required>
+                    <label for="fechaNacimientoInscripto">Fecha de Nacimiento</label>
+                    <input type="date" formControlName="fechaNacimientoInscripto" class="form-control is-valid" id="fechaNacimientoInscripto" required>
                     <div class="invalid-feedback">Ingrese la fecha de nacimiento</div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="fechaInscripcion">Fecha de Inscripción</label>
-                    <input type="date" class="form-control is-valid" id="fechaInscripcion" required>
+                    <input type="date" formControlName="fechaInscripcion" class="form-control is-valid" id="fechaInscripcion" required>
                     <div class="invalid-feedback">Ingrese la fecha de inscripción</div>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="provincia">Provincia</label>
-                    <select id="provincia" class="form-control is-valid" required>
-                        <option value="">Ej. La Rioja</option>
+                    <label for="provinciaInscripto">Provincia</label>
+                    <select id="provinciaInscripto" formControlName="provinciaInscripto" class="form-control is-valid" required>
+                        <option value="">Seleccione una provincia</option>
                         <option value="1">La Rioja</option>
                         <option value="2">Buenos Aires</option>
                         <option value="3">Capital Federal</option>
@@ -100,12 +98,12 @@
                         <option value="23">Tierra del Fuego</option>
                         <option value="24">Tucumán</option>
                     </select>
-                    <div class="invalid-feedback">Elija una provincia</div>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="departamento">Departamento</label>
-                    <select id="departamento" class="form-control is-valid" required>
-                        <option value="">Ej. Capital</option>
+                    <label for="departamentoInscripto">Departamento</label>
+                    <select id="departamentoInscripto" formControlName="departamentoInscripto" class="form-control is-valid" required>
+                        <option value="">Seleccione un depto</option>
                         <option value="1">Capital</option>
                         <option value="2">Arauco</option>
                         <option value="3">Castro Barros</option>
@@ -126,12 +124,12 @@
                         <option value="18">Sanagasta</option>
                         <option value="19">Vinchina</option>
                     </select>
-                    <div class="invalid-feedback">Elija un departamento</div>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="localidad">Localidad</label>
-                    <select id="localidad" class="form-control is-valid" required>
-                        <option value="">Ej. La Rioja</option>
+                    <label for="localidadInscripto">Localidad</label>
+                    <select id="localidadInscripto" formControlName="localidadInscripto" class="form-control is-valid" required>
+                        <option value="">Seleccione una localidad</option>
                         <option value="1">La Rioja</option>
                         <option value="2">Aimogasta</option>
                         <option value="3">Aminga</option>
@@ -153,178 +151,149 @@
                         <option value="19">Villa Unión</option>
                         <option value="20">Vinchina</option>
                     </select>
-                    <div class="invalid-feedback">Elija una localidad</div>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-        </form>
-        <form>
             <h3>Datos del Nacimiento</h3>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="horaNacimiento">Horario de Nacimiento</label>
-                    <input type="time" class="form-control" id="horaNacimiento">
+                    <input type="time" formControlName="horaNacimiento" class="form-control is-valid" id="horaNacimiento" required>
+                    <div class="invalid-feedback">Ingrese la hora de nacimiento</div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="nombre">Nombre del Obstetra</label>
-                    <input type="text" class="form-control" id="nombre">
+                    <label for="nombreObstetra">Nombre del Obstetra</label>
+                    <input type="text" formControlName="nombreObstetra" class="form-control is-valid" id="nombreObstetra" placeholder="Ingrese el nombre" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="apellido">Apellido del Obstetra</label>
-                    <input type="text" class="form-control" id="apellido">
+                    <label for="apellidoObstetra">Apellido del Obstetra</label>
+                    <input type="text" formControlName="apellidoObstetra" class="form-control is-valid" id="apellidoObstetra" placeholder="Ingrese el apellido" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="clinica">Clínica / Hospital</label>
-                    <select id="clinica" class="form-control">
-                      <option value="">Ej. Maternidad Privada</option>
-                      <option value="1">Maternidad Privada</option>
-                      <option value="2">Hospital de la Madre y el Niño</option>
-                      <option value="3">Hospital Vera Barros</option>
-                  </select>
+                    <input type="text" formControlName="clinica" class="form-control is-valid" id="clinica" placeholder="Ingrese el nombre de la clínica/hospital" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="tipoClinica">Tipo</label>
-                    <select id="tipoClinica" class="form-control">
-                      <option value="">Ej. Pública</option>
+                    <select id="tipoClinica" formControlName="tipoClinica" class="form-control is-valid" required>
+                      <option value="">Seleccione pública/o o privada/o</option>
                       <option value="1">Pública</option>
                       <option value="2">Privada</option>
                   </select>
+                    <div class="invalid-feedback">Elija el tipo de hospital o clínica</div>
                 </div>
             </div>
-        </form>
-        <form class="was-validated">
             <h3>Datos de Madre/Padre</h3>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="dni">DNI</label>
-                    <input type="text" class="form-control is-valid" id="dni" placeholder="Con puntos y sin espacios" required>
-                    <div class="invalid-feedback">Ingrese el DNI</div>
+                    <label for="dniMadre">DNI</label>
+                    <input type="number" formControlName="dniMadre" class="form-control is-valid" id="dniMadre" placeholder="Sin puntos ni espacios" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="nombre">Nombre/s</label>
-                    <input type="text" class="form-control is-valid" id="nombre" required>
-                    <div class="invalid-feedback">Ingrese un nombre</div>
+                    <label for="nombreMadre">Nombre/s</label>
+                    <input type="text" formControlName="nombreMadre" class="form-control is-valid" id="nombreMadre" placeholder="Ingrese el nombre" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="apellido">Apellido/s</label>
-                    <input type="text" class="form-control is-valid" id="apellido" required>
-                    <div class="invalid-feedback">Ingrese un apellido</div>
+                    <label for="apellidoMadre">Apellido/s</label>
+                    <input type="text" formControlName="apellidoMadre" class="form-control is-valid" id="apellidoMadre" placeholder="Ingrese el apellido" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-        </form>
-        <form>
             <div class="form-row">
                 <div class="form-group col-lg">
-                    <label for="barrio">Barrio</label>
-                    <input type="text" class="form-control" id="barrio">
+                    <label for="barrioMadre">Barrio</label>
+                    <input type="text" formControlName="barrioMadre" class="form-control is-valid" id="barrioMadre" placeholder="Ingrese el barrio" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-8">
-                    <label for="calle">Calle</label>
-                    <input type="text" class="form-control" id="calle">
+                    <label for="calleMadre">Calle</label>
+                    <input type="text" formControlName="calleMadre" class="form-control is-valid" id="calleMadre" placeholder="Ingrese la calle" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="numcalle">N°</label>
-                    <input type="number" class="form-control" id="numcalle">
+                    <label for="numCalleMadre">N°</label>
+                    <input type="number" formControlName="numCalleMadre" class="form-control is-valid" id="numCalleMadre" placeholder="Ingrese el número de casa" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-lg">
-                    <label for="observaciones">Detalles del Domicilio</label>
-                    <textarea class="form-control" id="observaciones"></textarea>
+                    <label for="detallesDomicilioMadre">Detalles del Domicilio</label>
+                    <textarea class="form-control is-valid" formControlName="detallesDomicilioMadre" id="detallesDomicilioMadre" placeholder="Ingrese Ninguno, si no hay detalles" required></textarea>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-        </form>
-        <form class="was-validated">
             <h3>Datos de Madre/Padre</h3>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="dni">DNI</label>
-                    <input type="text" class="form-control is-valid" id="dni" placeholder="Con puntos y sin espacios" required>
-                    <div class="invalid-feedback">Ingrese el DNI</div>
+                    <label for="dniPadre">DNI</label>
+                    <input type="number" formControlName="dniPadre" class="form-control is-valid" id="dniPadre" placeholder="Sin puntos ni espacios" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="nombre">Nombre/s</label>
-                    <input type="text" class="form-control is-valid" id="nombre" required>
-                    <div class="invalid-feedback">Ingrese un nombre</div>
+                    <label for="nombrePadre">Nombre/s</label>
+                    <input type="text" formControlName="nombrePadre" class="form-control is-valid" id="nombrePadre" placeholder="Ingrese el nombre" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="apellido">Apellido/s</label>
-                    <input type="text" class="form-control is-valid" id="apellido" required>
-                    <div class="invalid-feedback">Ingrese un apellido</div>
+                    <label for="apellidoPadre">Apellido/s</label>
+                    <input type="text" formControlName="apellidoPadre" class="form-control is-valid" id="apellidoPadre" placeholder="Ingrese el apellido" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-        </form>
-        <form>
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="barrio">Barrio</label>
-                    <input type="text" class="form-control" id="barrio">
+                    <label for="barrioPadre">Barrio</label>
+                    <input type="text" formControlName="barrioPadre" class="form-control is-valid" id="barrioPadre" placeholder="Ingrese el barrio" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="calle">Calle</label>
-                    <input type="text" class="form-control" id="calle">
+                    <label for="callePadre">Calle</label>
+                    <input type="text" formControlName="callePadre" class="form-control is-valid" id="callePadre" placeholder="Ingrese la calle" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="numcalle">N°</label>
-                    <input type="number" class="form-control" id="numcalle">
+                    <label for="numCallePadre">N°</label>
+                    <input type="number" formControlName="numCallePadre" class="form-control is-valid" id="numCallePadre" placeholder="Ingrese el número de casa" required>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="form-group col-lg">
-                    <label for="observaciones">Detalles del Domicilio</label>
-                    <textarea class="form-control" id="observaciones"></textarea>
+                    <label for="detallesDomicilioPadre">Detalles del Domicilio</label>
+                    <textarea class="form-control is-valid" formControlName="detallesDomicilioPadre" id="detallesDomicilioPadre" placeholder="Ingrese Ninguno, si no hay detalles" required></textarea>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-        </form>
-        <form class="was-validated">
             <h3>Declarantes</h3>
             <div class="form-row">
                 <div class="form-group col-lg">
-                    <textarea class="form-control is-valid" required></textarea>
-                    <div class="invalid-feedback">Ingrese los declarantes del acta de nacimiento</div>
+                    <label for="declarantes">Declarantes del Acta de Nacimiento</label>
+                    <textarea class="form-control is-valid" formControlName="declarantes" id="declarantes" required></textarea>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
-        </form>
-        <form>
             <h3>Archivos adjuntos</h3>
             <div class="form-group">
                 <input type="file" class="form-control-file" multiple accept=".jpg, .png, .pdf, .jpeg">
             </div>
+            <br>
+            <hr>
+            <button type="submit" class="btn btn2 text-uppercase">Cargar acta
+                  <i class="fas fa-plus"></i>
+            </button>
         </form>
-        <br>
-        <hr>
-        <button type="submit" class="btn btn2 text-uppercase" data-toggle="modal" data-target="#cargar">Cargar acta
-              <i class="fas fa-plus"></i>
-        </button>
-        <button class="btn btn1 text-uppercase" data-toggle="modal" data-target="#guardar">Guardar como borrador
-            <i class="fas fa-save"></i>
-        </button>
-        <div class="modal fade" id="cargar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <i class="fas fa-check-circle fa-2x"></i>
-                        <p class="txt-modal">Acta cargada correctamente!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="guardar" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <i class="fas fa-folder-open fa-2x"></i>
-                        <p class="txt-modal">Acta guardada como borrador!</p>
-                        <p class="txt-modal-2">Para editarla, ingrese en Mis Cargas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <footer class="footer"></footer>

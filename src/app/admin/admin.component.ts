@@ -42,7 +42,7 @@ export class AdminComponent implements OnInit {
         console.log(id_empleado);
         console.log(iControl);
 
-        if(window.confirm("¿Desea eliminar el empleado?")){
+        if(window.confirm("¿Desea eliminar el empleado?")){ 
 
         this.crudService.BorrarEmpleado(id_empleado).subscribe((respuesta)=>{
             this.Empleados.splice(iControl,1);

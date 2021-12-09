@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CrudService } from 'src/app/servicio/crud.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -25,13 +25,13 @@ export class EditarEmpleadoComponent implements OnInit {
     console.log(this.elID);
 
     this.formularioDeEmpleados=this.formulario.group({
-      dni: [''],
-      nombre: [''],
-      apellido: [''],
-      fechaNacimiento: [''],
-      idSectorTrabajo: [''],
-      mail: [''],
-      contrasenia: [''],
+      dni: ['', Validators.required],
+      nombre: ['', Validators.required],
+      apellido: ['', Validators.required],
+      fechaNacimiento: ['', Validators.required],
+      idSectorTrabajo: ['', Validators.required],
+      mail: ['', Validators.required],
+      contrasenia: ['', Validators.required],
     });
 
     this.crudService.ObtenerEmpleado(this.elID).subscribe(
@@ -42,7 +42,7 @@ export class EditarEmpleadoComponent implements OnInit {
           nombre:respuesta[0]['nombre_empleado'],
           apellido:respuesta[0]['apellido_empleado'],
           fechaNacimiento:respuesta[0]['fecha_nacimiento_empleado'],
-          idSectorTrabajo:respuesta[0]['nombre_sector_trabajo'],
+          idSectorTrabajo:respuesta[0]['id_sector_trabajo'],
           mail: respuesta[0]['mail'],
           contrasenia: respuesta[0]['contrasenia']
         });
@@ -59,7 +59,12 @@ export class EditarEmpleadoComponent implements OnInit {
 
     this.crudService.EditarEmpleado(this.elID, this.formularioDeEmpleados.value).subscribe(()=>{
 
-      this.ruteador.navigate(['/admin'],{relativeTo: this.activeRoute});
+      if (this.formularioDeEmpleados.valid){
+        window.alert("Cambios guardados!")
+        this.ruteador.navigate(['/admin'],{relativeTo: this.activeRoute});
+      } else {
+        window.alert("Faltan rellenar campos")
+      }
 
     })
   }

@@ -2,7 +2,7 @@
     <div class="empleados">
         <h1 class="titulo">Empleados</h1>
         <div class="btn-cargar">
-            <button class="btn btn-primary btns text-uppercase" [routerLink]="['/agregar-empleado']">Cargar
+            <button class="btn btn-primary btns text-uppercase" [routerLink]="['/admin/agregar-empleado']">Cargar
             <i class="fas fa-plus"></i>
             </button>
         </div>
@@ -27,8 +27,8 @@
                         <td class="item">{{ empleado.nombre_empleado }}</td>
                         <td class="item">{{ empleado.apellido_empleado }}</td>
                         <td>
-                            <a routerLink="/editar-empleado/{{empleado.id_empleado}}"><button class="btn btn-general btn2"><i class="fas fa-user-edit"></i></button></a>
-                            <a (click)="borrarRegistro(empleado.id_empleado, iControl)"><button class="btn btn-general btn1" data-toggle="modal" data-target="#borrar"><i class="fas fa-trash"></i></button></a>
+                            <a routerLink="/admin/editar-empleado/{{empleado.id_empleado}}"><button class="btn btn-general btn2"><i class="fas fa-user-edit"></i></button></a>
+                            <a (click)="borrarRegistro(empleado.id_empleado, iControl)"><button class="btn btn-general btn1"><i class="fas fa-trash"></i></button></a>
                         </td>
                     </tr>
                 </tbody>

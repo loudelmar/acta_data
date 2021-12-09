@@ -28,6 +28,7 @@ import { MiscargasComponent } from './miscargas/miscargas.component';
 import { CookieService } from 'ngx-cookie-service';
 import { AgregarEmpleadoComponent } from './admin/agregar-empleado/agregar-empleado.component';
 import { EditarEmpleadoComponent } from './admin/editar-empleado/editar-empleado.component';
+import { EditarActaComponent } from './editar-acta/editar-acta.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { EditarEmpleadoComponent } from './admin/editar-empleado/editar-empleado
     MiscargasComponent,
     AgregarEmpleadoComponent,
     EditarEmpleadoComponent,
+    EditarActaComponent,
   ],
   imports: [
     BrowserModule,

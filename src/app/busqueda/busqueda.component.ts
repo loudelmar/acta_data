@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudActaService } from '../servicio/crud-acta.service';
 
 @Component({
   selector: 'app-busqueda',
@@ -9,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 
 export class BusquedaComponent implements OnInit {
 
-  constructor(){}
+  Actas:any;
+
+  constructor(private crudService:CrudActaService){}
 
   ngOnInit(): void{
+    this.crudService.ObtenerActas().subscribe(respuesta=>{
+      console.log(respuesta);
+      this.Actas=respuesta;
+    })
   }
 }
