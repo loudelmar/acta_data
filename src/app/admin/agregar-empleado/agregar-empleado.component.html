@@ -1,5 +1,6 @@
 <div class="container">
     <div class="empleados">
+        <button [routerLink]="['/admin']" class="btn volver"><i class="fas fa-long-arrow-alt-left"></i>Volver</button>
         <h1 class="titulo">Cargar Empleados</h1>
         <form [formGroup]="formularioDeEmpleados" class="was-validated" (ngSubmit)="enviarDatos()">
             <div class="form-row">
@@ -30,7 +31,7 @@
                 <div class="form-group col-md-6">
                     <label for="sectorTrabajo">Sector de trabajo</label>
                     <select id="sectorTrabajo" formControlName="sectorTrabajo" class="form-control is-valid" required>
-                        <option value="">Seleccione un sector de trabajo</option>
+                        <option value="" [disabled]="true">Seleccione un sector de trabajo</option>
                         <option value="1">Encargado del Archivo</option>
                         <option value="2">Empleado del Archivo</option>
                         <option value="3">Atención al público</option>

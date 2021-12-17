@@ -5,17 +5,21 @@ import { CargaactasComponent } from './cargaactas/cargaactas.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { AdminComponent } from './admin/admin.component';
-import { MiscargasComponent } from './miscargas/miscargas.component';
 import { AuthGuard } from './_helpers';
 import { Role } from './_models';
 import { AgregarEmpleadoComponent } from './admin/agregar-empleado/agregar-empleado.component';
 import { EditarEmpleadoComponent } from './admin/editar-empleado/editar-empleado.component';
+import { EditarActaComponent } from './busqueda/editar-acta/editar-acta.component';
+import { VerActaComponent } from './busqueda/ver-acta/ver-acta.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'carga-actas', component: CargaactasComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
-  {path: 'busqueda', component: BusquedaComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
-  {path: 'editar-acta/:id', component: BusquedaComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
+  {path: 'busqueda', children:[
+    {path: '', component: BusquedaComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
+    {path: 'editar-acta/:id', component: EditarActaComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
+    {path: 'ver-acta/:id', component: VerActaComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
+  ]},
   {path: 'inicio', component: InicioComponent, canActivate: [AuthGuard]},
   {path: 'admin', children:[
     {path: '', component: AdminComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
@@ -23,7 +27,6 @@ const routes: Routes = [
     {path: 'editar-empleado/:id', component: EditarEmpleadoComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}},
     {path: 'buscar/:searchTerm', component: AdminComponent, canActivate: [AuthGuard], data: {roles: [Role.Admin]}}
   ]},
-  {path: 'mis-cargas', component: MiscargasComponent, canActivate: [AuthGuard], data: {roles: [Role.User]}},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '/' }

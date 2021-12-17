@@ -42,9 +42,9 @@
                 <div class="form-group col-md-6">
                     <label for="sexo">Sexo</label>
                     <select id="sexo" formControlName="sexo" class="form-control is-valid" required>
-                        <option value="">Seleccione un sexo</option>
-                        <option value="1">Femenino</option>
-                        <option value="2">Masculino</option>
+                        <option value="" [disabled]="true">Seleccione un sexo</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
                         <option value="3">X</option>
                     </select>
                     <div class="invalid-feedback"></div>
@@ -69,87 +69,52 @@
                     <input type="date" formControlName="fechaInscripcion" class="form-control is-valid" id="fechaInscripcion" required>
                     <div class="invalid-feedback">Ingrese la fecha de inscripción</div>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="provinciaInscripto">Provincia</label>
-                    <select id="provinciaInscripto" formControlName="provinciaInscripto" class="form-control is-valid" required>
-                        <option value="">Seleccione una provincia</option>
-                        <option value="1">La Rioja</option>
-                        <option value="2">Buenos Aires</option>
-                        <option value="3">Capital Federal</option>
-                        <option value="4">Catamarca</option>
-                        <option value="5">Chaco</option>
-                        <option value="6">Chubut</option>
-                        <option value="7">Córdoba</option>
-                        <option value="8">Corrientes</option>
-                        <option value="9">Entre Ríos</option>
-                        <option value="10">Formosa</option>
-                        <option value="11">Jujuy</option>
-                        <option value="12">La Pampa</option>
-                        <option value="13">Mendoza</option>
-                        <option value="14">Misiones</option>
-                        <option value="15">Neuquén</option>
-                        <option value="16">Río Negro</option>
-                        <option value="17">Salta</option>
-                        <option value="18">San Juan</option>
-                        <option value="19">San Luis</option>
-                        <option value="20">Santa Cruz</option>
-                        <option value="21">Santa Fé</option>
-                        <option value="22">Santiago del Estero</option>
-                        <option value="23">Tierra del Fuego</option>
-                        <option value="24">Tucumán</option>
-                    </select>
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="form-group col-md-4">
+                <!-- <div class="form-group col-md-4">
                     <label for="departamentoInscripto">Departamento</label>
                     <select id="departamentoInscripto" formControlName="departamentoInscripto" class="form-control is-valid" required>
-                        <option value="">Seleccione un depto</option>
-                        <option value="1">Capital</option>
-                        <option value="2">Arauco</option>
+                        <option value="" [disabled]="true">Seleccione un depto</option>
+                        <option value="1">Arauco</option>
+                        <option value="2">Capital</option>
                         <option value="3">Castro Barros</option>
                         <option value="4">Chamical</option>
                         <option value="5">Chilecito</option>
                         <option value="6">Coronel Felipe Varela</option>
                         <option value="7">Famatina</option>
-                        <option value="8">General Ángel V. Peñaloza</option>
+                        <option value="8">General Ángel Vicente Peñaloza</option>
                         <option value="9">General Belgrano</option>
                         <option value="10">General Juan Facundo Quiroga</option>
                         <option value="11">General Lamadrid</option>
-                        <option value="12">General Lamadrid</option>
-                        <option value="13">General Ocampo</option>
-                        <option value="14">General San Martín</option>
-                        <option value="15">Independencia</option>
-                        <option value="16">Rosario Vera Peñaloza</option>
-                        <option value="17">San Blas de los Sauces</option>
-                        <option value="18">Sanagasta</option>
-                        <option value="19">Vinchina</option>
+                        <option value="12">General Ocampo</option>
+                        <option value="13">General San Martín</option>
+                        <option value="14">Independencia</option>
+                        <option value="15">Rosario Vera Peñaloza</option>
+                        <option value="16">San Blas de los Sauces</option>
+                        <option value="17">Sanagasta</option>
+                        <option value="18">Vinchina</option>
                     </select>
                     <div class="invalid-feedback"></div>
-                </div>
+                </div> -->
                 <div class="form-group col-md-4">
                     <label for="localidadInscripto">Localidad</label>
                     <select id="localidadInscripto" formControlName="localidadInscripto" class="form-control is-valid" required>
-                        <option value="">Seleccione una localidad</option>
-                        <option value="1">La Rioja</option>
-                        <option value="2">Aimogasta</option>
+                        <option value="" [disabled]="true">Seleccione una localidad</option>
+                        <option value="1">Aimogasta</option>
+                        <option value="2">La Rioja</option>
                         <option value="3">Aminga</option>
-                        <option value="4">Anillaco</option>
-                        <option value="5">Chamical</option>
-                        <option value="6">Chepes</option>
-                        <option value="7">Chilecito</option>
-                        <option value="8">Famatina</option>
-                        <option value="9">Guandacol</option>
-                        <option value="10">Olta</option>
-                        <option value="11">Pagancillo</option>
-                        <option value="12">Patquía</option>
-                        <option value="13">Sanagasta</option>
-                        <option value="14">San Blas de los Sauces</option>
-                        <option value="15">Santa Teresita</option>
-                        <option value="16">Tama</option>
-                        <option value="17">Ulapes</option>
-                        <option value="18">Villa Castelli</option>
-                        <option value="19">Villa Unión</option>
-                        <option value="20">Vinchina</option>
+                        <option value="4">Chamical</option>
+                        <option value="5">Chilecito</option>
+                        <option value="6">Villa Unión</option>
+                        <option value="7">Famatina</option>
+                        <option value="8">Tama</option>
+                        <option value="9">Olta</option>
+                        <option value="10">Malanzán</option>
+                        <option value="11">Villa Castelli</option>
+                        <option value="12">Villa Santa Rita de Catuna</option>
+                        <option value="13">Ulapes</option>
+                        <option value="14">Patquía</option>
+                        <option value="15">Chepes</option>
+                        <option value="16">San Blas</option>
+                        <option value="17">Villa Sanagasta</option>
                     </select>
                     <div class="invalid-feedback"></div>
                 </div>
@@ -180,12 +145,8 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="tipoClinica">Tipo</label>
-                    <select id="tipoClinica" formControlName="tipoClinica" class="form-control is-valid" required>
-                      <option value="">Seleccione pública/o o privada/o</option>
-                      <option value="1">Pública</option>
-                      <option value="2">Privada</option>
-                  </select>
-                    <div class="invalid-feedback">Elija el tipo de hospital o clínica</div>
+                    <input type="text" formControlName="tipoClinica" class="form-control is-valid" id="tipoClinica" placeholder="Escriba el tipo de clínica/hospital" required>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
             <h3>Datos de Madre/Padre</h3>
@@ -210,27 +171,8 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-lg">
-                    <label for="barrioMadre">Barrio</label>
-                    <input type="text" formControlName="barrioMadre" class="form-control is-valid" id="barrioMadre" placeholder="Ingrese el barrio" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-8">
-                    <label for="calleMadre">Calle</label>
-                    <input type="text" formControlName="calleMadre" class="form-control is-valid" id="calleMadre" placeholder="Ingrese la calle" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="numCalleMadre">N°</label>
-                    <input type="number" formControlName="numCalleMadre" class="form-control is-valid" id="numCalleMadre" placeholder="Ingrese el número de casa" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-lg">
-                    <label for="detallesDomicilioMadre">Detalles del Domicilio</label>
-                    <textarea class="form-control is-valid" formControlName="detallesDomicilioMadre" id="detallesDomicilioMadre" placeholder="Ingrese Ninguno, si no hay detalles" required></textarea>
+                    <label for="domicilioMadre">Domicilio</label>
+                    <textarea class="form-control is-valid" formControlName="domicilioMadre" id="domicilioMadre" placeholder="Ingrese la dirección completa" required></textarea>
                     <div class="invalid-feedback"></div>
                 </div>
             </div>
@@ -255,24 +197,9 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="barrioPadre">Barrio</label>
-                    <input type="text" formControlName="barrioPadre" class="form-control is-valid" id="barrioPadre" placeholder="Ingrese el barrio" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="callePadre">Calle</label>
-                    <input type="text" formControlName="callePadre" class="form-control is-valid" id="callePadre" placeholder="Ingrese la calle" required>
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="numCallePadre">N°</label>
-                    <input type="number" formControlName="numCallePadre" class="form-control is-valid" id="numCallePadre" placeholder="Ingrese el número de casa" required>
-                    <div class="invalid-feedback"></div>
-                </div>
                 <div class="form-group col-lg">
-                    <label for="detallesDomicilioPadre">Detalles del Domicilio</label>
-                    <textarea class="form-control is-valid" formControlName="detallesDomicilioPadre" id="detallesDomicilioPadre" placeholder="Ingrese Ninguno, si no hay detalles" required></textarea>
+                    <label for="domicilioPadre">Domicilio</label>
+                    <textarea class="form-control is-valid" formControlName="domicilioPadre" id="domicilioPadre" placeholder="Ingrese la dirección completa" required></textarea>
                     <div class="invalid-feedback"></div>
                 </div>
             </div>
@@ -284,9 +211,13 @@
                     <div class="invalid-feedback"></div>
                 </div>
             </div>
-            <h3>Archivos adjuntos</h3>
-            <div class="form-group">
-                <input type="file" class="form-control-file" multiple accept=".jpg, .png, .pdf, .jpeg">
+            <h3>Observaciones</h3>
+            <div class="form-row">
+                <div class="form-group col-lg">
+                    <label for="observaciones">Observaciones del Acta de Nacimiento</label>
+                    <textarea class="form-control is-valid" formControlName="observaciones" id="observaciones" required></textarea>
+                    <div class="invalid-feedback"></div>
+                </div>
             </div>
             <br>
             <hr>

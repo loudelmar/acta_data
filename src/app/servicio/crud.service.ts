@@ -32,8 +32,4 @@ export class CrudService {
     return this.clientHttp.post(this.API+"?actualizar="+id_empleado, datosEmpleado);
   }
 
-  BuscarEmpleado(apellido_empleado:any):Observable<any>{
-    return this.clientHttp.get(this.API+"?consultar="+apellido_empleado);
-  }
-
 }

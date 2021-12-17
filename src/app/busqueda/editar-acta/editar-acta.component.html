@@ -1,0 +1,178 @@
+<div class="container">
+    <div class="editar">
+        <button [routerLink]="['/busqueda']" class="btn volver"><i class="fas fa-long-arrow-alt-left"></i>Volver</button>
+        <h1 class="titulo text-center">Editar acta</h1>
+        <form [formGroup]="formularioDeActas" (ngSubmit)="enviarDatos()">
+            <h3>Datos del Acta</h3>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="tomo">Tomo N°</label>
+                    <input type="number" formControlName="tomo" class="form-control" id="tomo" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="acta">Acta N°</label>
+                    <input type="number" formControlName="acta" class="form-control" id="acta" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="anio">Año</label>
+                    <input type="number" formControlName="anio" class="form-control" id="anio" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="lomo">Lomo</label>
+                    <input type="number" formControlName="lomo" class="form-control" id="lomo" required>
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="delegacion">Delegación</label>
+                    <input type="text" formControlName="delegacion" class="form-control" id="delegacion" required>
+                </div>
+            </div>
+            <h3>Datos del Inscripto</h3>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dniInscripto" class="form-label">DNI</label>
+                    <input type="number" formControlName="dniInscripto" class="form-control" id="dniInscripto" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo" formControlName="sexo" class="form-control" required>
+                        <option value="" [disabled]="true">Seleccione un sexo</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                        <option value="3">X</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nombreInscripto" class="form-label">Nombre/s</label>
+                    <input type="text" formControlName="nombreInscripto" class="form-control" id="nombreInscripto" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellidoInscripto">Apellido/s</label>
+                    <input type="text" formControlName="apellidoInscripto" class="form-control" id="apellidoInscripto" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fechaNacimientoInscripto">Fecha de Nacimiento</label>
+                    <input type="date" formControlName="fechaNacimientoInscripto" class="form-control" id="fechaNacimientoInscripto" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fechaInscripcion">Fecha de Inscripción</label>
+                    <input type="date" formControlName="fechaInscripcion" class="form-control" id="fechaInscripcion" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="localidadInscripto">Localidad</label>
+                    <select id="localidadInscripto" formControlName="localidadInscripto" class="form-control" required>
+                        <option value="" [disabled]="true">Seleccione una localidad</option>
+                        <option value="1">Aimogasta</option>
+                        <option value="2">La Rioja</option>
+                        <option value="3">Aminga</option>
+                        <option value="4">Chamical</option>
+                        <option value="5">Chilecito</option>
+                        <option value="6">Villa Unión</option>
+                        <option value="7">Famatina</option>
+                        <option value="8">Tama</option>
+                        <option value="9">Olta</option>
+                        <option value="10">Malanzán</option>
+                        <option value="11">Villa Castelli</option>
+                        <option value="12">Villa Santa Rita de Catuna</option>
+                        <option value="13">Ulapes</option>
+                        <option value="14">Patquía</option>
+                        <option value="15">Chepes</option>
+                        <option value="16">San Blas</option>
+                        <option value="17">Villa Sanagasta</option>
+                    </select>
+                </div>
+            </div>
+            <h3>Datos del Nacimiento</h3>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="horaNacimiento">Horario de Nacimiento</label>
+                    <input type="time" formControlName="horaNacimiento" class="form-control" id="horaNacimiento" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombreObstetra">Nombre del Obstetra</label>
+                    <input type="text" formControlName="nombreObstetra" class="form-control" id="nombreObstetra" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellidoObstetra">Apellido del Obstetra</label>
+                    <input type="text" formControlName="apellidoObstetra" class="form-control" id="apellidoObstetra" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="clinica">Clínica / Hospital</label>
+                    <input type="text" formControlName="clinica" class="form-control" id="clinica" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="tipoClinica">Tipo</label>
+                    <input type="text" formControlName="tipoClinica" class="form-control" id="tipoClinica" required>
+                </div>
+            </div>
+            <h3>Datos de Madre/Padre</h3>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dniMadre">DNI</label>
+                    <input type="number" formControlName="dniMadre" class="form-control" id="dniMadre" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombreMadre">Nombre/s</label>
+                    <input type="text" formControlName="nombreMadre" class="form-control" id="nombreMadre" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellidoMadre">Apellido/s</label>
+                    <input type="text" formControlName="apellidoMadre" class="form-control" id="apellidoMadre" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-lg">
+                    <label for="domicilioMadre">Domicilio</label>
+                    <textarea class="form-control" formControlName="domicilioMadre" id="domicilioMadre" required></textarea>
+                </div>
+            </div>
+            <h3>Datos de Madre/Padre</h3>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dniPadre">DNI</label>
+                    <input type="number" formControlName="dniPadre" class="form-control" id="dniPadre" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombrePadre">Nombre/s</label>
+                    <input type="text" formControlName="nombrePadre" class="form-control" id="nombrePadre" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellidoPadre">Apellido/s</label>
+                    <input type="text" formControlName="apellidoPadre" class="form-control" id="apellidoPadre" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-lg">
+                    <label for="domicilioPadre">Domicilio</label>
+                    <textarea class="form-control" formControlName="domicilioPadre" id="domicilioPadre" required></textarea>
+                </div>
+            </div>
+            <h3>Declarantes</h3>
+            <div class="form-row">
+                <div class="form-group col-lg">
+                    <label for="declarantes">Declarantes del Acta de Nacimiento</label>
+                    <textarea class="form-control" formControlName="declarantes" id="declarantes" required></textarea>
+                </div>
+            </div>
+            <h3>Observaciones</h3>
+            <div class="form-row">
+                <div class="form-group col-lg">
+                    <label for="observaciones">Observaciones del Acta de Nacimiento</label>
+                    <textarea class="form-control" formControlName="observaciones" id="observaciones" required></textarea>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-guardar btn2 text-uppercase">Guardar acta
+                  <i class="fas fa-save"></i>
+            </button>
+        </form>
+    </div>
+</div>
+<footer class="footer"></footer>

@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { first } from 'rxjs/operators';
-import { User } from '../_models';
-import { UserService } from '../_services';
-
 import { CrudService } from '../servicio/crud.service';
 
 @Component({
@@ -18,18 +14,11 @@ export class AdminComponent implements OnInit {
 
     apellido:any;
 
-    users: User[] = [];
-
     constructor(
-        private userService: UserService,
         private crudService: CrudService,
         ) { }
 
     ngOnInit():void {
-
-        this.userService.getAll().pipe(first()).subscribe(users => {
-            this.users = users;
-        });
 
         this.crudService.ObtenerEmpleados().subscribe(respuesta=>{
             console.log(respuesta);

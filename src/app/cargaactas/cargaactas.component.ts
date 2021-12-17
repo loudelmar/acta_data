@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { first } from 'rxjs/operators';
-import { Role, User } from '../_models';
-import { AuthenticationService, UserService } from '../_services';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { CrudActaService } from '../servicio/crud-acta.service';
 import { Router } from '@angular/router';
+import { ContentObserver } from '@angular/cdk/observers';
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-cargaactas',
@@ -14,21 +13,14 @@ import { Router } from '@angular/router';
 export class CargaactasComponent implements OnInit {
 
   formularioDeActas:FormGroup;
-
-  user: User;
-  userFromApi: User;
   
   constructor(
-    private userService: UserService,
-    private authenticationService: AuthenticationService,
     public formulario: FormBuilder,
     private crudService:CrudActaService,
     private ruteador:Router
-) {
-    this.user = this.authenticationService.userValue;
-    this.authenticationService.user.subscribe(x => this.user = x);
+    ) {
 
-    this.formularioDeActas=this.formulario.group({
+    this.formularioDeActas = this.formulario.group({
       tomo:[''],
       acta:[''],
       anio:[''],
@@ -40,8 +32,6 @@ export class CargaactasComponent implements OnInit {
       apellidoInscripto:[''],
       fechaNacimientoInscripto:[''],
       fechaInscripcion:[''],
-      provinciaInscripto:[''],
-      departamentoInscripto:[''],
       localidadInscripto:[''],
       horaNacimiento:[''],
       nombreObstetra:[''],
@@ -51,45 +41,32 @@ export class CargaactasComponent implements OnInit {
       dniMadre:[''],
       nombreMadre:[''],
       apellidoMadre:[''],
-      barrioMadre:[''],
-      calleMadre:[''],
-      numCalleMadre:[''],
-      detallesDomicilioMadre:[''],
+      domicilioMadre:[''],
       dniPadre:[''],
       nombrePadre:[''],
       apellidoPadre:[''],
-      barrioPadre:[''],
-      callePadre:[''],
-      numCallePadre:[''],
-      detallesDomicilioPadre:[''],
-      declarantes:['']
+      domicilioPadre:[''],
+      declarantes:[''],
+      observaciones:[''],
     });
 }
 
 
-ngOnInit() {
-  this.userService.getById(this.user.id).pipe(first()).subscribe(user => {
-      this.userFromApi = user;
-  });
+ngOnInit(): void {
+
 }
 
   enviarDatos():any{
-    console.log("Presionaito");
     console.log(this.formularioDeActas.value);
-    this.crudService.AgregarActa(this.formularioDeActas.value).subscribe();
-    this.ruteador.navigateByUrl('/busqueda');
+    this.crudService.AgregarActa(this.formularioDeActas.value).subscribe(respuesta=>{
 
-  }
-
-  logout() {
-    this.authenticationService.logout();
-  }
-
-  get isAdmin(){
-    return this.user && this.user.role === Role.Admin;
-  }
-
-  get isUser(){
-    return this.user && this.user.role === Role.User;
+      if (this.formularioDeActas.valid){
+        window.alert("Cambios guardados!")
+        this.ruteador.navigate(['/busqueda']);
+      } else {
+        window.alert("Faltan rellenar campos")
+      }
+      
+    });
   }
 }

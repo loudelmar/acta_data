@@ -1,0 +1,64 @@
+.titulo {
+    font-family: 'poppins';
+    color: #C30A20;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-top: 30px;
+    user-select: none;
+}
+
+.volver {
+    font-family: 'poppins';
+    color: #616161;
+    box-shadow: none !important;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+
+.ver {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btns {
+    font-size: 15px;
+    font-family: "poppins light";
+    height: auto;
+    margin-top: 10px;
+    width: auto;
+}
+
+.card {
+    margin-top: 30px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+
+.btn1 {
+    margin-right: 10px;
+}
+
+.titulo-lista {
+    font-family: 'poppins';
+    color: #8f0202d7;
+    font-size: 17px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    text-align: center;
+    user-select: none;
+}
+
+.fa-long-arrow-alt-left {
+    margin-right: 10px;
+}
+
+br {
+    user-select: none;
+}

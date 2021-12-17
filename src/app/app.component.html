@@ -18,16 +18,11 @@
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" [routerLink]="['/busqueda']" *ngIf="isUser">Buscar</a>
                 </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" [routerLink]="['/mis-cargas']" *ngIf="isUser">Ver mis cargas</a>
-                </li>
             </ul>
             <div class="btn-group">
                 <i class="fas fa-user-circle fa-2x" data-toggle="dropdown"></i>
                 <i class="fas fa-caret-down fa-xs" data-toggle="dropdown"></i>
                 <ul class="dropdown-menu dropdown-menu-lg-right" role="menu">
-                    <li><a class="dropdown-item" [routerLink]="['/mis-cargas']" *ngIf="isUser"><i class="fas fa-folder-open"></i>Mis Cargas</a></li>
-                    <hr class="my-2" *ngIf="isUser">
                     <li><a class="dropdown-item" (click)="logout()" data-toggle="modal" data-target="#modalCerrarSesion"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a></li>
                 </ul>
             </div>

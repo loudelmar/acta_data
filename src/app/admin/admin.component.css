@@ -1,3 +1,11 @@
+.empleados {
+    position: relative;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
 .titulo {
     font-family: 'poppins';
     color: #C30A20;
@@ -8,40 +16,12 @@
     user-select: none;
 }
 
-.empleados {
-    position: relative;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-}
-
 .form-control {
     font-size: 14px;
     font-weight: 300;
     font-family: 'poppins';
     height: 2.5rem !important;
     border-radius: 2rem !important;
-}
-
-.form-group label {
-    font-family: 'poppins';
-    font-weight: 600;
-    font-size: 14px;
-    color: #616161;
-}
-
-.btns {
-    font-size: 15px;
-    font-family: "poppins light";
-    height: 3rem;
-}
-
-label {
-    font-family: 'poppins';
-    font-size: 15px;
-    margin-left: 5px;
-    color: #7A7A7A;
 }
 
 .tabla {
@@ -58,6 +38,12 @@ th {
 .item {
     font-family: 'poppins';
     font-size: 15px;
+}
+
+.btns {
+    font-size: 15px;
+    font-family: "poppins light";
+    height: 3rem;
 }
 
 .btn1 {
@@ -90,57 +76,8 @@ td {
     vertical-align: middle;
 }
 
-.input-group input:focus {
-    box-shadow: none;
-}
-
-.input-group-append button:focus {
-    box-shadow: none;
-}
-
 .btn-cargar {
     margin-bottom: 20px;
-}
-
-.form-control:focus {
-    box-shadow: none;
-}
-
-.fa-save {
-    margin-left: 5px;
-}
-
-.btn-cerrar {
-    color: #C30A20 !important;
-    font-family: 'poppins';
-    font-size: 16px;
-}
-
-.btn-borrar {
-    background-color: #C30A20 !important;
-    border-radius: 0.7rem !important;
-    color: white;
-    font-family: 'poppins';
-    font-size: 15px;
-    font-weight: 500;
-    height: auto;
-    box-shadow: none !important;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    justify-content: center;
-    margin-left: 50% !important;
-    transform: translateX(-50%) !important;
-    margin-right: 115px;
-}
-
-.modal-title {
-    margin-left: 20px;
-}
-
-.txt-contra {
-    text-align: center;
-    font-family: 'poppins';
-    color: #4e4e4e;
 }
 
 .invalid-feedback {

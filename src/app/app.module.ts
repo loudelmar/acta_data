@@ -24,11 +24,11 @@ import * as $ from 'jquery';
 
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AdminComponent } from './admin/admin.component';
-import { MiscargasComponent } from './miscargas/miscargas.component';
 import { CookieService } from 'ngx-cookie-service';
 import { AgregarEmpleadoComponent } from './admin/agregar-empleado/agregar-empleado.component';
 import { EditarEmpleadoComponent } from './admin/editar-empleado/editar-empleado.component';
-import { EditarActaComponent } from './editar-acta/editar-acta.component';
+import { EditarActaComponent } from './busqueda/editar-acta/editar-acta.component';
+import { VerActaComponent } from './busqueda/ver-acta/ver-acta.component';
 
 @NgModule({
   declarations: [
@@ -38,10 +38,10 @@ import { EditarActaComponent } from './editar-acta/editar-acta.component';
     BusquedaComponent,
     InicioComponent,
     AdminComponent,
-    MiscargasComponent,
     AgregarEmpleadoComponent,
     EditarEmpleadoComponent,
     EditarActaComponent,
+    VerActaComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,7 @@ export class AgregarEmpleadoComponent implements OnInit {
     private crudService:CrudService,
     private ruteador:Router,
     private activeRoute:ActivatedRoute
-    ) {
+    ){
 
     this.formularioDeEmpleados = this.formulario.group({
       dni: [''],
@@ -34,21 +34,18 @@ export class AgregarEmpleadoComponent implements OnInit {
 
    }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   enviarDatos(): any {
-    console.log("Presionao");
-    console.log(this.formularioDeEmpleados.value);
-    
     this.crudService.AgregarEmpleado(this.formularioDeEmpleados.value).subscribe(respuesta=>{
 
-      this.ruteador.navigate(['/admin'],{relativeTo: this.activeRoute});
-      
+      if (this.formularioDeEmpleados.valid){
+        window.alert("Cambios guardados!")
+        this.ruteador.navigate(['/admin']);
+      } else {
+        window.alert("Faltan rellenar campos")
+      }
+
     });
-
-
   }
-
-
 }

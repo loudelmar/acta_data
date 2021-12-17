@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MiscargasComponent } from './miscargas.component';
+import { VerActaComponent } from './ver-acta.component';
 
-describe('MiscargasComponent', () => {
-  let component: MiscargasComponent;
-  let fixture: ComponentFixture<MiscargasComponent>;
+describe('VerActaComponent', () => {
+  let component: VerActaComponent;
+  let fixture: ComponentFixture<VerActaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MiscargasComponent ]
+      declarations: [ VerActaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MiscargasComponent);
+    fixture = TestBed.createComponent(VerActaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

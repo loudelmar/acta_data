@@ -1,6 +1,7 @@
 <div class="container">
     <div class="empleados">
-        <h1 class="titulo">Editar Empleados</h1>
+        <button [routerLink]="['/admin']" class="btn volver"><i class="fas fa-long-arrow-alt-left"></i>Volver</button>
+        <h1 class="titulo">Editar Empleado/a</h1>
         <form [formGroup]="formularioDeEmpleados" (ngSubmit)="enviarDatos()">
             <div class="form-row">
                 <div class="form-group col-lg">

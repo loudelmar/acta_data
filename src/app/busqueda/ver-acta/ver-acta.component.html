@@ -1,0 +1,67 @@
+<div class="container">
+    <button [routerLink]="['/busqueda']" class="btn volver"><i class="fas fa-long-arrow-alt-left"></i>Volver</button>
+    <div class="ver">
+        <h1 class="titulo text-center">Acta de Nacimiento</h1>
+        <div class="card" *ngFor="let acta of Actas; let iControl=index">
+            <div class="card-header">{{ acta.apellido_inscripto }}, {{ acta.nombre_inscripto }} </div>
+            <div class="card-body">
+                <h1 class="titulo-lista">Datos del Acta</h1>
+                <h4 class="card-title"><strong>Tomo N°: </strong> {{ acta.num_tomo }}</h4>
+                <h4 class="card-title"><strong>Acta N°: </strong> {{ acta.num_acta }}</h4>
+                <h4 class="card-title"></h4>
+                <h4 class="card-title"><strong>Año: </strong> {{ acta.anio_acta}}</h4>
+                <h4 class="card-title"><strong>Lomo: </strong> {{ acta.lomo_acta}}</h4>
+                <h4 class="card-title"><strong>Delegación: </strong> {{ acta.delegacion}}</h4>
+                <br>
+                <hr>
+                <br>
+                <h1 class="titulo-lista">Datos del Inscripto</h1>
+                <h4 class="card-title"><strong>DNI: </strong> {{ acta.dni_inscripto }}</h4>
+                <h4 class="card-title"><strong>Sexo: </strong> {{ acta.nombre_sexo }}</h4>
+                <h4 class="card-title"><strong>Fecha de Nacimiento: </strong> {{ acta.fecha_nacimiento_inscripto }}</h4>
+                <h4 class="card-title"><strong>Fecha de Inscripción: </strong> {{ acta.fecha_inscripcion }}</h4>
+                <h4 class="card-title"><strong>Lugar de Nacimiento: </strong> Provincia de La Rioja, {{ acta.nombre_localidad }}</h4>
+                <br>
+                <hr>
+                <br>
+                <h1 class="titulo-lista">Datos del Nacimiento</h1>
+                <h4 class="card-title"><strong>Obstetra: </strong>Dra. {{ acta.nombre_obstetra }} {{acta.apellido_obstetra}} </h4>
+                <h4 class="card-title"><strong>Hora de Nacimiento: </strong>{{ acta.horario_nacimiento }}hs</h4>
+                <h4 class="card-title"><strong>Clínica/Hospital: </strong>{{ acta.nombre_clinica_hospital }}</h4>
+                <h4 class="card-title"><strong>Tipo de Clínica/Hospital: </strong>{{ acta.tipo_clinica_hospital }}</h4>
+                <br>
+                <hr>
+                <br>
+                <h1 class="titulo-lista">Datos de Madre/Padre</h1>
+                <h4 class="card-title"><strong>DNI: </strong>{{ acta.dni_madre }}</h4>
+                <h4 class="card-title"><strong>Nombre y Apellido: </strong>{{ acta.nombre_madre }} {{acta.apellido_madre}} </h4>
+                <h4 class="card-title"><strong>Domicilio: </strong> {{ acta.domicilio_madre}} </h4>
+                <br>
+                <hr>
+                <br>
+                <h1 class="titulo-lista">Datos de Madre/Padre</h1>
+                <h4 class="card-title"><strong>DNI: </strong>{{ acta.dni_padre }}</h4>
+                <h4 class="card-title"><strong>Nombre y Apellido: </strong>{{ acta.nombre_padre }} {{acta.apellido_padre}} </h4>
+                <h4 class="card-title"><strong>Domicilio: </strong> {{ acta.domicilio_padre}} </h4>
+                <br>
+                <hr>
+                <br>
+                <h1 class="titulo-lista">Declarantes del Acta</h1>
+                <h4 class="card-title">{{ acta.declarantes_acta}} </h4>
+                <br>
+                <hr>
+                <br>
+                <h1 class="titulo-lista">Observaciones del Acta</h1>
+                <h4 class="card-title">{{ acta.observaciones_acta}} </h4>
+                <br>
+                <a href="assets/pdf/MODELO ACTA DIGITAL.pdf" download="Acta-Digital-Lede"><button class="btn btn1 btn-primary btns text-uppercase">
+                    <i class="fas fa-download"></i> Descargar Acta
+                </button>
+                </a>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer"></footer>

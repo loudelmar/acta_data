@@ -1,9 +1,23 @@
+.empleados {
+    position: relative;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.volver {
+    font-family: 'poppins';
+    color: #616161;
+    box-shadow: none !important;
+}
+
 .titulo {
     font-family: 'poppins';
     color: #C30A20;
     font-size: 30px;
     margin-left: 15px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 40px;
     text-align: center;
     user-select: none;
@@ -11,14 +25,6 @@
 
 form {
     user-select: none;
-}
-
-.empleados {
-    position: relative;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
 }
 
 .form-control {
@@ -76,6 +82,10 @@ label {
     justify-content: center;
 }
 
-.fas {
+.fa-plus {
     margin-left: 10px;
+}
+
+.fa-long-arrow-alt-left {
+    margin-right: 10px;
 }

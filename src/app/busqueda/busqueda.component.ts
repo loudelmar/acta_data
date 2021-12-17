@@ -10,6 +10,8 @@ import { CrudActaService } from '../servicio/crud-acta.service';
 
 export class BusquedaComponent implements OnInit {
 
+  busqueda;
+
   Actas:any;
 
   constructor(private crudService:CrudActaService){}
